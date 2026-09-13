@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://da20ueryll755"]
 
 [ext_resource type="Script" uid="uid://niupk8jqks5a" path="res://object.gd" id="1_0e48y"]
+[ext_resource type="Script" uid="uid://ben7ipj4cu25a" path="res://gameManager.gd" id="1_0hol4"]
 [ext_resource type="Texture2D" uid="uid://dny8qq63v8p6l" path="res://icon.svg" id="1_wtcfe"]
 [ext_resource type="Script" uid="uid://bqb10su8238hf" path="res://liquid.gd" id="3_epypp"]
 
@@ -15,6 +16,7 @@ radius = 34.0
 height = 166.0
 
 [node name="Node2D" type="Node2D" unique_id=2027772063]
+script = ExtResource("1_0hol4")
 
 [node name="object" type="Area2D" parent="." unique_id=729439785]
 z_index = 1
@@ -48,7 +50,7 @@ text = "fdafdsafdsafdsa"
 metadata/_edit_use_anchors_ = true
 
 [node name="place" type="Area2D" parent="." unique_id=206422528]
-position = Vector2(643, 274)
+position = Vector2(747, 767)
 metadata/place = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="place" unique_id=1995772240]
@@ -83,8 +85,56 @@ position = Vector2(0.9999999, 62.249992)
 scale = Vector2(1.296875, 0.3515625)
 texture = ExtResource("1_wtcfe")
 
+[node name="place3" type="Area2D" parent="place" unique_id=784477678]
+position = Vector2(-1713, -6)
+metadata/place = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="place/place3" unique_id=340371987]
+shape = SubResource("RectangleShape2D_rp3bj")
+
+[node name="Sprite2D" type="Sprite2D" parent="place/place3/CollisionShape2D" unique_id=1734400848]
+position = Vector2(0.9999999, 62.249992)
+scale = Vector2(1.296875, 0.3515625)
+texture = ExtResource("1_wtcfe")
+
+[node name="place" type="Area2D" parent="place/place3" unique_id=1174432663]
+position = Vector2(-401, 0)
+metadata/place = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="place/place3/place" unique_id=1886184830]
+shape = SubResource("RectangleShape2D_rp3bj")
+
+[node name="Sprite2D" type="Sprite2D" parent="place/place3/place/CollisionShape2D" unique_id=614368061]
+position = Vector2(0.9999999, 62.249992)
+scale = Vector2(1.296875, 0.3515625)
+texture = ExtResource("1_wtcfe")
+
+[node name="place2" type="Area2D" parent="place/place3" unique_id=1466856314]
+position = Vector2(-199, 0)
+metadata/place = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="place/place3/place2" unique_id=1429198307]
+shape = SubResource("RectangleShape2D_rp3bj")
+
+[node name="Sprite2D" type="Sprite2D" parent="place/place3/place2/CollisionShape2D" unique_id=467349097]
+position = Vector2(0.9999999, 62.249992)
+scale = Vector2(1.296875, 0.3515625)
+texture = ExtResource("1_wtcfe")
+
+[node name="place4" type="Area2D" parent="place" unique_id=1293856585]
+position = Vector2(-1511, -6)
+metadata/place = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="place/place4" unique_id=1726465149]
+shape = SubResource("RectangleShape2D_rp3bj")
+
+[node name="Sprite2D" type="Sprite2D" parent="place/place4/CollisionShape2D" unique_id=1865423651]
+position = Vector2(0.9999999, 62.249992)
+scale = Vector2(1.296875, 0.3515625)
+texture = ExtResource("1_wtcfe")
+
 [node name="place2" type="Area2D" parent="." unique_id=234050133]
-position = Vector2(845, 274)
+position = Vector2(949, 767)
 metadata/place = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="place2" unique_id=1942718488]
@@ -97,7 +147,7 @@ texture = ExtResource("1_wtcfe")
 
 [node name="liquid" type="Area2D" parent="." unique_id=225396704]
 z_index = 1
-position = Vector2(234, 517)
+position = Vector2(1194, 872)
 script = ExtResource("3_epypp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="liquid" unique_id=152757670]
@@ -126,7 +176,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="liquid2" type="Area2D" parent="." unique_id=339397104]
 z_index = 1
-position = Vector2(366, 520)
+position = Vector2(1326, 875)
 script = ExtResource("3_epypp")
 toAdd = "fruit"
 
@@ -153,6 +203,14 @@ offset_bottom = -63.963196
 grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
+
+[node name="camera" type="Camera2D" parent="." unique_id=734319948]
+position = Vector2(960, 540)
+limit_enabled = false
+limit_left = -1761
+limit_top = -9999468
+limit_right = 2239
+limit_bottom = 10000532
 
 [connection signal="button_down" from="object/CollisionShape2D/Sprite2D/Button" to="object" method="_on_button_button_down"]
 [connection signal="button_up" from="object/CollisionShape2D/Sprite2D/Button" to="object" method="_on_button_button_up"]
