@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://dihuyjkk3c7xl"]
+
+[ext_resource type="Script" uid="uid://niupk8jqks5a" path="res://object.gd" id="1_ykn3o"]
+[ext_resource type="Texture2D" uid="uid://dny8qq63v8p6l" path="res://icon.svg" id="2_b8qbv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3n2aa"]
+size = Vector2(82.5, 88.5)
+
+[node name="glass" type="Area2D" unique_id=330674391]
+z_index = 1
+script = ExtResource("1_ykn3o")
+metadata/drink = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2073138404]
+z_index = 1
+shape = SubResource("RectangleShape2D_3n2aa")
+
+[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D" unique_id=747515525]
+z_index = 1
+scale = Vector2(0.6357421, 0.67089844)
+texture = ExtResource("2_b8qbv")
+
+[node name="Button" type="Button" parent="CollisionShape2D/Sprite2D" unique_id=344818704]
+self_modulate = Color(1.6197081, 1.6197081, 1.6197081, 0)
+z_index = 1
+anchors_preset = -1
+anchor_right = 1.039
+anchor_bottom = 1.0
+offset_left = -68.0
+offset_top = -68.0
+offset_right = -63.992004
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 2
+action_mode = 0
+text = "fdafdsafdsafdsa"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="button_down" from="CollisionShape2D/Sprite2D/Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="CollisionShape2D/Sprite2D/Button" to="." method="_on_button_button_up"]

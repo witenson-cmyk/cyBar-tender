@@ -10,18 +10,21 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	
+	#camera movement
+	
 	var mousePos=get_viewport().get_mouse_position().x
-	mousePos=clamp(mousePos,0,1970)
+	mousePos=clamp(mousePos,0,1920)
 	if mousePos<450:
 		if mousePos>1:
 			mov=450/mousePos
 		mov=clamp(mov,3,25)
 		camera.position.x-=mov
 	if mousePos>1470:
-		if mousePos>1:
+		if mousePos<1920:
 			mov=450/(1920-mousePos)
 		else:
 			mov=mov
 		mov=clamp(mov,3,25)
 		camera.position.x+=mov
-	camera.position.x=clamp(camera.position.x,-2000,2000)
+	camera.position.x=clamp(camera.position.x,-1000,1000)
