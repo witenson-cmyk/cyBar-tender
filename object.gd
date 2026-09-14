@@ -8,7 +8,7 @@ var lastPlace
 var wanted
 var got
 
-# Called when the node enters the scene tree for the first time.
+# Called when the node enters the scene tree for the first time.simple and clean birth by sleep
 func _ready() -> void:
 	pass # Replace with function body.
 
@@ -44,7 +44,7 @@ func _on_button_button_up() -> void:
 				added.sort()
 				thing.wants.sort()
 				if added==thing.wants:
-					get_tree().current_scene.points+=100
+					get_tree().current_scene.points+=added.size()*50
 				else:
 					get_tree().current_scene.lives=get_tree().current_scene.lives-1
 				thing.queue_free()
