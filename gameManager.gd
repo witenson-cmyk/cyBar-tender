@@ -46,15 +46,14 @@ func _process(delta: float) -> void:
 		timer-=1
 	else:
 		var didIt=false
-		var i=0
-		for thing in places:
-			if thing==null and didIt!=true:
-				newPerson=instance.instantiate()
-				get_tree().current_scene.add_child(newPerson)
-				didIt=true
-				thing=newPerson
-				newPerson.position.x=500*i-700
-				newPerson.position.y=500
-				places[i]=newPerson
-			i+=1
+		if places.has(null):
+			while didIt==false:
+				var ran=random.randi()%4
+				if places[ran]==null:
+					newPerson=instance.instantiate()
+					get_tree().current_scene.add_child(newPerson)
+					didIt=true
+					newPerson.position.x=500*ran-700
+					newPerson.position.y=500
+					places[ran]=newPerson
 		timer=2000-random.randi()%1500
