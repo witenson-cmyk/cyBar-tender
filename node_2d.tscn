@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://ben7ipj4cu25a" path="res://gameManager.gd" id="1_0hol4"]
 [ext_resource type="Texture2D" uid="uid://dny8qq63v8p6l" path="res://icon.svg" id="1_wtcfe"]
 [ext_resource type="Script" uid="uid://bqb10su8238hf" path="res://liquid.gd" id="3_epypp"]
-[ext_resource type="Script" uid="uid://bp6kegb5ep5vd" path="res://patron.gd" id="5_kdubu"]
 [ext_resource type="Script" uid="uid://byimbx3sgyx57" path="res://drawer.gd" id="5_q6r6c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rp3bj"]
@@ -19,8 +18,8 @@ size = Vector2(106, 108)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l6vob"]
 size = Vector2(160, 233)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0hol4"]
-size = Vector2(159.5, 355)
+[sub_resource type="LabelSettings" id="LabelSettings_0hol4"]
+font_size = 33
 
 [node name="Node2D" type="Node2D" unique_id=2027772063]
 script = ExtResource("1_0hol4")
@@ -284,43 +283,6 @@ shape = SubResource("RectangleShape2D_l6vob")
 scale = Vector2(1.203125, 1.765625)
 texture = ExtResource("1_wtcfe")
 
-[node name="patron" type="Area2D" parent="." unique_id=646087570]
-position = Vector2(213, 265)
-script = ExtResource("5_kdubu")
-metadata/patron = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="patron" unique_id=864870480]
-shape = SubResource("RectangleShape2D_0hol4")
-
-[node name="Sprite2D" type="Sprite2D" parent="patron/CollisionShape2D" unique_id=423934374]
-scale = Vector2(1.2421875, 2.8125)
-texture = ExtResource("1_wtcfe")
-
-[node name="patron label" type="Label" parent="patron" unique_id=552136275]
-offset_left = 115.0
-offset_top = -166.0
-offset_right = 244.0
-offset_bottom = 52.0
-
-[node name="patron2" type="Area2D" parent="." unique_id=922019287]
-position = Vector2(633, 266)
-script = ExtResource("5_kdubu")
-metadata/patron = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="patron2" unique_id=216407619]
-shape = SubResource("RectangleShape2D_0hol4")
-
-[node name="Sprite2D" type="Sprite2D" parent="patron2/CollisionShape2D" unique_id=1161654643]
-scale = Vector2(1.2421875, 2.8125)
-texture = ExtResource("1_wtcfe")
-
-[node name="patron label" type="Label" parent="patron2" unique_id=226269366]
-offset_left = 115.0
-offset_top = -166.0
-offset_right = 244.0
-offset_bottom = 52.0
-metadata/_edit_use_anchors_ = true
-
 [node name="Control" type="Control" parent="." unique_id=1509193713]
 layout_mode = 3
 anchors_preset = 0
@@ -338,11 +300,12 @@ offset_right = 60.0
 offset_bottom = 36.0
 
 [node name="Label" type="Label" parent="." unique_id=356046835]
-offset_left = 96.0
-offset_top = 487.0
-offset_right = 867.0
-offset_bottom = 596.0
-text = "Vodka, soda water, Whisky, water, fruit, sprite"
+offset_left = 95.0
+offset_top = 1030.0
+offset_right = 1020.0
+offset_bottom = 1139.0
+text = "Vodka, soda water, Whisky, water,    fruit,     sprite"
+label_settings = SubResource("LabelSettings_0hol4")
 
 [connection signal="button_down" from="vodka/CollisionShape2D/Sprite2D/Button" to="vodka" method="_on_button_button_down"]
 [connection signal="button_up" from="vodka/CollisionShape2D/Sprite2D/Button" to="vodka" method="_on_button_button_up"]

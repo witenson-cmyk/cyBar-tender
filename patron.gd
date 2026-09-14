@@ -2,6 +2,9 @@ extends Area2D
 var wants=[]
 var possible=["vodka","water","fruit","sprite","soda water","whisky"]
 var random=RandomNumberGenerator.new()
+@export var timerMax = 7500
+var timer=timerMax
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var good = false
@@ -23,4 +26,10 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if timer>0:
+		timer=timer-1
+	else:
+		get_tree().current_scene.lives=get_tree().current_scene.lives-1
+		queue_free()
+	get_node("TextureProgressBar").value = timer*100/timerMax
+	
