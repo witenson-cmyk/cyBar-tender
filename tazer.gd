@@ -25,6 +25,8 @@ func _on_button_button_up() -> void:
 	var placed=get_overlapping_areas()
 	for thing in placed:
 		if thing.get_meta("patron")==true and thing.tazed==false:
+			if random.randi()%100<=10:
+				thing.queue_free()
 			thing.tazed=true
 			var toRemove=[]
 			for other in thing.wants:

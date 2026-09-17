@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://da40267jyemaq"]
+
+[ext_resource type="Script" uid="uid://c4e3cn6wnrk7p" path="res://ice.gd" id="1_lryxu"]
+[ext_resource type="Texture2D" uid="uid://dny8qq63v8p6l" path="res://icon.svg" id="2_3inoc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wc2py"]
+size = Vector2(84, 89)
+
+[node name="ice" type="Area2D" unique_id=1703207042]
+z_index = 1
+script = ExtResource("1_lryxu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=978024680]
+z_index = 1
+shape = SubResource("RectangleShape2D_wc2py")
+
+[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D" unique_id=1722654426]
+z_index = 1
+scale = Vector2(0.6171875, 0.67187494)
+texture = ExtResource("2_3inoc")
+
+[node name="Button" type="Button" parent="CollisionShape2D/Sprite2D" unique_id=220424689]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = -1
+anchor_left = -0.006574571
+anchor_top = -0.023579627
+anchor_right = 1.0318918
+anchor_bottom = 0.99971247
+offset_left = -63.968582
+offset_top = -63.958553
+offset_right = -64.03154
+offset_bottom = -63.963196
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[connection signal="button_down" from="CollisionShape2D/Sprite2D/Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="CollisionShape2D/Sprite2D/Button" to="." method="_on_button_button_up"]

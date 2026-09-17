@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://ben7ipj4cu25a" path="res://gameManager.gd" id="1_0hol4"]
 [ext_resource type="Texture2D" uid="uid://dny8qq63v8p6l" path="res://icon.svg" id="1_wtcfe"]
 [ext_resource type="Script" uid="uid://bqb10su8238hf" path="res://liquid.gd" id="3_epypp"]
+[ext_resource type="Script" uid="uid://ndm6eoaxythj" path="res://blender.gd" id="4_d21ai"]
+[ext_resource type="Script" uid="uid://k16j3hygwajp" path="res://ice_machine.gd" id="5_d21ai"]
 [ext_resource type="Script" uid="uid://dykgcvsu6yety" path="res://tazer.gd" id="5_kdubu"]
 [ext_resource type="Script" uid="uid://byimbx3sgyx57" path="res://drawer.gd" id="5_q6r6c"]
 
@@ -10,8 +12,8 @@
 size = Vector2(189, 202.75)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3n2aa"]
-radius = 34.0
-height = 166.0
+radius = 50.0
+height = 152.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iobs2"]
 size = Vector2(106, 108)
@@ -97,6 +99,96 @@ anchor_left = -0.202
 anchor_top = -0.155
 anchor_right = 1.202
 anchor_bottom = 1.1400001
+offset_left = -63.968582
+offset_top = -63.958553
+offset_right = -64.03154
+offset_bottom = -63.963196
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="stiring" type="Area2D" parent="." unique_id=2082373023]
+z_index = 1
+position = Vector2(2109, 956)
+script = ExtResource("3_epypp")
+toAdd = "stirred"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stiring" unique_id=556707399]
+z_index = 1
+shape = SubResource("CapsuleShape2D_3n2aa")
+
+[node name="Sprite2D" type="Sprite2D" parent="stiring/CollisionShape2D" unique_id=1359540468]
+z_index = 1
+scale = Vector2(0.4453125, 1.0859375)
+texture = ExtResource("1_wtcfe")
+
+[node name="Button" type="Button" parent="stiring/CollisionShape2D/Sprite2D" unique_id=1244351630]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = -1
+anchor_left = -0.202
+anchor_top = -0.155
+anchor_right = 1.202
+anchor_bottom = 1.1400001
+offset_left = -63.968582
+offset_top = -63.958553
+offset_right = -64.03154
+offset_bottom = -63.963196
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="shaker" type="Area2D" parent="." unique_id=1410473764]
+z_index = 1
+position = Vector2(1989, 936)
+script = ExtResource("3_epypp")
+toAdd = "shaken"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="shaker" unique_id=1579492246]
+z_index = 1
+shape = SubResource("CapsuleShape2D_3n2aa")
+
+[node name="Sprite2D" type="Sprite2D" parent="shaker/CollisionShape2D" unique_id=308386175]
+z_index = 1
+scale = Vector2(0.4453125, 1.0859375)
+texture = ExtResource("1_wtcfe")
+
+[node name="Button" type="Button" parent="shaker/CollisionShape2D/Sprite2D" unique_id=885512603]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = -1
+anchor_left = -0.202
+anchor_top = -0.155
+anchor_right = 1.202
+anchor_bottom = 1.1400001
+offset_left = -63.968582
+offset_top = -63.958553
+offset_right = -64.03154
+offset_bottom = -63.963196
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="blender" type="Area2D" parent="." unique_id=1952463535]
+z_index = 1
+position = Vector2(2258, 900)
+script = ExtResource("4_d21ai")
+metadata/blender = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="blender" unique_id=404369509]
+z_index = 1
+shape = SubResource("CapsuleShape2D_3n2aa")
+
+[node name="Sprite2D" type="Sprite2D" parent="blender/CollisionShape2D" unique_id=358653862]
+z_index = 1
+scale = Vector2(0.70703113, 1.1289064)
+texture = ExtResource("1_wtcfe")
+
+[node name="Button" type="Button" parent="blender/CollisionShape2D/Sprite2D" unique_id=600574507]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = -1
+anchor_left = 0.013566613
+anchor_top = 0.008326739
+anchor_right = 0.9974836
+anchor_bottom = 0.9910619
 offset_left = -63.968582
 offset_top = -63.958553
 offset_right = -64.03154
@@ -276,6 +368,19 @@ position = Vector2(0, 55)
 scale = Vector2(1, 0.2734375)
 texture = ExtResource("1_wtcfe")
 
+[node name="iceMachine" type="Area2D" parent="." unique_id=1024892369]
+position = Vector2(1836, 841)
+script = ExtResource("5_d21ai")
+metadata/icePlace = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="iceMachine" unique_id=739336420]
+shape = SubResource("RectangleShape2D_iobs2")
+
+[node name="Sprite2D" type="Sprite2D" parent="iceMachine/CollisionShape2D" unique_id=1068476385]
+position = Vector2(0, 55)
+scale = Vector2(1, 0.2734375)
+texture = ExtResource("1_wtcfe")
+
 [node name="trash" type="Area2D" parent="." unique_id=1845215834]
 position = Vector2(1183, 1087)
 metadata/trash = true
@@ -337,6 +442,12 @@ metadata/_edit_use_anchors_ = true
 
 [connection signal="button_down" from="vodka/CollisionShape2D/Sprite2D/Button" to="vodka" method="_on_button_button_down"]
 [connection signal="button_up" from="vodka/CollisionShape2D/Sprite2D/Button" to="vodka" method="_on_button_button_up"]
+[connection signal="button_down" from="stiring/CollisionShape2D/Sprite2D/Button" to="stiring" method="_on_button_button_down"]
+[connection signal="button_up" from="stiring/CollisionShape2D/Sprite2D/Button" to="stiring" method="_on_button_button_up"]
+[connection signal="button_down" from="shaker/CollisionShape2D/Sprite2D/Button" to="shaker" method="_on_button_button_down"]
+[connection signal="button_up" from="shaker/CollisionShape2D/Sprite2D/Button" to="shaker" method="_on_button_button_up"]
+[connection signal="button_down" from="blender/CollisionShape2D/Sprite2D/Button" to="blender" method="_on_button_button_down"]
+[connection signal="button_up" from="blender/CollisionShape2D/Sprite2D/Button" to="blender" method="_on_button_button_up"]
 [connection signal="button_down" from="water/CollisionShape2D/Sprite2D/Button" to="water" method="_on_button_button_down"]
 [connection signal="button_up" from="water/CollisionShape2D/Sprite2D/Button" to="water" method="_on_button_button_up"]
 [connection signal="button_down" from="fruit/CollisionShape2D/Sprite2D/Button" to="fruit" method="_on_button_button_down"]

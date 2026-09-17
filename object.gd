@@ -44,7 +44,10 @@ func _on_button_button_up() -> void:
 				added.sort()
 				thing.wants.sort()
 				if added==thing.wants:
-					get_tree().current_scene.points+=added.size()*50
+					var pointsToAdd=added.size()*50
+					if thing.wants.has("on the rocks"):
+						pointsToAdd+=150
+					get_tree().current_scene.points+=pointsToAdd
 				else:
 					get_tree().current_scene.lives=get_tree().current_scene.lives-1
 				thing.queue_free()
