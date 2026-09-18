@@ -54,4 +54,4 @@ func _process(delta: float) -> void:
 					newPerson.position.x=500*ran-700
 					newPerson.position.y=500
 					places[ran]=newPerson
-		timer=2000-random.randi()%1500
+		timer=3000-random.randi()%2000

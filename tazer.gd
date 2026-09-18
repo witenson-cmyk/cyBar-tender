@@ -30,8 +30,9 @@ func _on_button_button_up() -> void:
 			thing.tazed=true
 			var toRemove=[]
 			for other in thing.wants:
-				if random.randi()%100<=20:
-					toRemove.append(other)
+				if not thing.types.has(other):
+					if random.randi()%100<=25:
+						toRemove.append(other)
 			if !toRemove.is_empty():
 				for another in toRemove:
 					thing.wants.erase(another)
