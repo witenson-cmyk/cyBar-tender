@@ -11,6 +11,7 @@ func _ready():
 func _process(delta: float) -> void:
 	if dragging:
 		position = get_global_mouse_position()-off
+		z_index=2
 	else:
 		position=lerp(position,lastok,.2)
 
@@ -23,16 +24,21 @@ func _on_button_button_down() -> void:
 func _on_button_button_up() -> void:
 	dragging = false
 	var placed=get_overlapping_areas()
-	for thing in placed:
-		if thing.get_meta("patron")==true and thing.tazed==false:
-			if random.randi()%100<=10:
-				thing.queue_free()
-			thing.tazed=true
-			var toRemove=[]
-			for other in thing.wants:
-				if not thing.types.has(other):
-					if random.randi()%100<=25:
-						toRemove.append(other)
-			if !toRemove.is_empty():
-				for another in toRemove:
-					thing.wants.erase(another)
+	var good = false
+	while !good:
+		for thing in placed:
+			if thing.get_meta("patron")==true and thing.tazed==false:
+				if random.randi()%100<=10:
+					thing.queue_free()
+				var toRemove=[]
+				
+				for other in thing.wants:
+					if not thing.types.has(other):
+						if random.randi()%100<=25:
+							toRemove.append(other)
+				
+				if !toRemove.is_empty():
+					good=true
+					for another in toRemove:
+						thing.wants.erase(another)
+					thing.tazed=true

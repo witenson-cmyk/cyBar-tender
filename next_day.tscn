@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://cqsryxbyqx1ol"]
+
+[ext_resource type="Script" uid="uid://bn4xkp8srbk4o" path="res://next_day.gd" id="1_r4e5j"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3n2aa"]
+font_size = 150
+
+[node name="nextDay" type="Control" unique_id=1798611763]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r4e5j")
+
+[node name="Button" type="Button" parent="." unique_id=329144404]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.19600001
+anchor_top = 0.284
+anchor_right = 0.781
+anchor_bottom = 0.71900004
+offset_left = 0.6799927
+offset_top = 0.27999878
+offset_right = 0.47998047
+offset_bottom = 0.47998047
+
+[node name="Label" type="Label" parent="Button" unique_id=2138928844]
+layout_mode = 0
+offset_right = 1123.0
+offset_bottom = 463.0
+text = "Next Day"
+label_settings = SubResource("LabelSettings_3n2aa")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

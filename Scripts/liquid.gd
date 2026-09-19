@@ -12,6 +12,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if dragging:
 		position = get_global_mouse_position()-off
+		z_index=2
 	else:
 		position=lerp(position,startingPos,.2)
 

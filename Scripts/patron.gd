@@ -3,7 +3,7 @@ var wants=[]
 var possible=["vodka","water","fruit","sprite","soda water","whisky","on the rocks"]
 var types=["stirred","shaken","blended"]
 var random=RandomNumberGenerator.new()
-@export var timerMax = 6500
+@export var timerMax = 30
 var timer=timerMax
 var tazed=false
 var label
@@ -38,9 +38,9 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if timer>0 and talking:
-		timer-=.25
+		timer-=.25*delta
 	elif timer>0:
-		timer-=1
+		timer-=1*delta
 	else:
 		get_tree().current_scene.lives=get_tree().current_scene.lives-1
 		queue_free()

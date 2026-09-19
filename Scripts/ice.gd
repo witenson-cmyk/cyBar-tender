@@ -14,6 +14,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if dragging:
 		position = get_global_mouse_position()-off
+		z_index=2
 	else:
 		position=lerp(position,startingPos,.2)
 
@@ -38,5 +39,6 @@ func _on_button_button_up() -> void:
 			elif thing.get_meta("blender")==true:
 				if thing.iceAdd==false:
 					thing.iceAdd=true
-					thing.timer=1000
+					thing.timer=1000 
+				lastPlace.set_meta("icePlace",true)
 				queue_free()

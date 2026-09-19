@@ -11,9 +11,9 @@ config_version=5
 [application]
 
 config/name="cyBar:tender"
-run/main_scene="uid://da20ueryll755"
+run/main_scene="uid://jkv67xmb0qb5"
 config/features=PackedStringArray("4.7", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Sprites/icon.svg"
 
 [display]
 

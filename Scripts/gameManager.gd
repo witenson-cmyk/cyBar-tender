@@ -8,14 +8,22 @@ var timer=0
 var instance
 var newPerson
 var random=RandomNumberGenerator.new()
+const SAVE_PATH:="res://Resources/savegame.tres"
+var save_game: player_data = null
+var day
+var gameTime = 0
+var gameTimer = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	camera=get_node("camera")
 	Input.set_mouse_mode(Input.MOUSE_MODE_CONFINED)
 	instance = preload("res://patron.tscn")
-
-
+	if ResourceLoader.exists(SAVE_PATH):
+		save_game = ResourceLoader.load(SAVE_PATH, "", ResourceLoader.CACHE_MODE_IGNORE)
+	else:
+		save_game = player_data.new()
+	day=save_game.days
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	
@@ -32,11 +40,6 @@ func _process(delta: float) -> void:
 		mov=clamp(mov,.1,25)
 		camera.position.x+=mov
 	camera.position.x=clamp(camera.position.x,0,2000)
-	
-	#ui
-	
-	var label = get_node("Control/CanvasLayer/ui")
-	label.text="Points: "+str(points)+" Lives: "+str(lives)
 	
 	#spawning patrons
 	
@@ -55,3 +58,21 @@ func _process(delta: float) -> void:
 					newPerson.position.y=500
 					places[ran]=newPerson
 		timer=3000-random.randi()%2000
+	
+	#game timer
+	
+	gameTimer+=5*delta
+	gameTime=int(gameTimer/30)*30
+	var gameHT: int = int((gameTime/60)+9)%13
+	var gameMT: int = int(gameTime)%60
+	var label = get_node("Control/CanvasLayer/ui")
+	var gameHL=str(gameHT)
+	var gameML=""
+	if gameMT<10:
+		gameML="0"+str(gameMT)
+	else:
+		gameML=str(gameMT)
+		
+	#Update UI
+	
+	label.text="Points: "+str(points)+" Lives: "+str(lives)+" "+gameHL+":"+gameML
