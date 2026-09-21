@@ -27,6 +27,9 @@ font_size = 33
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d21ai"]
 size = Vector2(88, 152)
 
+[sub_resource type="Theme" id="Theme_3n2aa"]
+default_font_size = 43
+
 [node name="Node2D" type="Node2D" unique_id=2027772063]
 script = ExtResource("1_0hol4")
 
@@ -440,6 +443,14 @@ offset_right = -64.03764
 offset_bottom = -63.997383
 metadata/_edit_use_anchors_ = true
 
+[node name="startDay" type="Button" parent="." unique_id=386922921]
+offset_left = 999.0
+offset_top = 302.0
+offset_right = 1309.0
+offset_bottom = 400.0
+theme = SubResource("Theme_3n2aa")
+text = "Start Day"
+
 [connection signal="button_down" from="vodka/CollisionShape2D/Sprite2D/Button" to="vodka" method="_on_button_button_down"]
 [connection signal="button_up" from="vodka/CollisionShape2D/Sprite2D/Button" to="vodka" method="_on_button_button_up"]
 [connection signal="button_down" from="stiring/CollisionShape2D/Sprite2D/Button" to="stiring" method="_on_button_button_down"]
@@ -460,3 +471,4 @@ metadata/_edit_use_anchors_ = true
 [connection signal="button_up" from="whisky/CollisionShape2D/Sprite2D/Button" to="whisky" method="_on_button_button_up"]
 [connection signal="button_down" from="tazer/CollisionShape2D/Sprite2D/Button" to="tazer" method="_on_button_button_down"]
 [connection signal="button_up" from="tazer/CollisionShape2D/Sprite2D/Button" to="tazer" method="_on_button_button_up"]
+[connection signal="button_down" from="startDay" to="." method="_on_button_button_down"]

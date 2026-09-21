@@ -1,7 +1,6 @@
-[gd_resource type="Resource" script_class="player_data" format=3 uid="uid://2mppj8ny4qh4"]
+[gd_resource type="Resource" script_class="player_data" format=3]
 
-[ext_resource type="Script" uid="uid://ctrmi7s1alhh3" path="res://Scripts/playerData.gd" id="1_0jntd"]
+[ext_resource type="Script" path="res://Scripts/playerData.gd" id="1_0jntd"]
 
 [resource]
 script = ExtResource("1_0jntd")
-points = 50

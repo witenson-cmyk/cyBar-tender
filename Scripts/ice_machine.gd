@@ -10,12 +10,12 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if get_meta("icePlace")==true and timer<=0:
 		var newIce=instance.instantiate()
-		newIce.lastok=get_node(".").global_position
-		newIce.lastPlace=get_node(".")
+		newIce.lastok=global_position
+		newIce.lastPlace=self
 		newIce.position=global_position
 		newIce.startingPos=global_position
 		get_tree().current_scene.add_child(newIce)
 		set_meta("icePlace",false)
-		timer=1200
-	elif timer<0:
-		timer-=1
+		timer=15
+	elif timer>0:
+		timer-=1*delta

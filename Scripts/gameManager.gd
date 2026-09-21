@@ -4,7 +4,7 @@ var mov
 var lives = 3
 var points = 0
 var places=[null,null,null,null,null,null]
-var timer=0
+var timer=3
 var instance
 var newPerson
 var random=RandomNumberGenerator.new()
@@ -13,6 +13,9 @@ var save_game: player_data = null
 var day
 var gameTime = 0
 var gameTimer = 0
+var dayStarted = false
+var infoToGet: data = data.new()
+var info
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -24,6 +27,10 @@ func _ready() -> void:
 	else:
 		save_game = player_data.new()
 	day=save_game.days
+	info=infoToGet.dayVariables[str(day)]
+	
+	if not info["possible"].has("on the rocks"):
+		get_node("iceMachine").queue_free()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	
@@ -43,9 +50,9 @@ func _process(delta: float) -> void:
 	
 	#spawning patrons
 	
-	if timer!=0:
+	if timer!=0 and dayStarted:
 		timer-=1
-	else:
+	elif dayStarted:
 		var didIt=false
 		if places.has(null):
 			while didIt==false:
@@ -73,6 +80,11 @@ func _process(delta: float) -> void:
 	else:
 		gameML=str(gameMT)
 		
-	#Update UI
+	#update UI
 	
 	label.text="Points: "+str(points)+" Lives: "+str(lives)+" "+gameHL+":"+gameML
+
+
+func _on_button_button_down() -> void:
+	dayStarted=true
+	get_node("startDay").queue_free()

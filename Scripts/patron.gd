@@ -1,19 +1,32 @@
 extends Area2D
-var wants=[]
-var possible=["vodka","water","fruit","sprite","soda water","whisky","on the rocks"]
+var infoToGet: data = data.new()
+var parent
+var info
+var wants
+var possible
 var types=["stirred","shaken","blended"]
 var random=RandomNumberGenerator.new()
-@export var timerMax = 30
-var timer=timerMax
+var timerMax
+var timer
 var tazed=false
 var label
 var failed=false
 var good = false
 var chance=80
 var talking=false
-	
+var special
+var styles
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	parent = get_parent()
+	info = infoToGet.dayVariables[str(parent.day)]
+	wants=[]
+	possible=info["possible"]
+	special=info["Special"]
+	styles=info["Styles"]
+	timerMax=info["timerMax"]
+	timer = timerMax
 	
 	#set up patron order
 	
