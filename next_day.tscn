@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cqsryxbyqx1ol"]
 
-[ext_resource type="Script" uid="uid://bn4xkp8srbk4o" path="res://next_day.gd" id="1_r4e5j"]
+[ext_resource type="Script" uid="uid://bn4xkp8srbk4o" path="res://Scripts/next_day.gd" id="1_r4e5j"]
 
 [sub_resource type="Theme" id="Theme_3n2aa"]
 default_font_size = 32

@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://c44nm3drf4ghu"]
+
+[ext_resource type="Script" uid="uid://2fdx5f8rqpn8" path="res://Scripts/game_over.gd" id="1_y26ei"]
+
+[sub_resource type="Theme" id="Theme_rp3bj"]
+default_font_size = 80
+
+[sub_resource type="Theme" id="Theme_3n2aa"]
+default_font_size = 100
+
+[node name="gameOver" type="Node2D" unique_id=532023458]
+script = ExtResource("1_y26ei")
+
+[node name="title" type="Button" parent="." unique_id=374839982]
+offset_left = 620.0
+offset_top = 656.0
+offset_right = 1408.0
+offset_bottom = 859.0
+theme = SubResource("Theme_rp3bj")
+text = "Title Screen"
+
+[node name="retry" type="Button" parent="." unique_id=635790396]
+offset_left = 460.0
+offset_top = 238.0
+offset_right = 1535.0
+offset_bottom = 466.0
+theme = SubResource("Theme_3n2aa")
+text = "Retry Day"
+
+[connection signal="button_down" from="title" to="." method="_on_title_button_down"]
+[connection signal="button_down" from="retry" to="." method="_on_retry_button_down"]

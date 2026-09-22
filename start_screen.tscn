@@ -2,11 +2,14 @@
 
 [ext_resource type="Script" uid="uid://dcp7y32n6cs4r" path="res://Scripts/start_screen.gd" id="1_ncxyx"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_3n2aa"]
-font_size = 62
-
 [sub_resource type="LabelSettings" id="LabelSettings_rp3bj"]
 font_size = 120
+
+[sub_resource type="Theme" id="Theme_3n2aa"]
+default_font_size = 75
+
+[sub_resource type="Theme" id="Theme_rp3bj"]
+default_font_size = 100
 
 [node name="startScreen" type="Control" unique_id=1401339525]
 layout_mode = 3
@@ -17,33 +20,12 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ncxyx")
 
-[node name="Button" type="Button" parent="." unique_id=497972381]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.32700002
-anchor_top = 0.656
-anchor_right = 0.68700004
-anchor_bottom = 0.80600005
-offset_left = -73.84003
-offset_top = -29.480042
-offset_right = -73.04004
-offset_bottom = -30.480042
-
-[node name="Label" type="Label" parent="Button" unique_id=1519347480]
-layout_mode = 0
-offset_right = 692.0
-offset_bottom = 159.0
-text = "Start"
-label_settings = SubResource("LabelSettings_3n2aa")
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="Label" type="Label" parent="." unique_id=1641191304]
 layout_mode = 0
 offset_left = 3.0
-offset_top = 114.0
+offset_top = 26.0
 offset_right = 1925.0
-offset_bottom = 682.0
+offset_bottom = 594.0
 text = "cyBar:tender"
 label_settings = SubResource("LabelSettings_rp3bj")
 horizontal_alignment = 1
@@ -52,4 +34,26 @@ vertical_alignment = 1
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2080385994]
 position = Vector2(960, 540)
 
-[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[node name="exit" type="Button" parent="." unique_id=416304638]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.12100001
+anchor_bottom = 0.042000003
+offset_left = 650.0
+offset_top = 825.0
+offset_right = 1032.6799
+offset_bottom = 929.64
+theme = SubResource("Theme_3n2aa")
+text = "Quit Game"
+
+[node name="start_game" type="Button" parent="." unique_id=1745208651]
+layout_mode = 0
+offset_left = 618.0
+offset_top = 561.0
+offset_right = 1303.0
+offset_bottom = 723.0
+theme = SubResource("Theme_rp3bj")
+text = "Start Game"
+
+[connection signal="button_down" from="exit" to="." method="_on_exit_button_down"]
+[connection signal="button_down" from="start_game" to="." method="_on_start_game_button_down"]

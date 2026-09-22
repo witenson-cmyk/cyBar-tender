@@ -7,6 +7,7 @@ var random=RandomNumberGenerator.new()
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	lastok=global_position
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if dragging:
@@ -25,9 +26,10 @@ func _on_button_button_up() -> void:
 	dragging = false
 	var placed=get_overlapping_areas()
 	var good = false
-	while !good:
-		for thing in placed:
-			if thing.get_meta("patron")==true and thing.tazed==false:
+	for thing in placed:
+		if thing.get_meta("patron")==true and thing.tazed==false:
+			while not good:
+				
 				if random.randi()%100<=10:
 					thing.queue_free()
 				var toRemove=[]

@@ -6,11 +6,11 @@ var words = {
 "admin NEW SYSTEM MESSAGE:
 admin GOOD MORNING LOCA 3, THE DATE IS 10/27/2096
 admin NO NEWS UPDATE
-admin YOU HAVE BEEN ASSIGNED A NEW POSITION
-admin 	POSITION: Bartender
+admin YOU HAVE BEEN ASSIGNED A NEW TEMPORARY POSITION
+admin 	POSITION: Remote Bartender
 admin 	LOCATION: 2704 Silkwood Street
 admin 	BUILDING NAME: cyBar 3
-admin 	SHIFT DATES AND TIME: Su M Tu W Th F Sa, 9PM - 1AM
+admin 	SHIFT DATES AND TIME: W Th F Sa Su, 9PM - 1AM
 admin 	MESSAGE FROM EMPLOYER: Hi! Welcome to the team! You'll be taking over the night shift from here on, it's a short shift but probably the busiest, so GL. There's a handbook waiting for you when you get there, don't take it though, we're a family here so sharing is caring.
 admin 	I won't be there to train you, so make sure you read it throughly. I'll update it each day if anything changes, so make sure to check it each day, gotcha?
 admin END MESSAGE",
@@ -60,7 +60,7 @@ other awwwww
 player On what earth do you think I would tell you that over a fucking UCC
 other actually wait i can just look that up gimme a sec
 player huh?
-other damn, loca 3, you must be pretty good off, marginally breathable air has to be expensive
+other damn, loca 3, you must be psomeoneretty good off, marginally breathable air has to be expensive
 player I'm not rich, I was just born here
 other damn you're like young young then
 player I'm like 25 stfucommunicatino
@@ -81,7 +81,7 @@ player how bad is it over there
 other hot as fuck, cooling towers broke like 2 months ago and they said there was no way to fix it, so yea I'm fucked
 player there's no way to fix it?
 other there probably is, but it's either to expensive or they couldn't be assed to do it. only people left here are androids anyways
-player if the cooling towers have been broken for two months, how much longer do you think you could last in there?
+player if the coolinsomeoneg towers have been broken for two months, how much longer do you think you could last in there?
 other idk, doesn't really matter, data transfers are going to be swiped in a few days anyways
 player I see
 other welp, i'm running out of data, so see you tomorrow, human person
@@ -91,4 +91,39 @@ admin YOU HAVE DISCONNECTED",
 		"",
 	"5":
 		""
+}
+
+var bookPages = {
+	"1":
+		"10/27
+		Yo! this is a message from your assistant manager from the morning shift.
+		your job should be fairly simple, look at the patrons orders and give it to them. Take a glass, put int the liquid, and hand it to them, easy.
+		See those bottles? hover your mouse over them and it should tell you what's in it.
+		If you mess up, just throw away the glass, don't worry the glasses are made from some polymer that we make in house, so it's \"Cost Effective\" or whatever.
+		As long as you get each patron their drinks in time, you'll be fine. The interface should tell you how long they'll be willing to wait before they, just, leave. If you need more time, click and hold on the patron and the interface will autimatically talk to them, giving you more time.
+		Don't worry if you make any mistakes, but if you give a patron the wrong order, or take too long and the patron leaves, you'll get a citation. 3 citations in the same day and you're fired.
+		You might also notice that tazer, and while you are at the comfort of your home, you might wonder \"why do I need a tazer for self defence?\", and to that I say, it's not for your safety, it's to make your job easier.
+		If someone's order is too difficult, feel free to give them a little shock, and their systems will forget a few pieces of their order. And don't worry, we only serve androids, so it's perfectly legal, given the whole they're not people and stuff. Sometimes they'll just forget that they ordered anything and just leave, which at the end just makes your job easier so go at it. You won't get a citation for that so don't worry.
+		Anyways, once you're ready, click that big \"Start Day\" button and people will start trickling in. Good luck on your first shift, hopefully I'll get to write to you again tomorrow",
+	"2":
+		"10/28
+		Hey! if you're reading this, you're back!
+		same thing as yesterday, but we have some new toys to mess with, so take note. See that ice machine we've got there? If a patron wants their drink \"On The Rocks\" make sure you add an ice sphere to their drink. The whole ice printer thing is tacky, but it brings in more customers.
+		It takes some time for another ice sphere to be printed, so sometimes you'll have to wait for a new ice to be printed. Just remember you can talk to patrons if you need more time, or make use of the humble tazer.
+		Other than that, same as always, so have fun.",
+	"3":
+		"10/29
+		2 days down, you're on a roll.
+		Same as always, but got a few more tools to work with. Mostly just the stirring spoon, shaker, and blender. Patrons will now ask for their drink to be Stirred, Shaken, or Blended, so use those as needed.
+		Each style is easy, but for the blender, all you need to do is add an ice sphere to the blender and then add the blended ice to the drink and it will be considered blended.
+		Anyways, good luck once again, and don't forget to use each tool at your disposal.",
+	"4":
+		"10/30
+		Welp, that makes it a hat trick, that's what they call it, right?
+		Everytings basically the same, except now, sometimes people will come in and ask for a name of a drink, instead of specific ingredients. To help with this, a list of drink names and ingredients are included on the next few pages.
+		Other than that, everythings is the same, so go get 'em.",
+	"5":
+		"10/31
+		Congrats on making it to your last day! If it were up to me, from your data, it wouldn't be, but upper management is finally ready to put in the new automated bartender, so hate to see you go.
+		nothing new this time, so good luck I guess."
 }

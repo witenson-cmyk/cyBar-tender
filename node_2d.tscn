@@ -5,8 +5,11 @@
 [ext_resource type="Script" uid="uid://bqb10su8238hf" path="res://Scripts/liquid.gd" id="3_epypp"]
 [ext_resource type="Script" uid="uid://ndm6eoaxythj" path="res://Scripts/blender.gd" id="4_d21ai"]
 [ext_resource type="Script" uid="uid://k16j3hygwajp" path="res://Scripts/ice_machine.gd" id="5_d21ai"]
+[ext_resource type="Script" uid="uid://coqwnstoj346c" path="res://addons/tooltips_pro/scripts/tooltip_trigger.gd" id="5_hqns4"]
 [ext_resource type="Script" uid="uid://dykgcvsu6yety" path="res://Scripts/tazer.gd" id="5_kdubu"]
 [ext_resource type="Script" uid="uid://byimbx3sgyx57" path="res://Scripts/drawer.gd" id="5_q6r6c"]
+[ext_resource type="Script" uid="uid://xl1dyi3yxv47" path="res://bookControl.gd" id="7_4d7sh"]
+[ext_resource type="Texture2D" uid="uid://bf0mpfwrhykrt" path="res://Sprites/whiteBox.png" id="8_rj586"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rp3bj"]
 size = Vector2(189, 202.75)
@@ -21,8 +24,14 @@ size = Vector2(106, 108)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l6vob"]
 size = Vector2(160, 233)
 
-[sub_resource type="LabelSettings" id="LabelSettings_0hol4"]
-font_size = 33
+[sub_resource type="Theme" id="Theme_rj586"]
+default_font_size = 30
+
+[sub_resource type="Theme" id="Theme_4d7sh"]
+default_font_size = 100
+
+[sub_resource type="Theme" id="Theme_ir8iy"]
+default_font_size = 100
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d21ai"]
 size = Vector2(88, 152)
@@ -108,6 +117,11 @@ offset_right = -64.03154
 offset_bottom = -63.963196
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("5_hqns4")
+tooltip_alignment = 2
+origin = 3
+offset = Vector2(25, 25)
+tooltip_strings = Array[String](["Vodka"])
 metadata/_edit_use_anchors_ = true
 
 [node name="stiring" type="Area2D" parent="." unique_id=2082373023]
@@ -138,6 +152,7 @@ offset_right = -64.03154
 offset_bottom = -63.963196
 grow_horizontal = 2
 grow_vertical = 2
+tooltip_text = "Stirring Spoon"
 metadata/_edit_use_anchors_ = true
 
 [node name="shaker" type="Area2D" parent="." unique_id=1410473764]
@@ -168,6 +183,7 @@ offset_right = -64.03154
 offset_bottom = -63.963196
 grow_horizontal = 2
 grow_vertical = 2
+tooltip_text = "Shaker"
 metadata/_edit_use_anchors_ = true
 
 [node name="blender" type="Area2D" parent="." unique_id=1952463535]
@@ -198,6 +214,7 @@ offset_right = -64.03154
 offset_bottom = -63.963196
 grow_horizontal = 2
 grow_vertical = 2
+tooltip_text = "Blender"
 metadata/_edit_use_anchors_ = true
 
 [node name="water" type="Area2D" parent="." unique_id=524280698]
@@ -218,16 +235,22 @@ texture = ExtResource("1_wtcfe")
 [node name="Button" type="Button" parent="water/CollisionShape2D/Sprite2D" unique_id=50988461]
 self_modulate = Color(1, 1, 1, 0)
 anchors_preset = -1
-anchor_left = -0.202
-anchor_top = -0.155
-anchor_right = 1.202
-anchor_bottom = 1.1400001
-offset_left = -63.968582
-offset_top = -63.958553
-offset_right = -64.03154
-offset_bottom = -63.963196
+anchor_left = -0.18445814
+anchor_top = -0.09025219
+anchor_right = 1.2019981
+anchor_bottom = 1.0752513
+offset_left = -63.968338
+offset_top = -63.958523
+offset_right = -64.031296
+offset_bottom = -63.963165
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("5_hqns4")
+trigger_mode = 1
+tooltip_alignment = 2
+origin = 3
+offset = Vector2(25, 25)
+tooltip_strings = Array[String](["Water"])
 metadata/_edit_use_anchors_ = true
 
 [node name="fruit" type="Area2D" parent="." unique_id=1750166694]
@@ -246,18 +269,23 @@ scale = Vector2(0.4453125, 1.0859375)
 texture = ExtResource("1_wtcfe")
 
 [node name="Button" type="Button" parent="fruit/CollisionShape2D/Sprite2D" unique_id=248023572]
-self_modulate = Color(1, 1, 1, 0)
+self_modulate = Color(0.97, 0.97, 0.97, 0)
 anchors_preset = -1
-anchor_left = -0.202
+anchor_left = -0.20200002
 anchor_top = -0.155
-anchor_right = 1.202
-anchor_bottom = 1.1400001
+anchor_right = 1.2190001
+anchor_bottom = 1.097
 offset_left = -63.968582
 offset_top = -63.958553
-offset_right = -64.03154
-offset_bottom = -63.963196
+offset_right = -63.961823
+offset_bottom = -63.98433
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("5_hqns4")
+tooltip_alignment = 2
+origin = 3
+offset = Vector2(25, 25)
+tooltip_strings = Array[String](["Fruit"])
 metadata/_edit_use_anchors_ = true
 
 [node name="sprite" type="Area2D" parent="." unique_id=1202219946]
@@ -288,6 +316,11 @@ offset_right = -64.03154
 offset_bottom = -63.963196
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("5_hqns4")
+tooltip_alignment = 5
+origin = 3
+offset = Vector2(25, 25)
+tooltip_strings = Array[String](["Citrus"])
 metadata/_edit_use_anchors_ = true
 
 [node name="soda water" type="Area2D" parent="." unique_id=339397104]
@@ -318,6 +351,11 @@ offset_right = -64.03154
 offset_bottom = -63.963196
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("5_hqns4")
+tooltip_alignment = 2
+origin = 3
+offset = Vector2(25, 25)
+tooltip_strings = Array[String](["Soda Water"])
 metadata/_edit_use_anchors_ = true
 
 [node name="whisky" type="Area2D" parent="." unique_id=2085533543]
@@ -348,6 +386,11 @@ offset_right = -64.03154
 offset_bottom = -63.963196
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("5_hqns4")
+tooltip_alignment = 2
+origin = 3
+offset = Vector2(25, 25)
+tooltip_strings = Array[String](["Whisky"])
 metadata/_edit_use_anchors_ = true
 
 [node name="camera" type="Camera2D" parent="." unique_id=734319948]
@@ -402,9 +445,24 @@ offset_left = 20.0
 offset_top = 13.0
 offset_right = 216.0
 offset_bottom = 77.0
+script = ExtResource("7_4d7sh")
 metadata/_edit_use_anchors_ = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Control" unique_id=1866058415]
+
+[node name="book" type="Sprite2D" parent="Control/CanvasLayer" unique_id=1280228879]
+z_index = 3
+position = Vector2(1016, 1621.75)
+scale = Vector2(40.328125, 24.484375)
+texture = ExtResource("8_rj586")
+
+[node name="openBook" type="Button" parent="Control/CanvasLayer" unique_id=454998662]
+offset_left = 792.0
+offset_top = 991.0
+offset_right = 1173.0
+offset_bottom = 1049.0
+theme = SubResource("Theme_rj586")
+text = "↑"
 
 [node name="ui" type="Label" parent="Control/CanvasLayer" unique_id=1278619011]
 offset_left = 20.0
@@ -413,13 +471,23 @@ offset_right = 60.0
 offset_bottom = 36.0
 metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="." unique_id=356046835]
-offset_left = 95.0
-offset_top = 1030.0
-offset_right = 1020.0
-offset_bottom = 1139.0
-text = "Vodka,  S. Water, Whisky,    Water,    Fruit,     Sprite"
-label_settings = SubResource("LabelSettings_0hol4")
+[node name="left" type="Button" parent="Control/CanvasLayer" unique_id=1010949049]
+z_index = 4
+offset_left = 246.0
+offset_top = 1410.75
+offset_right = 326.0
+offset_bottom = 1765.75
+theme = SubResource("Theme_4d7sh")
+text = "<"
+
+[node name="right" type="Button" parent="Control/CanvasLayer" unique_id=432057960]
+z_index = 4
+offset_left = 1701.0
+offset_top = 1417.75
+offset_right = 1781.0
+offset_bottom = 1772.75
+theme = SubResource("Theme_ir8iy")
+text = ">"
 
 [node name="tazer" type="Area2D" parent="." unique_id=1300496687]
 position = Vector2(1427, 931)
@@ -469,6 +537,7 @@ text = "Start Day"
 [connection signal="button_up" from="soda water/CollisionShape2D/Sprite2D/Button" to="soda water" method="_on_button_button_up"]
 [connection signal="button_down" from="whisky/CollisionShape2D/Sprite2D/Button" to="whisky" method="_on_button_button_down"]
 [connection signal="button_up" from="whisky/CollisionShape2D/Sprite2D/Button" to="whisky" method="_on_button_button_up"]
+[connection signal="button_down" from="Control/CanvasLayer/openBook" to="Control" method="_on_open_book_button_down"]
 [connection signal="button_down" from="tazer/CollisionShape2D/Sprite2D/Button" to="tazer" method="_on_button_button_down"]
 [connection signal="button_up" from="tazer/CollisionShape2D/Sprite2D/Button" to="tazer" method="_on_button_button_up"]
 [connection signal="button_down" from="startDay" to="." method="_on_button_button_down"]

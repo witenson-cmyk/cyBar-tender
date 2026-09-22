@@ -16,7 +16,6 @@ var visChars = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	save_game = ResourceLoader.load(SAVE_PATH, "", ResourceLoader.CACHE_MODE_IGNORE)
-	save_game.write_savegame()
 	speak=text.words.get(str(save_game.days))
 	speaks=speak.split("\n")
 	for other in speaks:
@@ -56,7 +55,6 @@ func _input(event):
 		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	
 	cameraBMAX = point.get_content_height()-950
 	if cameraBMAX<0:
 		cameraBMAX=0

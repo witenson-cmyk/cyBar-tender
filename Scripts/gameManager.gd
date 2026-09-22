@@ -31,11 +31,15 @@ func _ready() -> void:
 	
 	if not info["possible"].has("on the rocks"):
 		get_node("iceMachine").queue_free()
+	
+	if not info["Styles"]:
+		get_node("stiring").queue_free()
+		get_node("shaker").queue_free()
+		get_node("blender").queue_free()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	
 	#camera movement
-
 	var mousePos=get_viewport().get_mouse_position().x
 	mousePos=clamp(mousePos,0,1920)
 	if mousePos<250:
@@ -49,9 +53,8 @@ func _process(delta: float) -> void:
 	camera.position.x=clamp(camera.position.x,0,2000)
 	
 	#spawning patrons
-	
-	if timer!=0 and dayStarted:
-		timer-=1
+	if timer>0 and dayStarted:
+		timer-=1*delta
 	elif dayStarted:
 		var didIt=false
 		if places.has(null):
@@ -64,11 +67,11 @@ func _process(delta: float) -> void:
 					newPerson.position.x=500*ran-700
 					newPerson.position.y=500
 					places[ran]=newPerson
-		timer=3000-random.randi()%2000
+		timer=30-random.randi()%15
 	
 	#game timer
-	
-	gameTimer+=5*delta
+	if dayStarted:
+		gameTimer+=3*delta
 	gameTime=int(gameTimer/30)*30
 	var gameHT: int = int((gameTime/60)+9)%13
 	var gameMT: int = int(gameTime)%60
@@ -79,11 +82,15 @@ func _process(delta: float) -> void:
 		gameML="0"+str(gameMT)
 	else:
 		gameML=str(gameMT)
+	
+	#end the day
+	if gameHT==3:
+		save_game.days+=1
+		save_game.write_savegame()
+		get_tree().change_scene_to_file("res://next_day.tscn")
 		
 	#update UI
-	
 	label.text="Points: "+str(points)+" Lives: "+str(lives)+" "+gameHL+":"+gameML
-
 
 func _on_button_button_down() -> void:
 	dayStarted=true

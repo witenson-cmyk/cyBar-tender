@@ -7,7 +7,7 @@ class_name data
 		"timerMax":
 			100,
 		"possible":
-			["vodka","water","fruit","sprite","soda water","whisky"],
+			["vodka","water","grenadine","citrus","soda water","whisky","orange","tequilla"],
 		"Special":
 			false,
 		"Styles":
@@ -18,7 +18,7 @@ class_name data
 		"timerMax":
 			85,
 		"possible":
-			["vodka","water","fruit","sprite","soda water","whisky","on the rocks"],
+			["vodka","water","grenadine","citrus","soda water","whisky","on the rocks","orange","tequilla"],
 		"Special":
 			false,
 		"Styles":
@@ -29,7 +29,7 @@ class_name data
 		"timerMax":
 			65,
 		"possible":
-			["vodka","water","fruit","sprite","soda water","whisky","on the rocks"],
+			["vodka","water","grenadine","citrus","soda water","whisky","on the rocks","orange","tequilla"],
 		"Special":
 			false,
 		"Styles":
@@ -40,7 +40,7 @@ class_name data
 		"timerMax":
 			55,
 		"possible":
-			["vodka","water","fruit","sprite","soda water","whisky","on the rocks"],
+			["vodka","water","grenadine","citrus","soda water","whisky","on the rocks","orange","tequilla"],
 		"Special":
 			true,
 		"Styles":
@@ -51,11 +51,25 @@ class_name data
 		"timerMax":
 			45,
 		"possible":
-			["vodka","water","fruit","sprite","soda water","whisky","on the rocks"],
+			["vodka","water","grenadine","citrus","soda water","whisky","on the rocks","orange","tequilla"],
 		"Special":
 			true,
 		"Styles":
 			true
 	}
-		
+}
+
+@export var Specials = {
+	"Blue Moons":
+		["vodka","grenadine","on the rocks"],
+	"50/50/50":
+		["whisky","soda water","vodka"],
+	"De-Rusted Nail":
+		["vodka","on the rocks"],
+	"Surely Tower":
+		["citrus","whisky","on the rocks"],
+	"Giblet":
+		["grenadine","vodka"],
+	"Tequilla, No Sun":
+		["tequilla","grenadine","orange"]
 }
