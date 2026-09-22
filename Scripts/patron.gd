@@ -16,6 +16,8 @@ var chance=80
 var talking=false
 var special
 var styles
+var doSpecial=false
+var specialName = ""
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -27,10 +29,17 @@ func _ready() -> void:
 	styles=info["Styles"]
 	timerMax=info["timerMax"]
 	timer = timerMax
+	label=get_node("patron label")
 	
 	#set up patron order
+	if special and random.randi()%101<=25:
+		var keys = infoToGet.Specials.keys()
+		doSpecial=true
+		specialName = keys[random.randi()%keys.size()]
+		for thing in infoToGet.Specials[specialName]:
+			wants.append(thing)
 	
-	while good==false:
+	while good==false and doSpecial == false:
 		if wants.size()<=2 or random.randi()%101<=chance or failed:
 			var next=random.randi()%possible.size()
 			if wants.size()==possible.size():
@@ -43,10 +52,8 @@ func _ready() -> void:
 				failed=true
 		else:
 			good=true
-			
-	wants.append(types[random.randi()%types.size()])
-	
-	label=get_node("patron label")
+	if styles:
+		wants.append(types[random.randi()%types.size()])
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -61,8 +68,11 @@ func _process(delta: float) -> void:
 	get_node("TextureProgressBar").value = timer*100/timerMax
 	
 	var text = ""
-	for another in wants:
-		text+=another+"\n"
+	if doSpecial:
+		text = specialName
+	else:
+		for another in wants:
+			text+=another+"\n"
 	label.text=text
 	
 func _on_button_button_down() -> void:

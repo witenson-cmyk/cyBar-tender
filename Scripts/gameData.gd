@@ -61,15 +61,17 @@ class_name data
 
 @export var Specials = {
 	"Blue Moons":
-		["vodka","grenadine","on the rocks"],
+		["vodka","grenadine","on the rocks","stirred"],
 	"50/50/50":
-		["whisky","soda water","vodka"],
+		["whisky","soda water","vodka","stirred"],
 	"De-Rusted Nail":
-		["vodka","on the rocks"],
+		["vodka","on the rocks","shaken"],
 	"Surely Tower":
 		["citrus","whisky","on the rocks"],
 	"Giblet":
-		["grenadine","vodka"],
+		["grenadine","vodka","stirred"],
 	"Tequilla, No Sun":
-		["tequilla","grenadine","orange"]
+		["tequilla","grenadine","orange","shaken"],
+	"Strawberry Daiquiri":
+		["grenadine","vodka","blended"]
 }

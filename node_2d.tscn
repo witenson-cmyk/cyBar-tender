@@ -33,6 +33,9 @@ default_font_size = 100
 [sub_resource type="Theme" id="Theme_ir8iy"]
 default_font_size = 100
 
+[sub_resource type="Theme" id="Theme_rp3bj"]
+default_font_size = 30
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d21ai"]
 size = Vector2(88, 152)
 
@@ -489,6 +492,16 @@ offset_bottom = 1772.75
 theme = SubResource("Theme_ir8iy")
 text = ">"
 
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/CanvasLayer/right" unique_id=1919671256]
+layout_mode = 0
+offset_left = -1296.0
+offset_top = -220.75
+offset_right = -83.0
+offset_bottom = 506.25
+theme = SubResource("Theme_rp3bj")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "YOU SHOULDN'T BE SEEING THIS"
+
 [node name="tazer" type="Area2D" parent="." unique_id=1300496687]
 position = Vector2(1427, 931)
 script = ExtResource("5_kdubu")
@@ -538,6 +551,8 @@ text = "Start Day"
 [connection signal="button_down" from="whisky/CollisionShape2D/Sprite2D/Button" to="whisky" method="_on_button_button_down"]
 [connection signal="button_up" from="whisky/CollisionShape2D/Sprite2D/Button" to="whisky" method="_on_button_button_up"]
 [connection signal="button_down" from="Control/CanvasLayer/openBook" to="Control" method="_on_open_book_button_down"]
+[connection signal="button_down" from="Control/CanvasLayer/left" to="Control" method="_on_left_button_down"]
+[connection signal="button_down" from="Control/CanvasLayer/right" to="Control" method="_on_right_button_down"]
 [connection signal="button_down" from="tazer/CollisionShape2D/Sprite2D/Button" to="tazer" method="_on_button_button_down"]
 [connection signal="button_up" from="tazer/CollisionShape2D/Sprite2D/Button" to="tazer" method="_on_button_button_up"]
 [connection signal="button_down" from="startDay" to="." method="_on_button_button_down"]

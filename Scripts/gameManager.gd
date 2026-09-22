@@ -52,7 +52,7 @@ func _process(delta: float) -> void:
 		camera.position.x+=mov
 	camera.position.x=clamp(camera.position.x,0,2000)
 	
-	#spawning patrons
+	#spawning patrons15
 	if timer>0 and dayStarted:
 		timer-=1*delta
 	elif dayStarted:
