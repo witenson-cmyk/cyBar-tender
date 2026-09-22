@@ -97,13 +97,9 @@ var bookPages = {
 	"1":
 		"10/27
 		Yo! this is a message from your assistant manager from the morning shift.
-		your job should be fairly simple, look at the patrons orders and give it to them. Take a glass, put int the liquid, and hand it to them, easy.
-		See those bottles? hover your mouse over them and it should tell you what's in it.
-		If you mess up, just throw away the glass, don't worry the glasses are made from some polymer that we make in house, so it's \"Cost Effective\" or whatever.
-		As long as you get each patron their drinks in time, you'll be fine. The interface should tell you how long they'll be willing to wait before they, just, leave. If you need more time, click and hold on the patron and the interface will autimatically talk to them, giving you more time.
-		Don't worry if you make any mistakes, but if you give a patron the wrong order, or take too long and the patron leaves, you'll get a citation. 3 citations in the same day and you're fired.
-		You might also notice that tazer, and while you are at the comfort of your home, you might wonder \"why do I need a tazer for self defence?\", and to that I say, it's not for your safety, it's to make your job easier.
-		If someone's order is too difficult, feel free to give them a little shock, and their systems will forget a few pieces of their order. And don't worry, we only serve androids, so it's perfectly legal, given the whole they're not people and stuff. Sometimes they'll just forget that they ordered anything and just leave, which at the end just makes your job easier so go at it. You won't get a citation for that so don't worry.
+		your job should be fairly simple, look at the patrons orders and give it to them. Take a glass, put int the liquid, and hand it to them, easy. See those bottles? hover your mouse over them and it should tell you what's in it. If you mess up, just throw away the glass, don't worry the glasses are made from some polymer that we make in house, so it's \"Cost Effective\" or whatever.
+		Just make sure you get each patrons drinks finished before they get fed up and leave, click and hold on the patron and the interface will automatically talk to them giving you more time. If you give a patron the wrong order, or take too long and the patron leaves, you'll get a citation. 3 citations in the same day and you're fired, but your citations will reset at the beginning of each shift, so don't worry too much about making too many mistakes.
+		You might also notice that tazer, and while you are at the comfort of your home, you might wonder \"why do I need a tazer for self defence?\", and to that I say, it's not for your safety, it's to make your job easier. If someone's order is too difficult, feel free to give them a little shock, and their systems will forget a few pieces of their order. And don't worry, we only serve androids, so it's perfectly legal, given the whole they're not people and stuff. Sometimes they'll just forget that they ordered anything and just leave, which at the end just makes your job easier so go at it. You won't get a citation for that so don't worry.
 		Anyways, once you're ready, click that big \"Start Day\" button and people will start trickling in. Good luck on your first shift, hopefully I'll get to write to you again tomorrow",
 	"2":
 		"10/28

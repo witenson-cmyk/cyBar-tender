@@ -6,6 +6,7 @@ var off=Vector2(0,0)
 var timer=0
 var blended=false
 var iceAdd=false
+@onready var button = get_node("CollisionShape2D/Sprite2D/Button")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -23,6 +24,13 @@ func _process(delta: float) -> void:
 	elif iceAdd:
 		blended=true
 		iceAdd=false
+	
+	if blended:
+		button.tooltip_strings[0] = "Blender (Blended)"
+	elif iceAdd and timer > 0:
+		button.tooltip_strings[0] = "Blender (Blending)"
+	else:
+		button.tooltip_strings[0] = "Blender (Needs Ice)"
 
 func _on_button_button_down() -> void:
 	if timer<=0 and blended:

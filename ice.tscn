@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c4e3cn6wnrk7p" path="res://Scripts/ice.gd" id="1_lryxu"]
 [ext_resource type="Texture2D" uid="uid://dny8qq63v8p6l" path="res://Sprites/icon.svg" id="2_3inoc"]
+[ext_resource type="Script" uid="uid://coqwnstoj346c" path="res://addons/tooltips_pro/scripts/tooltip_trigger.gd" id="3_3inoc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wc2py"]
 size = Vector2(84, 89)
@@ -32,6 +33,11 @@ offset_right = -64.03154
 offset_bottom = -63.963196
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("3_3inoc")
+tooltip_alignment = 2
+origin = 3
+offset = Vector2(25, 25)
+tooltip_strings = Array[String](["Ice Sphere"])
 metadata/_edit_use_anchors_ = true
 
 [connection signal="button_down" from="CollisionShape2D/Sprite2D/Button" to="." method="_on_button_button_down"]

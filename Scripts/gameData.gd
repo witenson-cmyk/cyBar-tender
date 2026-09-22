@@ -68,9 +68,7 @@ class_name data
 		["vodka","on the rocks","shaken"],
 	"Surely Tower":
 		["citrus","whisky","on the rocks"],
-	"Giblet":
-		["grenadine","vodka","stirred"],
-	"Tequilla, No Sun":
+	"Tequilla, No Sunrise":
 		["tequilla","grenadine","orange","shaken"],
 	"Strawberry Daiquiri":
 		["grenadine","vodka","blended"]

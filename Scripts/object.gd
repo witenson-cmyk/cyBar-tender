@@ -7,6 +7,7 @@ var added=[]
 var lastPlace
 var wanted
 var got
+@onready var button = get_node("CollisionShape2D/Sprite2D/Button")
 
 # Called when the node enters the scene tree for the first time.simple and clean birth by sleep
 func _ready() -> void:
@@ -20,6 +21,10 @@ func _process(delta: float) -> void:
 		z_index=2
 	else:
 		position=lerp(position,lastok,.2)
+	
+	var toolText = "Liquor Glass " 
+	toolText+=str(added)
+	button.tooltip_strings[0]=toolText
 
 
 func _on_button_button_down() -> void:

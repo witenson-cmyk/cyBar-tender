@@ -129,7 +129,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="stiring" type="Area2D" parent="." unique_id=2082373023]
 z_index = 1
-position = Vector2(2109, 956)
+position = Vector2(1540, 899)
 script = ExtResource("3_epypp")
 toAdd = "stirred"
 
@@ -155,12 +155,16 @@ offset_right = -64.03154
 offset_bottom = -63.963196
 grow_horizontal = 2
 grow_vertical = 2
-tooltip_text = "Stirring Spoon"
+script = ExtResource("5_hqns4")
+tooltip_alignment = 2
+origin = 3
+offset = Vector2(25, 25)
+tooltip_strings = Array[String](["Stirring Spoon"])
 metadata/_edit_use_anchors_ = true
 
 [node name="shaker" type="Area2D" parent="." unique_id=1410473764]
 z_index = 1
-position = Vector2(1989, 936)
+position = Vector2(1420, 879)
 script = ExtResource("3_epypp")
 toAdd = "shaken"
 
@@ -186,12 +190,16 @@ offset_right = -64.03154
 offset_bottom = -63.963196
 grow_horizontal = 2
 grow_vertical = 2
-tooltip_text = "Shaker"
+script = ExtResource("5_hqns4")
+tooltip_alignment = 2
+origin = 3
+offset = Vector2(25, 25)
+tooltip_strings = Array[String](["Shaker"])
 metadata/_edit_use_anchors_ = true
 
 [node name="blender" type="Area2D" parent="." unique_id=1952463535]
 z_index = 1
-position = Vector2(2258, 900)
+position = Vector2(1666, 840)
 script = ExtResource("4_d21ai")
 metadata/blender = true
 
@@ -217,7 +225,11 @@ offset_right = -64.03154
 offset_bottom = -63.963196
 grow_horizontal = 2
 grow_vertical = 2
-tooltip_text = "Blender"
+script = ExtResource("5_hqns4")
+tooltip_alignment = 2
+origin = 3
+offset = Vector2(25, 25)
+tooltip_strings = Array[String](["Blender (needs ice)"])
 metadata/_edit_use_anchors_ = true
 
 [node name="water" type="Area2D" parent="." unique_id=524280698]
@@ -256,22 +268,22 @@ offset = Vector2(25, 25)
 tooltip_strings = Array[String](["Water"])
 metadata/_edit_use_anchors_ = true
 
-[node name="fruit" type="Area2D" parent="." unique_id=1750166694]
+[node name="grenadine" type="Area2D" parent="." unique_id=1750166694]
 z_index = 1
 position = Vector2(707, 955)
 script = ExtResource("3_epypp")
-toAdd = "fruit"
+toAdd = "grenadine"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="fruit" unique_id=1011110626]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="grenadine" unique_id=1011110626]
 z_index = 1
 shape = SubResource("CapsuleShape2D_3n2aa")
 
-[node name="Sprite2D" type="Sprite2D" parent="fruit/CollisionShape2D" unique_id=1427432880]
+[node name="Sprite2D" type="Sprite2D" parent="grenadine/CollisionShape2D" unique_id=1427432880]
 z_index = 1
 scale = Vector2(0.4453125, 1.0859375)
 texture = ExtResource("1_wtcfe")
 
-[node name="Button" type="Button" parent="fruit/CollisionShape2D/Sprite2D" unique_id=248023572]
+[node name="Button" type="Button" parent="grenadine/CollisionShape2D/Sprite2D" unique_id=248023572]
 self_modulate = Color(0.97, 0.97, 0.97, 0)
 anchors_preset = -1
 anchor_left = -0.20200002
@@ -291,22 +303,22 @@ offset = Vector2(25, 25)
 tooltip_strings = Array[String](["Fruit"])
 metadata/_edit_use_anchors_ = true
 
-[node name="sprite" type="Area2D" parent="." unique_id=1202219946]
+[node name="citrus" type="Area2D" parent="." unique_id=1202219946]
 z_index = 1
 position = Vector2(845, 956)
 script = ExtResource("3_epypp")
-toAdd = "sprite"
+toAdd = "citrus"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="sprite" unique_id=1071311996]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="citrus" unique_id=1071311996]
 z_index = 1
 shape = SubResource("CapsuleShape2D_3n2aa")
 
-[node name="Sprite2D" type="Sprite2D" parent="sprite/CollisionShape2D" unique_id=909317383]
+[node name="Sprite2D" type="Sprite2D" parent="citrus/CollisionShape2D" unique_id=909317383]
 z_index = 1
 scale = Vector2(0.4453125, 1.0859375)
 texture = ExtResource("1_wtcfe")
 
-[node name="Button" type="Button" parent="sprite/CollisionShape2D/Sprite2D" unique_id=517112086]
+[node name="Button" type="Button" parent="citrus/CollisionShape2D/Sprite2D" unique_id=517112086]
 self_modulate = Color(1, 1, 1, 0)
 anchors_preset = -1
 anchor_left = -0.202
@@ -405,7 +417,7 @@ limit_right = 2000
 limit_bottom = 10000532
 
 [node name="drawer" type="Area2D" parent="." unique_id=1624584086]
-position = Vector2(1176, 792)
+position = Vector2(1068, 808)
 script = ExtResource("5_q6r6c")
 metadata/place = true
 
@@ -418,7 +430,7 @@ scale = Vector2(1, 0.2734375)
 texture = ExtResource("1_wtcfe")
 
 [node name="iceMachine" type="Area2D" parent="." unique_id=1024892369]
-position = Vector2(1836, 841)
+position = Vector2(-76, 796)
 script = ExtResource("5_d21ai")
 metadata/icePlace = true
 
@@ -454,7 +466,7 @@ metadata/_edit_use_anchors_ = true
 [node name="CanvasLayer" type="CanvasLayer" parent="Control" unique_id=1866058415]
 
 [node name="book" type="Sprite2D" parent="Control/CanvasLayer" unique_id=1280228879]
-z_index = 3
+z_index = 10
 position = Vector2(1016, 1621.75)
 scale = Vector2(40.328125, 24.484375)
 texture = ExtResource("8_rj586")
@@ -493,6 +505,7 @@ theme = SubResource("Theme_ir8iy")
 text = ">"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control/CanvasLayer/right" unique_id=1919671256]
+z_index = 11
 layout_mode = 0
 offset_left = -1296.0
 offset_top = -220.75
@@ -503,7 +516,7 @@ theme_override_colors/default_color = Color(0, 0, 0, 1)
 text = "YOU SHOULDN'T BE SEEING THIS"
 
 [node name="tazer" type="Area2D" parent="." unique_id=1300496687]
-position = Vector2(1427, 931)
+position = Vector2(1248, 766)
 script = ExtResource("5_kdubu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tazer" unique_id=1587944148]
@@ -522,6 +535,11 @@ offset_left = -70.776474
 offset_top = -66.17687
 offset_right = -64.03764
 offset_bottom = -63.997383
+script = ExtResource("5_hqns4")
+tooltip_alignment = 2
+origin = 3
+offset = Vector2(25, 25)
+tooltip_strings = Array[String](["Tazer"])
 metadata/_edit_use_anchors_ = true
 
 [node name="startDay" type="Button" parent="." unique_id=386922921]
@@ -542,10 +560,10 @@ text = "Start Day"
 [connection signal="button_up" from="blender/CollisionShape2D/Sprite2D/Button" to="blender" method="_on_button_button_up"]
 [connection signal="button_down" from="water/CollisionShape2D/Sprite2D/Button" to="water" method="_on_button_button_down"]
 [connection signal="button_up" from="water/CollisionShape2D/Sprite2D/Button" to="water" method="_on_button_button_up"]
-[connection signal="button_down" from="fruit/CollisionShape2D/Sprite2D/Button" to="fruit" method="_on_button_button_down"]
-[connection signal="button_up" from="fruit/CollisionShape2D/Sprite2D/Button" to="fruit" method="_on_button_button_up"]
-[connection signal="button_down" from="sprite/CollisionShape2D/Sprite2D/Button" to="sprite" method="_on_button_button_down"]
-[connection signal="button_up" from="sprite/CollisionShape2D/Sprite2D/Button" to="sprite" method="_on_button_button_up"]
+[connection signal="button_down" from="grenadine/CollisionShape2D/Sprite2D/Button" to="grenadine" method="_on_button_button_down"]
+[connection signal="button_up" from="grenadine/CollisionShape2D/Sprite2D/Button" to="grenadine" method="_on_button_button_up"]
+[connection signal="button_down" from="citrus/CollisionShape2D/Sprite2D/Button" to="citrus" method="_on_button_button_down"]
+[connection signal="button_up" from="citrus/CollisionShape2D/Sprite2D/Button" to="citrus" method="_on_button_button_up"]
 [connection signal="button_down" from="soda water/CollisionShape2D/Sprite2D/Button" to="soda water" method="_on_button_button_down"]
 [connection signal="button_up" from="soda water/CollisionShape2D/Sprite2D/Button" to="soda water" method="_on_button_button_up"]
 [connection signal="button_down" from="whisky/CollisionShape2D/Sprite2D/Button" to="whisky" method="_on_button_button_down"]
