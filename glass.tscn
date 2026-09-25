@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dihuyjkk3c7xl"]
 
 [ext_resource type="Script" uid="uid://niupk8jqks5a" path="res://Scripts/object.gd" id="1_ykn3o"]
-[ext_resource type="Texture2D" uid="uid://dny8qq63v8p6l" path="res://Sprites/icon.svg" id="2_b8qbv"]
+[ext_resource type="Texture2D" uid="uid://b6tces3pituyi" path="res://Sprites/cupp.png" id="2_b8qbv"]
 [ext_resource type="Script" uid="uid://coqwnstoj346c" path="res://addons/tooltips_pro/scripts/tooltip_trigger.gd" id="3_b8qbv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3n2aa"]
@@ -18,19 +18,20 @@ shape = SubResource("RectangleShape2D_3n2aa")
 
 [node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D" unique_id=747515525]
 z_index = 1
-scale = Vector2(0.6357421, 0.67089844)
+position = Vector2(0.4999981, -1.9073486e-06)
+scale = Vector2(2.59375, 2.75)
 texture = ExtResource("2_b8qbv")
 
 [node name="Button" type="Button" parent="CollisionShape2D/Sprite2D" unique_id=344818704]
 self_modulate = Color(1.6197081, 1.6197081, 1.6197081, 0)
 z_index = 1
 anchors_preset = -1
-anchor_right = 1.039
-anchor_bottom = 1.0
-offset_left = -68.0
-offset_top = -68.0
-offset_right = -63.992004
-offset_bottom = -60.0
+anchor_right = 0.85065377
+anchor_bottom = 0.7386363
+offset_left = -15.614456
+offset_top = -14.545452
+offset_right = -11.606461
+offset_bottom = -6.545452
 grow_horizontal = 2
 grow_vertical = 2
 action_mode = 0

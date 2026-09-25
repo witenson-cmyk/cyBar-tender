@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://da40267jyemaq"]
 
 [ext_resource type="Script" uid="uid://c4e3cn6wnrk7p" path="res://Scripts/ice.gd" id="1_lryxu"]
-[ext_resource type="Texture2D" uid="uid://dny8qq63v8p6l" path="res://Sprites/icon.svg" id="2_3inoc"]
+[ext_resource type="Texture2D" uid="uid://dg4anhd2dvxb8" path="res://Sprites/iceSphere.png" id="2_3inoc"]
 [ext_resource type="Script" uid="uid://coqwnstoj346c" path="res://addons/tooltips_pro/scripts/tooltip_trigger.gd" id="3_3inoc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wc2py"]
-size = Vector2(84, 89)
+size = Vector2(89, 89)
 
 [node name="ice" type="Area2D" unique_id=1703207042]
 z_index = 1
@@ -17,7 +17,8 @@ shape = SubResource("RectangleShape2D_wc2py")
 
 [node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D" unique_id=1722654426]
 z_index = 1
-scale = Vector2(0.6171875, 0.67187494)
+position = Vector2(0.50000036, -8.881784e-16)
+scale = Vector2(1.8522136, 1.8346351)
 texture = ExtResource("2_3inoc")
 
 [node name="Button" type="Button" parent="CollisionShape2D/Sprite2D" unique_id=220424689]

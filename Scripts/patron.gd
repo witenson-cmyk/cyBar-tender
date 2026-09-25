@@ -43,7 +43,8 @@ func _ready() -> void:
 		if wants.size()<=2 or random.randi()%101<=chance or failed:
 			var next=random.randi()%possible.size()
 			if wants.size()==possible.size():
-				good=true
+				good = true
+				failed = false
 			elif not wants.has(possible[next]):
 				wants.append(possible[next])
 				chance-=10
@@ -52,7 +53,7 @@ func _ready() -> void:
 				failed=true
 		else:
 			good=true
-	if styles:
+	if styles and not doSpecial:
 		wants.append(types[random.randi()%types.size()])
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

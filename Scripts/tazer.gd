@@ -28,6 +28,7 @@ func _on_button_button_up() -> void:
 	var good = false
 	for thing in placed:
 		if thing.get_meta("patron")==true and thing.tazed==false:
+			thing.doSpecial=false
 			while not good:
 				
 				if random.randi()%100<=10:

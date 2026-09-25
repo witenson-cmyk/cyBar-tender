@@ -4,25 +4,74 @@
 [ext_resource type="Texture2D" uid="uid://dny8qq63v8p6l" path="res://Sprites/icon.svg" id="1_wtcfe"]
 [ext_resource type="Script" uid="uid://bqb10su8238hf" path="res://Scripts/liquid.gd" id="3_epypp"]
 [ext_resource type="Script" uid="uid://ndm6eoaxythj" path="res://Scripts/blender.gd" id="4_d21ai"]
+[ext_resource type="Texture2D" uid="uid://cvx0qwscj4wep" path="res://Sprites/voodka.png" id="4_ta5nu"]
 [ext_resource type="Script" uid="uid://k16j3hygwajp" path="res://Scripts/ice_machine.gd" id="5_d21ai"]
 [ext_resource type="Script" uid="uid://coqwnstoj346c" path="res://addons/tooltips_pro/scripts/tooltip_trigger.gd" id="5_hqns4"]
 [ext_resource type="Script" uid="uid://dykgcvsu6yety" path="res://Scripts/tazer.gd" id="5_kdubu"]
 [ext_resource type="Script" uid="uid://byimbx3sgyx57" path="res://Scripts/drawer.gd" id="5_q6r6c"]
+[ext_resource type="Texture2D" uid="uid://drvo6ou65kvyb" path="res://Sprites/spooooon.png" id="6_ei405"]
 [ext_resource type="Script" uid="uid://xl1dyi3yxv47" path="res://bookControl.gd" id="7_4d7sh"]
+[ext_resource type="Texture2D" uid="uid://ev3k0ydm5px3" path="res://Sprites/shakin.png" id="7_e8dv2"]
+[ext_resource type="Texture2D" uid="uid://c0mpip2lv2cl6" path="res://Sprites/bowawa.png" id="7_flf07"]
+[ext_resource type="Texture2D" uid="uid://ckcbpf5kg781v" path="res://Sprites/grenadineine.png" id="8_k73cj"]
 [ext_resource type="Texture2D" uid="uid://bf0mpfwrhykrt" path="res://Sprites/whiteBox.png" id="8_rj586"]
+[ext_resource type="Texture2D" uid="uid://d4aoe6yx44mu7" path="res://Sprites/sproot.png" id="9_rjqkl"]
+[ext_resource type="Texture2D" uid="uid://hcygv7qgdq18" path="res://Sprites/spicyWater.png" id="10_fs4d3"]
+[ext_resource type="Texture2D" uid="uid://ddjxjh3abx6pr" path="res://Sprites/whiskkkk.png" id="11_7vxoj"]
+[ext_resource type="Texture2D" uid="uid://bh0we1gxoeav8" path="res://Sprites/tequilla.png" id="12_2nhjh"]
+[ext_resource type="Texture2D" uid="uid://chn4demdvrdsj" path="res://Sprites/orange.png" id="13_bjha6"]
+[ext_resource type="Texture2D" uid="uid://cjhlwm51u1j8r" path="res://Sprites/trashcnnnn.png" id="14_flf07"]
+[ext_resource type="Texture2D" uid="uid://xhyab3seepyk" path="res://Sprites/tazzz.png" id="18_k73cj"]
+[ext_resource type="FontFile" uid="uid://c8ju06t01t0mv" path="res://fonts/ConsoleSansVF.ttf" id="23_e8dv2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rp3bj"]
 size = Vector2(189, 202.75)
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ei405"]
+radius = 42.0
+height = 314.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gt76g"]
+radius = 67.0
+height = 212.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1fr6y"]
+radius = 42.0
+height = 174.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2hxjc"]
+radius = 60.0
+height = 182.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e8dv2"]
+radius = 42.0
+height = 288.0
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3n2aa"]
-radius = 50.0
-height = 152.0
+radius = 42.0
+height = 222.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2nhjh"]
+radius = 42.0
+height = 228.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ebxd8"]
+radius = 74.0
+height = 216.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2u7jv"]
+radius = 57.0
+height = 228.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bjha6"]
+radius = 72.0
+height = 212.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iobs2"]
 size = Vector2(106, 108)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l6vob"]
-size = Vector2(160, 233)
+size = Vector2(206, 301.5)
 
 [sub_resource type="Theme" id="Theme_rj586"]
 default_font_size = 30
@@ -34,19 +83,21 @@ default_font_size = 100
 default_font_size = 100
 
 [sub_resource type="Theme" id="Theme_rp3bj"]
+default_base_scale = 0.4
 default_font_size = 30
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d21ai"]
 size = Vector2(88, 152)
 
 [sub_resource type="Theme" id="Theme_3n2aa"]
+default_font = ExtResource("23_e8dv2")
 default_font_size = 43
 
 [node name="Node2D" type="Node2D" unique_id=2027772063]
 script = ExtResource("1_0hol4")
 
 [node name="place8" type="Area2D" parent="." unique_id=211766824]
-position = Vector2(592, 727)
+position = Vector2(624, 879)
 metadata/place = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="place8" unique_id=1145606762]
@@ -58,7 +109,7 @@ scale = Vector2(1.296875, 0.3515625)
 texture = ExtResource("1_wtcfe")
 
 [node name="place7" type="Area2D" parent="." unique_id=331055570]
-position = Vector2(794, 727)
+position = Vector2(826, 879)
 metadata/place = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="place7" unique_id=1769195859]
@@ -70,7 +121,7 @@ scale = Vector2(1.296875, 0.3515625)
 texture = ExtResource("1_wtcfe")
 
 [node name="place3" type="Area2D" parent="." unique_id=784477678]
-position = Vector2(184, 728)
+position = Vector2(216, 880)
 metadata/place = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="place3" unique_id=340371987]
@@ -82,7 +133,7 @@ scale = Vector2(1.296875, 0.3515625)
 texture = ExtResource("1_wtcfe")
 
 [node name="place4" type="Area2D" parent="." unique_id=1293856585]
-position = Vector2(386, 728)
+position = Vector2(418, 880)
 metadata/place = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="place4" unique_id=1726465149]
@@ -95,29 +146,31 @@ texture = ExtResource("1_wtcfe")
 
 [node name="vodka" type="Area2D" parent="." unique_id=225396704]
 z_index = 1
-position = Vector2(152, 948)
+position = Vector2(211, 584)
 script = ExtResource("3_epypp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="vodka" unique_id=152757670]
 z_index = 1
-shape = SubResource("CapsuleShape2D_3n2aa")
+shape = SubResource("CapsuleShape2D_ei405")
 
 [node name="Sprite2D" type="Sprite2D" parent="vodka/CollisionShape2D" unique_id=2124195975]
 z_index = 1
-scale = Vector2(0.4453125, 1.0859375)
-texture = ExtResource("1_wtcfe")
+position = Vector2(3.8146973e-06, -0.999979)
+scale = Vector2(4.6875, 4.8437514)
+texture = ExtResource("4_ta5nu")
 
 [node name="Button" type="Button" parent="vodka/CollisionShape2D/Sprite2D" unique_id=12542085]
 self_modulate = Color(1, 1, 1, 0)
+z_index = 5
 anchors_preset = -1
-anchor_left = -0.202
-anchor_top = -0.155
-anchor_right = 1.202
-anchor_bottom = 1.1400001
-offset_left = -63.968582
-offset_top = -63.958553
-offset_right = -64.03154
-offset_bottom = -63.963196
+anchor_left = -0.2019999
+anchor_top = -0.15500003
+anchor_right = 0.41996753
+anchor_bottom = 0.83216906
+offset_left = -3.5626717
+offset_top = -21.25418
+offset_right = -3.6256294
+offset_bottom = -21.258823
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("5_hqns4")
@@ -135,24 +188,27 @@ toAdd = "stirred"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stiring" unique_id=556707399]
 z_index = 1
-shape = SubResource("CapsuleShape2D_3n2aa")
+position = Vector2(1, 35)
+shape = SubResource("CapsuleShape2D_gt76g")
 
 [node name="Sprite2D" type="Sprite2D" parent="stiring/CollisionShape2D" unique_id=1359540468]
 z_index = 1
-scale = Vector2(0.4453125, 1.0859375)
-texture = ExtResource("1_wtcfe")
+position = Vector2(9.99995, 34.000015)
+scale = Vector2(2.4653323, 3.964356)
+texture = ExtResource("6_ei405")
 
 [node name="Button" type="Button" parent="stiring/CollisionShape2D/Sprite2D" unique_id=1244351630]
 self_modulate = Color(1, 1, 1, 0)
+z_index = 5
 anchors_preset = -1
 anchor_left = -0.202
 anchor_top = -0.155
 anchor_right = 1.202
 anchor_bottom = 1.1400001
-offset_left = -63.968582
-offset_top = -63.958553
-offset_right = -64.03154
-offset_bottom = -63.963196
+offset_left = -73.05147
+offset_top = -68.52907
+offset_right = -73.114426
+offset_bottom = -68.53371
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("5_hqns4")
@@ -170,24 +226,26 @@ toAdd = "shaken"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="shaker" unique_id=1579492246]
 z_index = 1
-shape = SubResource("CapsuleShape2D_3n2aa")
+shape = SubResource("CapsuleShape2D_1fr6y")
 
 [node name="Sprite2D" type="Sprite2D" parent="shaker/CollisionShape2D" unique_id=308386175]
 z_index = 1
-scale = Vector2(0.4453125, 1.0859375)
-texture = ExtResource("1_wtcfe")
+position = Vector2(-2.0000038, -19.000008)
+scale = Vector2(2.7779946, 3.1621091)
+texture = ExtResource("7_e8dv2")
 
 [node name="Button" type="Button" parent="shaker/CollisionShape2D/Sprite2D" unique_id=885512603]
 self_modulate = Color(1, 1, 1, 0)
+z_index = 5
 anchors_preset = -1
-anchor_left = -0.202
-anchor_top = -0.155
-anchor_right = 1.202
-anchor_bottom = 1.1400001
-offset_left = -63.968582
-offset_top = -63.958553
-offset_right = -64.03154
-offset_bottom = -63.963196
+anchor_left = 0.163
+anchor_top = 0.15900001
+anchor_right = 0.86
+anchor_bottom = 1.0
+offset_left = -24.022747
+offset_top = -31.996883
+offset_right = -24.001358
+offset_bottom = -30.47808
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("5_hqns4")
@@ -205,7 +263,7 @@ metadata/blender = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="blender" unique_id=404369509]
 z_index = 1
-shape = SubResource("CapsuleShape2D_3n2aa")
+shape = SubResource("CapsuleShape2D_2hxjc")
 
 [node name="Sprite2D" type="Sprite2D" parent="blender/CollisionShape2D" unique_id=358653862]
 z_index = 1
@@ -214,6 +272,7 @@ texture = ExtResource("1_wtcfe")
 
 [node name="Button" type="Button" parent="blender/CollisionShape2D/Sprite2D" unique_id=600574507]
 self_modulate = Color(1, 1, 1, 0)
+z_index = 5
 anchors_preset = -1
 anchor_left = 0.013566613
 anchor_top = 0.008326739
@@ -234,30 +293,32 @@ metadata/_edit_use_anchors_ = true
 
 [node name="water" type="Area2D" parent="." unique_id=524280698]
 z_index = 1
-position = Vector2(575, 952)
+position = Vector2(564, 602)
 script = ExtResource("3_epypp")
 toAdd = "water"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="water" unique_id=433103763]
 z_index = 1
-shape = SubResource("CapsuleShape2D_3n2aa")
+shape = SubResource("CapsuleShape2D_e8dv2")
 
 [node name="Sprite2D" type="Sprite2D" parent="water/CollisionShape2D" unique_id=97250937]
 z_index = 1
-scale = Vector2(0.4453125, 1.0859375)
-texture = ExtResource("1_wtcfe")
+position = Vector2(1.0000153, -12.999989)
+scale = Vector2(2.781252, 2.7708333)
+texture = ExtResource("7_flf07")
 
 [node name="Button" type="Button" parent="water/CollisionShape2D/Sprite2D" unique_id=50988461]
 self_modulate = Color(1, 1, 1, 0)
+z_index = 5
 anchors_preset = -1
 anchor_left = -0.18445814
-anchor_top = -0.09025219
-anchor_right = 1.2019981
-anchor_bottom = 1.0752513
-offset_left = -63.968338
-offset_top = -63.958523
-offset_right = -64.031296
-offset_bottom = -63.963165
+anchor_top = -0.0902522
+anchor_right = 0.8961601
+anchor_bottom = 0.89099926
+offset_left = -11.355755
+offset_top = -32.478657
+offset_right = -11.418709
+offset_bottom = -32.4833
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("5_hqns4")
@@ -270,7 +331,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="grenadine" type="Area2D" parent="." unique_id=1750166694]
 z_index = 1
-position = Vector2(707, 955)
+position = Vector2(650, 610)
 script = ExtResource("3_epypp")
 toAdd = "grenadine"
 
@@ -280,55 +341,58 @@ shape = SubResource("CapsuleShape2D_3n2aa")
 
 [node name="Sprite2D" type="Sprite2D" parent="grenadine/CollisionShape2D" unique_id=1427432880]
 z_index = 1
-scale = Vector2(0.4453125, 1.0859375)
-texture = ExtResource("1_wtcfe")
+position = Vector2(4.2915344e-06, -6.999977)
+scale = Vector2(2.8593743, 2.4427085)
+texture = ExtResource("8_k73cj")
 
 [node name="Button" type="Button" parent="grenadine/CollisionShape2D/Sprite2D" unique_id=248023572]
 self_modulate = Color(0.97, 0.97, 0.97, 0)
+z_index = 5
 anchors_preset = -1
-anchor_left = -0.20200002
-anchor_top = -0.155
-anchor_right = 1.2190001
-anchor_bottom = 1.097
-offset_left = -63.968582
-offset_top = -63.958553
-offset_right = -63.961823
-offset_bottom = -63.98433
+anchor_top = 0.0050000004
+anchor_right = 0.93700004
+anchor_bottom = 1.029
+offset_left = -15.387981
+offset_top = -47.968277
+offset_right = -15.994923
+offset_bottom = -48.0207
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("5_hqns4")
 tooltip_alignment = 2
 origin = 3
 offset = Vector2(25, 25)
-tooltip_strings = Array[String](["Fruit"])
+tooltip_strings = Array[String](["Grenadine"])
 metadata/_edit_use_anchors_ = true
 
 [node name="citrus" type="Area2D" parent="." unique_id=1202219946]
 z_index = 1
-position = Vector2(845, 956)
+position = Vector2(725, 624)
 script = ExtResource("3_epypp")
 toAdd = "citrus"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="citrus" unique_id=1071311996]
 z_index = 1
-shape = SubResource("CapsuleShape2D_3n2aa")
+shape = SubResource("CapsuleShape2D_2nhjh")
 
 [node name="Sprite2D" type="Sprite2D" parent="citrus/CollisionShape2D" unique_id=909317383]
 z_index = 1
-scale = Vector2(0.4453125, 1.0859375)
-texture = ExtResource("1_wtcfe")
+position = Vector2(1.0000095, 2.0000234)
+scale = Vector2(2.3750002, 3.0078125)
+texture = ExtResource("9_rjqkl")
 
 [node name="Button" type="Button" parent="citrus/CollisionShape2D/Sprite2D" unique_id=517112086]
 self_modulate = Color(1, 1, 1, 0)
+z_index = 5
 anchors_preset = -1
-anchor_left = -0.202
+anchor_left = -0.20200002
 anchor_top = -0.155
-anchor_right = 1.202
-anchor_bottom = 1.1400001
-offset_left = -63.968582
-offset_top = -63.958553
-offset_right = -64.03154
-offset_bottom = -63.963196
+anchor_right = 0.83944106
+anchor_bottom = 1.0242932
+offset_left = -9.5359955
+offset_top = -27.981306
+offset_right = -9.598957
+offset_bottom = -27.985947
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("5_hqns4")
@@ -338,9 +402,89 @@ offset = Vector2(25, 25)
 tooltip_strings = Array[String](["Citrus"])
 metadata/_edit_use_anchors_ = true
 
+[node name="tequilla" type="Area2D" parent="." unique_id=1622415]
+z_index = 1
+position = Vector2(930, 632)
+script = ExtResource("3_epypp")
+toAdd = "tequilla"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tequilla" unique_id=1147642742]
+z_index = 1
+position = Vector2(5, 1)
+shape = SubResource("CapsuleShape2D_ebxd8")
+
+[node name="Sprite2D" type="Sprite2D" parent="tequilla/CollisionShape2D" unique_id=1360196593]
+z_index = 1
+position = Vector2(0.99999714, 2.336502e-05)
+scale = Vector2(2.9166663, 3.0078125)
+texture = ExtResource("12_2nhjh")
+
+[node name="Button" type="Button" parent="tequilla/CollisionShape2D/Sprite2D" unique_id=908979937]
+self_modulate = Color(1, 1, 1, 0)
+z_index = 5
+z_as_relative = false
+anchors_preset = -1
+anchor_left = 0.071
+anchor_top = -0.071
+anchor_right = 0.95100003
+anchor_bottom = 0.96195555
+offset_left = -23.979427
+offset_top = -32.027424
+offset_right = -24.016
+offset_bottom = -26.656063
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5_hqns4")
+tooltip_alignment = 5
+origin = 3
+offset = Vector2(25, 25)
+tooltip_strings = Array[String](["Tequilla"])
+metadata/_edit_use_anchors_ = true
+
+[node name="orange" type="Area2D" parent="." unique_id=245067281]
+z_index = 1
+position = Vector2(795, 632)
+script = ExtResource("3_epypp")
+toAdd = "orange"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="orange" unique_id=1965498124]
+z_index = 1
+position = Vector2(32, -9)
+shape = SubResource("CapsuleShape2D_2u7jv")
+
+[node name="Sprite2D" type="Sprite2D" parent="orange/CollisionShape2D" unique_id=786572682]
+modulate = Color(0.9, 0.75975, 0.40499997, 1)
+self_modulate = Color(1, 0.8333334, 0, 1)
+z_index = 1
+position = Vector2(4.0000153, -11.0000305)
+scale = Vector2(2.645834, 3.441406)
+texture = ExtResource("13_bjha6")
+
+[node name="Button" type="Button" parent="orange/CollisionShape2D/Sprite2D" unique_id=36030712]
+self_modulate = Color(1, 1, 1, 0)
+z_index = 5
+z_as_relative = false
+anchors_preset = -1
+anchor_left = -0.20200002
+anchor_top = -0.16019467
+anchor_right = 0.7205712
+anchor_bottom = 0.85690403
+offset_left = -13.737043
+offset_top = -18.805449
+offset_right = -13.800003
+offset_bottom = -18.81009
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5_hqns4")
+tooltip_alignment = 5
+origin = 3
+offset = Vector2(25, 25)
+tooltip_strings = Array[String](["Orange"])
+metadata/_edit_use_anchors_ = true
+
 [node name="soda water" type="Area2D" parent="." unique_id=339397104]
 z_index = 1
-position = Vector2(284, 951)
+position = Vector2(305, 613)
 script = ExtResource("3_epypp")
 toAdd = "soda water"
 
@@ -350,20 +494,22 @@ shape = SubResource("CapsuleShape2D_3n2aa")
 
 [node name="Sprite2D" type="Sprite2D" parent="soda water/CollisionShape2D" unique_id=769726375]
 z_index = 1
-scale = Vector2(0.4453125, 1.0859375)
-texture = ExtResource("1_wtcfe")
+position = Vector2(-2.4999866, -3.5000076)
+scale = Vector2(2.7187498, 2.6354165)
+texture = ExtResource("10_fs4d3")
 
 [node name="Button" type="Button" parent="soda water/CollisionShape2D/Sprite2D" unique_id=1213000788]
 self_modulate = Color(1, 1, 1, 0)
+z_index = 5
 anchors_preset = -1
-anchor_left = -0.202
-anchor_top = -0.155
-anchor_right = 1.202
-anchor_bottom = 1.1400001
-offset_left = -63.968582
-offset_top = -63.958553
-offset_right = -64.03154
-offset_bottom = -63.963196
+anchor_left = -0.2019999
+anchor_top = -0.15500002
+anchor_right = 0.7654848
+anchor_bottom = 0.849001
+offset_left = -8.800373
+offset_top = -32.361103
+offset_right = -8.863331
+offset_bottom = -32.365746
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("5_hqns4")
@@ -375,30 +521,33 @@ metadata/_edit_use_anchors_ = true
 
 [node name="whisky" type="Area2D" parent="." unique_id=2085533543]
 z_index = 1
-position = Vector2(422, 952)
+position = Vector2(445, 632)
 script = ExtResource("3_epypp")
 toAdd = "whisky"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="whisky" unique_id=645023874]
 z_index = 1
-shape = SubResource("CapsuleShape2D_3n2aa")
+position = Vector2(-4, 0)
+shape = SubResource("CapsuleShape2D_bjha6")
 
 [node name="Sprite2D" type="Sprite2D" parent="whisky/CollisionShape2D" unique_id=2119178464]
 z_index = 1
-scale = Vector2(0.4453125, 1.0859375)
-texture = ExtResource("1_wtcfe")
+position = Vector2(-2.000002, -4.9999924)
+scale = Vector2(2.9887695, 2.7475595)
+texture = ExtResource("11_7vxoj")
 
 [node name="Button" type="Button" parent="whisky/CollisionShape2D/Sprite2D" unique_id=387514104]
 self_modulate = Color(1, 1, 1, 0)
+z_index = 5
 anchors_preset = -1
-anchor_left = -0.202
-anchor_top = -0.155
-anchor_right = 1.202
-anchor_bottom = 1.1400001
-offset_left = -63.968582
-offset_top = -63.958553
-offset_right = -64.03154
-offset_bottom = -63.963196
+anchor_left = -0.13926506
+anchor_top = -0.029888898
+anchor_right = 0.8588335
+anchor_bottom = 0.9824455
+offset_left = -16.067112
+offset_top = -26.111982
+offset_right = -16.13007
+offset_bottom = -26.116623
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("5_hqns4")
@@ -450,8 +599,9 @@ metadata/trash = true
 shape = SubResource("RectangleShape2D_l6vob")
 
 [node name="Sprite2D" type="Sprite2D" parent="trash/CollisionShape2D" unique_id=1221776297]
-scale = Vector2(1.203125, 1.765625)
-texture = ExtResource("1_wtcfe")
+position = Vector2(3.000021, -67.999985)
+scale = Vector2(5.200684, 4.976075)
+texture = ExtResource("14_flf07")
 
 [node name="Control" type="Control" parent="." unique_id=1509193713]
 layout_mode = 3
@@ -513,7 +663,9 @@ offset_right = -83.0
 offset_bottom = 506.25
 theme = SubResource("Theme_rp3bj")
 theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 5
 text = "YOU SHOULDN'T BE SEEING THIS"
+tab_size = 3
 
 [node name="tazer" type="Area2D" parent="." unique_id=1300496687]
 position = Vector2(1248, 766)
@@ -523,18 +675,20 @@ script = ExtResource("5_kdubu")
 shape = SubResource("RectangleShape2D_d21ai")
 
 [node name="Sprite2D" type="Sprite2D" parent="tazer/CollisionShape2D" unique_id=1253082562]
-scale = Vector2(0.6640625, 1.1484375)
-texture = ExtResource("1_wtcfe")
+position = Vector2(-0.9999771, -2.000019)
+scale = Vector2(2.0625002, 2.3593752)
+texture = ExtResource("18_k73cj")
 
 [node name="Button" type="Button" parent="tazer/CollisionShape2D/Sprite2D" unique_id=1610742361]
 modulate = Color(1, 1, 1, 0)
+z_index = 5
 anchors_preset = -1
-anchor_right = 1.065
-anchor_bottom = 1.051
-offset_left = -70.776474
-offset_top = -66.17687
-offset_right = -64.03764
-offset_bottom = -63.997383
+anchor_right = 0.74849576
+anchor_bottom = 0.99243474
+offset_left = -20.363602
+offset_top = -32.211903
+offset_right = -13.624771
+offset_bottom = -30.032413
 script = ExtResource("5_hqns4")
 tooltip_alignment = 2
 origin = 3
@@ -564,6 +718,10 @@ text = "Start Day"
 [connection signal="button_up" from="grenadine/CollisionShape2D/Sprite2D/Button" to="grenadine" method="_on_button_button_up"]
 [connection signal="button_down" from="citrus/CollisionShape2D/Sprite2D/Button" to="citrus" method="_on_button_button_down"]
 [connection signal="button_up" from="citrus/CollisionShape2D/Sprite2D/Button" to="citrus" method="_on_button_button_up"]
+[connection signal="button_down" from="tequilla/CollisionShape2D/Sprite2D/Button" to="tequilla" method="_on_button_button_down"]
+[connection signal="button_up" from="tequilla/CollisionShape2D/Sprite2D/Button" to="tequilla" method="_on_button_button_up"]
+[connection signal="button_down" from="orange/CollisionShape2D/Sprite2D/Button" to="orange" method="_on_button_button_down"]
+[connection signal="button_up" from="orange/CollisionShape2D/Sprite2D/Button" to="orange" method="_on_button_button_up"]
 [connection signal="button_down" from="soda water/CollisionShape2D/Sprite2D/Button" to="soda water" method="_on_button_button_down"]
 [connection signal="button_up" from="soda water/CollisionShape2D/Sprite2D/Button" to="soda water" method="_on_button_button_up"]
 [connection signal="button_down" from="whisky/CollisionShape2D/Sprite2D/Button" to="whisky" method="_on_button_button_down"]

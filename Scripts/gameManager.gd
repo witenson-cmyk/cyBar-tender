@@ -59,7 +59,7 @@ func _process(delta: float) -> void:
 		var didIt=false
 		if places.has(null):
 			while didIt==false:
-				var ran=random.randi()%4
+				var ran=random.randi()%places.size()
 				if places[ran]==null:
 					newPerson=instance.instantiate()
 					get_tree().current_scene.add_child(newPerson)
@@ -67,7 +67,7 @@ func _process(delta: float) -> void:
 					newPerson.position.x=500*ran-700
 					newPerson.position.y=500
 					places[ran]=newPerson
-		timer=30-random.randi()%15
+		timer=15-random.randi()%7
 	
 	#game timer
 	if dayStarted:
@@ -84,10 +84,14 @@ func _process(delta: float) -> void:
 		gameML=str(gameMT)
 	
 	#end the day
-	if gameHT==3:
+	if gameHT==3 and day<5:
 		save_game.days+=1
 		save_game.write_savegame()
 		get_tree().change_scene_to_file("res://next_day.tscn")
+	elif day==5:
+		save_game.days=1
+		save_game.write_savegame()
+		get_tree().change_scene_to_file("res://start_screen.tscn")
 		
 	#update UI
 	label.text="Points: "+str(points)+" Lives: "+str(lives)+" "+gameHL+":"+gameML

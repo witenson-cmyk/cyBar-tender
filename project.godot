@@ -37,6 +37,12 @@ enabled=PackedStringArray("res://addons/tooltips_pro/plugin.cfg")
 
 timers/tooltip_delay_sec=0.05
 timers/tooltip_delay_sec.editor_hint=0.05
+theme/default_font_antialiasing=0
+theme/default_font_subpixel_positioning=3
+theme/default_font_multichannel_signed_distance_field=true
+theme/default_font_generate_mipmaps=true
+theme/default_theme_scale=1.47
+theme/custom_font="uid://c8ju06t01t0mv"
 
 [input]
 
@@ -85,4 +91,7 @@ dismiss_tooltip={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
+anti_aliasing/quality/msaa_2d=1
+anti_aliasing/quality/msaa_3d=1

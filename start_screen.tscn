@@ -1,14 +1,18 @@
 [gd_scene format=3 uid="uid://jkv67xmb0qb5"]
 
 [ext_resource type="Script" uid="uid://dcp7y32n6cs4r" path="res://Scripts/start_screen.gd" id="1_ncxyx"]
+[ext_resource type="FontFile" uid="uid://c8ju06t01t0mv" path="res://fonts/ConsoleSansVF.ttf" id="2_pevhg"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_rp3bj"]
+font = ExtResource("2_pevhg")
 font_size = 120
 
 [sub_resource type="Theme" id="Theme_3n2aa"]
+default_font = ExtResource("2_pevhg")
 default_font_size = 75
 
 [sub_resource type="Theme" id="Theme_rp3bj"]
+default_font = ExtResource("2_pevhg")
 default_font_size = 100
 
 [node name="startScreen" type="Control" unique_id=1401339525]

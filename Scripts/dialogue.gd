@@ -7,15 +7,16 @@ var words = {
 admin GOOD MORNING LOCA 3, THE DATE IS 10/27/2096
 admin NO NEWS UPDATE
 admin YOU HAVE BEEN ASSIGNED A NEW TEMPORARY POSITION
-admin 	POSITION: Remote Bartender
-admin 	LOCATION: 2704 Silkwood Street
-admin 	BUILDING NAME: cyBar 3
-admin 	SHIFT DATES AND TIME: W Th F Sa Su, 9PM - 1AM
-admin 	MESSAGE FROM EMPLOYER: Hi! Welcome to the team! You'll be taking over the night shift from here on, it's a short shift but probably the busiest, so GL. There's a handbook waiting for you when you get there, don't take it though, we're a family here so sharing is caring.
-admin 	I won't be there to train you, so make sure you read it throughly. I'll update it each day if anything changes, so make sure to check it each day, gotcha?
+admin - POSITION: Remote Bartender
+admin - LOCATION: 2704 Silkwood Street
+admin - BUILDING NAME: cyBar 3
+admin - SHIFT DATES AND TIME: W Th F Sa Su, 9PM - 1AM
+admin - MESSAGE FROM EMPLOYER: Hi! Welcome to the team! You'll be taking over the night shift from here on, it's a short shift but probably the busiest, so GL. There's a handbook waiting for you when you get there, don't take it though, we're a family here so sharing is caring.
+admin - I won't be there to train you, so make sure you read it throughly. I'll update it each day if anything changes, so make sure to check it each day, gotcha?
 admin END MESSAGE",
 	"2": 
-"admin GOOD MORNING LOCA 3, THE DATE IS 10/28/2096
+"admin NEW SYSTEM MESSAGE:
+admin GOOD MORNING LOCA 3, THE DATE IS 10/28/2096
 admin NEWS UPDATE: DUE TO THE GENEROUS WORK DONE BY OUR NATIONS GREATEST SCIENTISTS, NEW AIR FILTERS RATED WITH 4% GREATER AIR FILTRATION CAPABILITIES HAVE BEEN RELEASED TO THE PUBLIC.
 admin CITIZENS LEVEL C3 OR HIGHER MAY PURCHASE FILTERS THROUGH REGULAR CHANNELS WITH ECHO-3 AND ECHO-3.5 FILTERS BEING SUPPORTED
 admin NOTE: C5 AND C6 CITIZENS NO LONGER GET COMPLEMENTARY FILTERS PLEASE AQUAINT YOURSELF WITH THE CHANNELS REQUIRED TO PURCHASE NEW PROVISIONS OR PURCHASE HIGHER CITIZENSHIP LEVEL. 
@@ -44,7 +45,8 @@ player No you won't I'm resetting my IP
 other ;(
 admin YOU HAVE DISCONNECTED",
 	"3":
-"admin GOOD MORNING LOCA 3, THE DATE IS 10/29/2096
+"NEW SYSTEM MESSAGE:
+admin GOOD MORNING LOCA 3, THE DATE IS 10/29/2096
 admin NEWS UPDATE: DUE TO AN INCREASE IN ILOGICAL DATA TRANSFER, DATA ALLOWENCES WILL BE DECREASED ACCROSS ALL CITIZENSHIP LEVELS BY 10%, PLEASE MAKE SURE TO REPORT ANY CASES OF ILLOGICAL DATA TRANSFERING TO YOUR LOCAL AUTHORITY.
 admin REMINDER, ILLOGICAL DATA TRANSFERS REFER TO ANY DATA BEING TRANSFERED FOR ANY NON STATE REQUIRED PURPOSE, SUCH AS ENTERTAINMENT, EDUCATION, AND ART CREATED BY THE PUBLIC. LET THE STATE HANDLE THESE, THEY KNOW WHAT THEY ARE DOING.
 admin END NEWS
@@ -63,7 +65,7 @@ player huh?
 other damn, loca 3, you must be psomeoneretty good off, marginally breathable air has to be expensive
 player I'm not rich, I was just born here
 other damn you're like young young then
-player I'm like 25 stfucommunicatino
+player I'm like 25 stfu
 other 26 actually, it says it right here
 player ...
 player ok, if you're so jelous, then just move over here
@@ -71,7 +73,7 @@ other you say it like it's that easy
 player Didn't you hear about the whole public movement initiative they were doing, supposedly if you were from a \"deteriorating\" loca they would let you apply for transfer
 other if you were human
 player ?
-player ohstr(save_game.days)
+player oh
 other yeaaaahhh
 player I mean, there's still a chance
 other already tried, they said my shit is depreciated, or whatever
@@ -81,16 +83,60 @@ player how bad is it over there
 other hot as fuck, cooling towers broke like 2 months ago and they said there was no way to fix it, so yea I'm fucked
 player there's no way to fix it?
 other there probably is, but it's either to expensive or they couldn't be assed to do it. only people left here are androids anyways
-player if the coolinsomeoneg towers have been broken for two months, how much longer do you think you could last in there?
+player if the cooling towers have been broken for two months, how much longer do you think you could last in there?
 other idk, doesn't really matter, data transfers are going to be swiped in a few days anyways
 player I see
 other welp, i'm running out of data, so see you tomorrow, human person
 admin OTHER HAS DISCONNECTED
 admin YOU HAVE DISCONNECTED",
 	"4":
-		"",
+		"admin NEW SYSTEM MESSAGE:
+admin GOOD MORNING LOCA 3, THE DATE IS 10/30/2096
+admin NO NEWS UPDATE
+admin NOTICE: YOU HAVE BEEN FOUND TO HAVE BEEN USING EXCESS DATA FOR POSSIBLY NON STATE APPROVED REASONS, PLEASE LIMIT YOUR DATA USAGE OR YOUR DATA USAGE WILL BE LIMITED AND POSSIBE INVESTIGATIONS WILL ENSUE.
+admin TO ENSURE THIS, YOUR DATA ALLOWANCE HAS BEEN REDUCED BY HALF FOR THE REMAINING PERIOD
+admin END NOTICE
+other mornin
+player It's like noon for me over here
+player How're you holding up?
+other fine myself, how is that bar job you've been working?
+player never told you that but it's been fine. Jobs a job. What are you up to?
+other nothing much, jobs for people like me ran up dry a long long time ago
+player guess that means you have more free time then
+other and I'm enjoying it greatly
+player ...
+player what did you do before everything.. started going to shit I guess
+other I mostly just moved packages for people. It was mostly just mail until the tower broke, and then my job became moving peoples belongings onto the convoys.
+admin NOTICE: YOUR DATA IS ABOUT TO RUN OUT
+player My data is running low sadly
+other your data? I thought the reset was yesterday?
+other oh wait right different loca
+player it resets today though, so if I get cut off today there's always tomorrow
+other actually
+other today's it for me, they're pulling the plug on the data transfer
+player wait
+player you said you had a few days
+other I did
+other didn't really matter
+player it matters to me
+other welp, one more question for you then
+player ok
+player ok
+player who are you
+admin INSUFFICIENT DATA
+player wait no
+admin INSUFFICIENT DATA
+player FUCK
+admin INSUFFICIENT DATA
+",
 	"5":
-		""
+		"admin NEW SYSTEM MESSAGE:
+GOOD MORNING LOCA 3, THE DATE IS 10/31/2096, DATA HAS BEEN RESET
+NO NEWS UPDATE
+player you there
+player anything
+player a name at least?
+player ..."
 }
 
 var bookPages = {
@@ -120,6 +166,6 @@ var bookPages = {
 		Other than that, everythings is the same, so go get 'em.",
 	"5":
 		"10/31
-		Congrats on making it to your last day! If it were up to me, from your data, it wouldn't be, but upper management is finally ready to put in the new automated bartender, so hate to see you go.
-		nothing new this time, so good luck I guess."
+		Congrats on making it to your last day! If it were up to me, from your data, it wouldn't be, but upper management is finally ready to put in the new automated bartender, so hate to see you go. My jobs getting easier at least, won't have to server at the bar anymore, so I can just go back to being a manager like I was supposed to be.
+		nothing new this time, so good luck I guess. See you around :)"
 }
