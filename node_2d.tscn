@@ -435,6 +435,7 @@ offset_bottom = -26.656063
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("5_hqns4")
+trigger_mode = 1
 tooltip_alignment = 5
 origin = 3
 offset = Vector2(25, 25)

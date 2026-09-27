@@ -7,6 +7,7 @@ var added=[]
 var lastPlace
 var wanted
 var got
+var previousPosition = global_position
 @onready var button = get_node("CollisionShape2D/Sprite2D/Button")
 
 # Called when the node enters the scene tree for the first time.simple and clean birth by sleep
@@ -21,10 +22,24 @@ func _process(delta: float) -> void:
 		z_index=2
 	else:
 		position=lerp(position,lastok,.2)
-	
-	var toolText = "Liquor Glass " 
-	toolText+=str(added)
+	var toolText=""
+	if added.is_empty():
+		toolText="Empty Liquor Glass"
+	else:
+		toolText = "Liquor Glass ("
+		for thing in added:
+			if added.find(thing)==added.size()-1:
+				toolText+=thing.capitalize()+")"
+			else:
+				toolText+=thing.capitalize()+", "
 	button.tooltip_strings[0]=toolText
+	var shmoovX = (global_position.x - previousPosition.x)/100
+	var shmoovY = (global_position.y - previousPosition.y)/100*sign(shmoovX)
+	var shmoov = shmoovY+shmoovX
+	shmoov = clamp(shmoov,-.50,.50)
+	get_node("CollisionShape2D/Sprite2D").rotation = shmoov
+	
+	previousPosition=global_position
 
 
 func _on_button_button_down() -> void:

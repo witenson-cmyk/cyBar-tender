@@ -10,11 +10,20 @@ func _ready():
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	var offY = random.randi()%5
+	var offX = random.randi()%5
+	
 	if dragging:
 		position = get_global_mouse_position()-off
-		z_index=2
+		z_index=9
+		offY*=3
+		offX*=3
 	else:
 		position=lerp(position,lastok,.2)
+		z_index=2
+		
+	get_node("CollisionShape2D/Sprite2D").position.x=offX
+	get_node("CollisionShape2D/Sprite2D").position.y=offY
 
 
 func _on_button_button_down() -> void:
