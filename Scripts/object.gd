@@ -58,10 +58,10 @@ func _on_button_button_up() -> void:
 				if(lastPlace!=null):
 					lastPlace.set_meta("place",true)
 				lastPlace=thing
-			elif thing.get_meta("trash")==true:
+			elif thing.has_meta("trash"):
 				lastPlace.set_meta("place",true)
 				queue_free()
-			elif thing.get_meta("patron")==true:
+			elif thing.has_meta("patron"):
 				added.sort()
 				thing.wants.sort()
 				if added==thing.wants:

@@ -16,6 +16,7 @@ var gameTimer = 0
 var dayStarted = false
 var infoToGet: data = data.new()
 var info
+var peeps = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -28,6 +29,8 @@ func _ready() -> void:
 		save_game = player_data.new()
 	day=save_game.days
 	info=infoToGet.dayVariables[str(day)]
+	
+	load_peeps()
 	
 	if not info["possible"].has("on the rocks"):
 		get_node("iceMachine").queue_free()
@@ -62,10 +65,12 @@ func _process(delta: float) -> void:
 				var ran=random.randi()%places.size()
 				if places[ran]==null:
 					newPerson=instance.instantiate()
-					get_tree().current_scene.add_child(newPerson)
+					get_node("patrons").add_child(newPerson)
 					didIt=true
 					newPerson.position.x=500*ran-700
-					newPerson.position.y=500
+					newPerson.position.y=350
+					newPerson.z_index=0
+					newPerson.get_node("CollisionShape2D/Sprite2D").texture=peeps[random.randi()%peeps.size()]
 					places[ran]=newPerson
 		timer=15-random.randi()%7
 	
@@ -99,3 +104,9 @@ func _process(delta: float) -> void:
 func _on_button_button_down() -> void:
 	dayStarted=true
 	get_node("startDay").queue_free()
+	
+func load_peeps():
+	for file_name in DirAccess.get_files_at("res://Sprites/patrons/"):
+		if(file_name.get_extension()=="import"):
+			file_name = file_name.replace(".import","")
+		peeps.append(load("res://Sprites/patrons/"+file_name))

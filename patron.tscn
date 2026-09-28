@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://1oa41cx1b75i"]
 
 [ext_resource type="Script" uid="uid://bp6kegb5ep5vd" path="res://Scripts/patron.gd" id="1_44a8u"]
-[ext_resource type="Texture2D" uid="uid://dny8qq63v8p6l" path="res://Sprites/icon.svg" id="2_pulac"]
+[ext_resource type="Texture2D" uid="uid://7p45rspw6f81" path="res://Sprites/patrons/patron0.png" id="2_44a8u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0hol4"]
-size = Vector2(159.5, 355)
+size = Vector2(264.75, 377.5)
 
 [sub_resource type="Gradient" id="Gradient_44a8u"]
 offsets = PackedFloat32Array(0.0064935065)
@@ -34,18 +34,18 @@ metadata/spot = 0
 shape = SubResource("RectangleShape2D_0hol4")
 
 [node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D" unique_id=1545143223]
-scale = Vector2(1.2421875, 2.8125)
-texture = ExtResource("2_pulac")
+scale = Vector2(3, 3)
+texture = ExtResource("2_44a8u")
 
 [node name="Button" type="Button" parent="CollisionShape2D/Sprite2D" unique_id=1903660834]
 self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -64.40251
-offset_top = -63.999996
-offset_right = -63.59749
-offset_bottom = -64.0
+offset_left = -47.333336
+offset_top = -68.0
+offset_right = -71.666664
+offset_bottom = -88.0
 grow_horizontal = 2
 grow_vertical = 2
 

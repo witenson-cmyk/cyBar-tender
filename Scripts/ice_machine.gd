@@ -16,6 +16,6 @@ func _process(delta: float) -> void:
 		newIce.startingPos=global_position
 		get_tree().current_scene.add_child(newIce)
 		set_meta("icePlace",false)
-		timer=15
-	elif timer>0:
+		timer=30
+	elif timer>0 and get_meta("icePlace")==true:
 		timer-=1*delta

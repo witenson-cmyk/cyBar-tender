@@ -29,16 +29,16 @@ func _on_button_button_up() -> void:
 	var placed=get_overlapping_areas()
 	if(placed!=null):
 		for thing in placed:
-			if thing.get_meta("drink")==true:
+			if thing.has_meta("drink"):
 				for all in thing.added:
 					if(all==toAdd):
 						pass
 				thing.added.append(toAdd)
 				lastPlace.set_meta("icePlace",true)
 				queue_free()
-			elif thing.get_meta("blender")==true:
+			elif thing.has_meta("blender"):
 				if thing.iceAdd==false:
 					thing.iceAdd=true
-					thing.timer=1000 
+					thing.timer=15
 				lastPlace.set_meta("icePlace",true)
 				queue_free()

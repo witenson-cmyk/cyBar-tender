@@ -1,6 +1,5 @@
 extends Area2D
 var infoToGet: data = data.new()
-var parent
 var info
 var wants
 var possible
@@ -21,8 +20,7 @@ var specialName = ""
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	parent = get_parent()
-	info = infoToGet.dayVariables[str(parent.day)]
+	info = infoToGet.dayVariables[str(get_parent().get_parent().day)]
 	wants=[]
 	possible=info["possible"]
 	special=info["Special"]

@@ -35,7 +35,7 @@ func _on_button_button_up() -> void:
 	var placed=get_overlapping_areas()
 	var good = false
 	for thing in placed:
-		if thing.get_meta("patron")==true and thing.tazed==false:
+		if thing.has_meta("patron")==true and thing.tazed==false:
 			thing.doSpecial=false
 			while not good:
 				
