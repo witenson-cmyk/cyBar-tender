@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://c0mpip2lv2cl6" path="res://Sprites/bowawa.png" id="7_flf07"]
 [ext_resource type="Texture2D" uid="uid://ckcbpf5kg781v" path="res://Sprites/grenadineine.png" id="8_k73cj"]
 [ext_resource type="Texture2D" uid="uid://bf0mpfwrhykrt" path="res://Sprites/whiteBox.png" id="8_rj586"]
+[ext_resource type="Texture2D" uid="uid://dypwnb6va0kmr" path="res://Sprites/blenderDepressed.png" id="9_2nhjh"]
 [ext_resource type="Texture2D" uid="uid://d4aoe6yx44mu7" path="res://Sprites/sproot.png" id="9_rjqkl"]
 [ext_resource type="Texture2D" uid="uid://hcygv7qgdq18" path="res://Sprites/spicyWater.png" id="10_fs4d3"]
 [ext_resource type="Texture2D" uid="uid://ddjxjh3abx6pr" path="res://Sprites/whiskkkk.png" id="11_7vxoj"]
@@ -41,7 +42,7 @@ height = 174.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2hxjc"]
 radius = 60.0
-height = 182.0
+height = 268.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e8dv2"]
 radius = 42.0
@@ -73,6 +74,10 @@ size = Vector2(106, 108)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l6vob"]
 size = Vector2(206, 301.5)
 
+[sub_resource type="Theme" id="Theme_rp3bj"]
+default_base_scale = 0.1
+default_font_size = 30
+
 [sub_resource type="Theme" id="Theme_rj586"]
 default_font_size = 30
 
@@ -81,10 +86,6 @@ default_font_size = 100
 
 [sub_resource type="Theme" id="Theme_ir8iy"]
 default_font_size = 100
-
-[sub_resource type="Theme" id="Theme_rp3bj"]
-default_base_scale = 0.4
-default_font_size = 30
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d21ai"]
 size = Vector2(88, 152)
@@ -201,14 +202,14 @@ texture = ExtResource("6_ei405")
 self_modulate = Color(1, 1, 1, 0)
 z_index = 5
 anchors_preset = -1
-anchor_left = -0.202
+anchor_left = -0.20199998
 anchor_top = -0.155
-anchor_right = 1.202
-anchor_bottom = 1.1400001
-offset_left = -73.05147
-offset_top = -68.52907
-offset_right = -73.114426
-offset_bottom = -68.53371
+anchor_right = 1.0837902
+anchor_bottom = 0.6885259
+offset_left = -23.159615
+offset_top = -25.646944
+offset_right = -23.222572
+offset_bottom = -25.651585
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("5_hqns4")
@@ -263,25 +264,27 @@ metadata/blender = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="blender" unique_id=404369509]
 z_index = 1
+position = Vector2(31, -4)
 shape = SubResource("CapsuleShape2D_2hxjc")
 
 [node name="Sprite2D" type="Sprite2D" parent="blender/CollisionShape2D" unique_id=358653862]
 z_index = 1
-scale = Vector2(0.70703113, 1.1289064)
-texture = ExtResource("1_wtcfe")
+position = Vector2(5.8174133e-05, -23.999985)
+scale = Vector2(2.5416646, 2.5937505)
+texture = ExtResource("9_2nhjh")
 
 [node name="Button" type="Button" parent="blender/CollisionShape2D/Sprite2D" unique_id=600574507]
 self_modulate = Color(1, 1, 1, 0)
 z_index = 5
 anchors_preset = -1
 anchor_left = 0.013566613
-anchor_top = 0.008326739
-anchor_right = 0.9974836
-anchor_bottom = 0.9910619
-offset_left = -63.968582
-offset_top = -63.958553
-offset_right = -64.03154
-offset_bottom = -63.963196
+anchor_top = 0.008326729
+anchor_right = 1.1460263
+anchor_bottom = 1.0967282
+offset_left = -26.618444
+offset_top = -43.209003
+offset_right = -26.681404
+offset_bottom = -43.213646
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("5_hqns4")
@@ -622,6 +625,18 @@ position = Vector2(1016, 1621.75)
 scale = Vector2(40.328125, 24.484375)
 texture = ExtResource("8_rj586")
 
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/CanvasLayer" unique_id=1919671256]
+z_index = 11
+offset_left = 404.99994
+offset_top = 1197.0001
+offset_right = 1624.0
+offset_bottom = 1933.0
+theme = SubResource("Theme_rp3bj")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 5
+text = "YOU SHOULDN'T BE SEEING THIS"
+tab_size = 3
+
 [node name="openBook" type="Button" parent="Control/CanvasLayer" unique_id=454998662]
 offset_left = 792.0
 offset_top = 991.0
@@ -654,19 +669,6 @@ offset_right = 1781.0
 offset_bottom = 1772.75
 theme = SubResource("Theme_ir8iy")
 text = ">"
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Control/CanvasLayer/right" unique_id=1919671256]
-z_index = 11
-layout_mode = 0
-offset_left = -1296.0
-offset_top = -220.75
-offset_right = -83.0
-offset_bottom = 506.25
-theme = SubResource("Theme_rp3bj")
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_constants/line_separation = 5
-text = "YOU SHOULDN'T BE SEEING THIS"
-tab_size = 3
 
 [node name="tazer" type="Area2D" parent="." unique_id=1300496687]
 position = Vector2(1248, 766)

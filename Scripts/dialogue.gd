@@ -142,11 +142,10 @@ player ..."
 var bookPages = {
 	"1":
 		"10/27
-		Yo! this is a message from your assistant manager from the morning shift.
-		your job should be fairly simple, look at the patrons orders and give it to them. Take a glass, put int the liquid, and hand it to them, easy. See those bottles? hover your mouse over them and it should tell you what's in it. If you mess up, just throw away the glass, don't worry the glasses are made from some polymer that we make in house, so it's \"Cost Effective\" or whatever.
-		Just make sure you get each patrons drinks finished before they get fed up and leave, click and hold on the patron and the interface will automatically talk to them giving you more time. If you give a patron the wrong order, or take too long and the patron leaves, you'll get a citation. 3 citations in the same day and you're fired, but your citations will reset at the beginning of each shift, so don't worry too much about making too many mistakes.
-		You might also notice that tazer, and while you are at the comfort of your home, you might wonder \"why do I need a tazer for self defence?\", and to that I say, it's not for your safety, it's to make your job easier. If someone's order is too difficult, feel free to give them a little shock, and their systems will forget a few pieces of their order. And don't worry, we only serve androids, so it's perfectly legal, given the whole they're not people and stuff. Sometimes they'll just forget that they ordered anything and just leave, which at the end just makes your job easier so go at it. You won't get a citation for that so don't worry.
-		Anyways, once you're ready, click that big \"Start Day\" button and people will start trickling in. Good luck on your first shift, hopefully I'll get to write to you again tomorrow",
+		How's it going! This is a friendly message from your assistant manager, welcome to the team!
+		You'll only be here for a few days as we install the automatic bartender, but I might as well make sure you know enough to not get fired. The system is simple, just complete people's order as they come in, mess up someone's order or take too long and you'll get a citation, get 3 citations and you're fired.
+		Other than that, everything's pretty simple, feel free to use that tazer by the way, it was originally put there for personal safety, but we found out that it fries the systems of patrons who come in and makes them forget parts of their order, so use that to your advantage.
+		Feel free to take a look around to get yourself situated, and press that button there to start the day and start letting customers in.",
 	"2":
 		"10/28
 		Hey! if you're reading this, you're back!

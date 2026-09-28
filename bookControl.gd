@@ -5,7 +5,7 @@ var pages = []
 @onready var book = get_node("CanvasLayer/book")
 @onready var left = get_node("CanvasLayer/left")
 @onready var right = get_node("CanvasLayer/right")
-@onready var wordPlace = get_node("CanvasLayer/right/RichTextLabel")
+@onready var wordPlace = get_node("CanvasLayer/RichTextLabel")
 var info: dialogue = dialogue.new()
 @onready var day = get_parent().day
 var save_game: player_data = null
@@ -44,11 +44,24 @@ func _process(delta: float) -> void:
 		yPlace = 500.0
 	else:
 		yPlace = 1500.0
+		
 	page=clamp(page,0,totalPages)
 	book.position.y=lerp(book.position.y,yPlace,.1)
 	right.position.y=lerp(right.position.y,yPlace-150,.1)
 	left.position.y=lerp(left.position.y,yPlace-150,.1)
+	wordPlace.position.y=book.position.y-375
+	
 	wordPlace.text=pages[page]
+	
+	if page==totalPages:
+		right.visible=false
+	else:
+		right.visible=true
+	
+	if page==0:
+		left.visible=false
+	else:
+		left.visible=true
 
 func _on_open_book_button_down() -> void:
 	open = not open

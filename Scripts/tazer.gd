@@ -25,7 +25,6 @@ func _process(delta: float) -> void:
 	get_node("CollisionShape2D/Sprite2D").position.x=offX
 	get_node("CollisionShape2D/Sprite2D").position.y=offY
 
-
 func _on_button_button_down() -> void:
 	dragging = true
 	off = get_global_mouse_position() - global_position
