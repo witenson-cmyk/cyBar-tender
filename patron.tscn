@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://7p45rspw6f81" path="res://Sprites/patrons/patron0.png" id="2_44a8u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0hol4"]
-size = Vector2(264.75, 377.5)
+size = Vector2(311.375, 471.75)
 
 [sub_resource type="Gradient" id="Gradient_44a8u"]
 offsets = PackedFloat32Array(0.0064935065)
@@ -31,6 +31,8 @@ metadata/patron = true
 metadata/spot = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=425447873]
+position = Vector2(-1, 52.00003)
+scale = Vector2(1.25, 1.25)
 shape = SubResource("RectangleShape2D_0hol4")
 
 [node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D" unique_id=1545143223]
@@ -48,12 +50,13 @@ offset_right = -71.666664
 offset_bottom = -88.0
 grow_horizontal = 2
 grow_vertical = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="patron label" type="Label" parent="." unique_id=1132450089]
-offset_left = 115.0
-offset_top = -166.0
-offset_right = 244.0
-offset_bottom = 52.0
+offset_left = 170.0
+offset_top = -173.0
+offset_right = 299.0
+offset_bottom = 45.0
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="." unique_id=448932028]
 offset_left = -175.0

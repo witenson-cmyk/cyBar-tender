@@ -22,8 +22,8 @@ func _process(delta: float) -> void:
 		position=lerp(position,lastok,.2)
 		z_index=2
 		
-	get_node("CollisionShape2D/Sprite2D").position.x=offX
-	get_node("CollisionShape2D/Sprite2D").position.y=offY
+	get_node("Sprite2D").position.x=offX
+	get_node("Sprite2D").position.y=offY
 
 func _on_button_button_down() -> void:
 	dragging = true

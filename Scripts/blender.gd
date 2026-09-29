@@ -9,11 +9,11 @@ var iceAdd=false
 var sprite
 var blendingSpr = load("res://Sprites/blenderBlending.png")
 var noBlendSpr = load("res://Sprites/blenderDepressed.png")
-@onready var button = get_node("CollisionShape2D/Sprite2D/Button")
+@onready var button = get_node("Sprite2D/Button")
 var random = RandomNumberGenerator.new()
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	sprite=get_node("CollisionShape2D/Sprite2D")
+	sprite=get_node("Sprite2D")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -37,8 +37,8 @@ func _process(delta: float) -> void:
 		sprite.set_texture(blendingSpr)
 		var offY = random.randi()%5
 		var offX = random.randi()%5
-		get_node("CollisionShape2D/Sprite2D").position.x=offX
-		get_node("CollisionShape2D/Sprite2D").position.y=offY
+		get_node("Sprite2D").position.x=offX
+		get_node("Sprite2D").position.y=offY
 	else:
 		button.tooltip_strings[0] = "Blender (Needs Ice)"
 		sprite.set_texture(noBlendSpr)

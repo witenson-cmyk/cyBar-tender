@@ -42,8 +42,10 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if open:
 		yPlace = 500.0
+		get_node("CanvasLayer/openBook").text = "Close Book"
 	else:
-		yPlace = 1500.0
+		yPlace = -500.0
+		get_node("CanvasLayer/openBook").text = "Open Book"
 		
 	page=clamp(page,0,totalPages)
 	book.position.y=lerp(book.position.y,yPlace,.1)

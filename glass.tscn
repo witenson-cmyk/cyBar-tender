@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://coqwnstoj346c" path="res://addons/tooltips_pro/scripts/tooltip_trigger.gd" id="3_b8qbv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3n2aa"]
-size = Vector2(82.5, 88.5)
+size = Vector2(116.53125, 108.53125)
 
 [node name="glass" type="Area2D" unique_id=330674391]
 z_index = 1
@@ -18,8 +18,7 @@ shape = SubResource("RectangleShape2D_3n2aa")
 
 [node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D" unique_id=747515525]
 z_index = 1
-position = Vector2(0.4999981, -1.9073486e-06)
-scale = Vector2(2.59375, 2.75)
+scale = Vector2(3.5, 3.5)
 texture = ExtResource("2_b8qbv")
 
 [node name="Button" type="Button" parent="CollisionShape2D/Sprite2D" unique_id=344818704]
@@ -34,6 +33,7 @@ offset_right = -11.606461
 offset_bottom = -6.545452
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 action_mode = 0
 script = ExtResource("3_b8qbv")
 tooltip_alignment = 2
@@ -41,6 +41,13 @@ origin = 3
 offset = Vector2(25, 25)
 tooltip_strings = Array[String](["WOAH"])
 metadata/_edit_use_anchors_ = true
+
+[node name="outline" type="Sprite2D" parent="CollisionShape2D/Sprite2D" unique_id=775008149]
+visible = false
+self_modulate = Color(18.892157, 18.892157, 18.892157, 1)
+z_index = -1
+scale = Vector2(1.2, 1.1)
+texture = ExtResource("2_b8qbv")
 
 [connection signal="button_down" from="CollisionShape2D/Sprite2D/Button" to="." method="_on_button_button_down"]
 [connection signal="button_up" from="CollisionShape2D/Sprite2D/Button" to="." method="_on_button_button_up"]

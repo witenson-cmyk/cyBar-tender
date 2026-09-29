@@ -9,6 +9,7 @@ var wanted
 var got
 var previousPosition = global_position
 @onready var button = get_node("CollisionShape2D/Sprite2D/Button")
+@onready var filled = load("res://Sprites/cuppFilled.png")
 
 # Called when the node enters the scene tree for the first time.simple and clean birth by sleep
 func _ready() -> void:
@@ -40,12 +41,15 @@ func _process(delta: float) -> void:
 	get_node("CollisionShape2D/Sprite2D").rotation = shmoov
 	
 	previousPosition=global_position
+	
+	if not added.is_empty():
+		get_node("CollisionShape2D/Sprite2D").texture = filled
+		get_node("CollisionShape2D/Sprite2D/outline").texture = filled
 
 
 func _on_button_button_down() -> void:
 	dragging = true
 	off = get_global_mouse_position() - global_position
-
 
 func _on_button_button_up() -> void:
 	dragging = false
@@ -74,3 +78,9 @@ func _on_button_button_up() -> void:
 				thing.queue_free()
 				lastPlace.set_meta("place",true)
 				queue_free()
+
+func _mouse_enter() -> void:
+	get_node("CollisionShape2D/Sprite2D/outline").visible=true
+
+func _mouse_exit() -> void:
+	get_node("CollisionShape2D/Sprite2D/outline").visible=false

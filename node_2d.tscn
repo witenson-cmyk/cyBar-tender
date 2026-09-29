@@ -23,14 +23,16 @@
 [ext_resource type="Texture2D" uid="uid://chn4demdvrdsj" path="res://Sprites/orange.png" id="13_bjha6"]
 [ext_resource type="Texture2D" uid="uid://cjhlwm51u1j8r" path="res://Sprites/trashcnnnn.png" id="14_flf07"]
 [ext_resource type="Texture2D" uid="uid://xhyab3seepyk" path="res://Sprites/tazzz.png" id="18_k73cj"]
-[ext_resource type="FontFile" uid="uid://c8ju06t01t0mv" path="res://fonts/ConsoleSansVF.ttf" id="23_e8dv2"]
+[ext_resource type="Texture2D" uid="uid://dgdh5vpq8ys8c" path="res://Sprites/cubby.png" id="22_gt76g"]
+[ext_resource type="Texture2D" uid="uid://godsoqwfoqag" path="res://Sprites/backbackground.png" id="24_bjha6"]
+[ext_resource type="Texture2D" uid="uid://cj10xsibe1s3y" path="res://Sprites/backforeground.png" id="25_gt76g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rp3bj"]
-size = Vector2(189, 202.75)
+size = Vector2(95.25, 90.1875)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ei405"]
-radius = 42.0
-height = 314.0
+radius = 47.0
+height = 338.00024
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gt76g"]
 radius = 67.0
@@ -41,8 +43,8 @@ radius = 42.0
 height = 174.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2hxjc"]
-radius = 60.0
-height = 268.0
+radius = 124.0
+height = 480.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e8dv2"]
 radius = 42.0
@@ -50,14 +52,14 @@ height = 288.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3n2aa"]
 radius = 42.0
-height = 222.0
+height = 250.00024
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2nhjh"]
 radius = 42.0
 height = 228.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ebxd8"]
-radius = 74.0
+radius = 62.0
 height = 216.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2u7jv"]
@@ -66,7 +68,7 @@ height = 228.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bjha6"]
 radius = 72.0
-height = 212.0
+height = 228.00024
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iobs2"]
 size = Vector2(106, 108)
@@ -91,17 +93,34 @@ default_font_size = 100
 size = Vector2(88, 152)
 
 [sub_resource type="Theme" id="Theme_3n2aa"]
-default_font = ExtResource("23_e8dv2")
 default_font_size = 43
 
 [node name="Node2D" type="Node2D" unique_id=2027772063]
 script = ExtResource("1_0hol4")
 
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=932264517]
+layer = -1
+follow_viewport_enabled = true
+
+[node name="Backbackground" type="Sprite2D" parent="CanvasLayer2" unique_id=1939035015]
+position = Vector2(1082, 644.00006)
+scale = Vector2(5, 5)
+texture = ExtResource("24_bjha6")
+
+[node name="Backforeground" type="Sprite2D" parent="CanvasLayer2/Backbackground" unique_id=1273445047]
+texture = ExtResource("25_gt76g")
+
+[node name="Cubby" type="Sprite2D" parent="CanvasLayer2/Backbackground" unique_id=1850065758]
+position = Vector2(-114.65001, 93.14998)
+scale = Vector2(1.4632812, 1.0354165)
+texture = ExtResource("22_gt76g")
+
 [node name="place8" type="Area2D" parent="." unique_id=211766824]
-position = Vector2(600, 615)
+position = Vector2(600, 765)
 metadata/place = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="place8" unique_id=1145606762]
+position = Vector2(-5, 1)
 shape = SubResource("RectangleShape2D_rp3bj")
 
 [node name="Sprite2D" type="Sprite2D" parent="place8/CollisionShape2D" unique_id=1859957767]
@@ -111,10 +130,11 @@ scale = Vector2(1.296875, 0.3515625)
 texture = ExtResource("1_wtcfe")
 
 [node name="place7" type="Area2D" parent="." unique_id=331055570]
-position = Vector2(802, 615)
+position = Vector2(802, 765)
 metadata/place = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="place7" unique_id=1769195859]
+position = Vector2(-5, 1)
 shape = SubResource("RectangleShape2D_rp3bj")
 
 [node name="Sprite2D" type="Sprite2D" parent="place7/CollisionShape2D" unique_id=761702368]
@@ -124,7 +144,7 @@ scale = Vector2(1.296875, 0.3515625)
 texture = ExtResource("1_wtcfe")
 
 [node name="place3" type="Area2D" parent="." unique_id=784477678]
-position = Vector2(192, 616)
+position = Vector2(192, 766)
 metadata/place = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="place3" unique_id=340371987]
@@ -136,8 +156,62 @@ position = Vector2(0.9999999, 62.249992)
 scale = Vector2(1.296875, 0.3515625)
 texture = ExtResource("1_wtcfe")
 
+[node name="place8" type="Area2D" parent="place3" unique_id=677816167]
+position = Vector2(509, -1)
+metadata/place = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="place3/place8" unique_id=795601394]
+position = Vector2(-5, 1)
+shape = SubResource("RectangleShape2D_rp3bj")
+
+[node name="Sprite2D" type="Sprite2D" parent="place3/place8/CollisionShape2D" unique_id=191320739]
+visible = false
+position = Vector2(0.9999999, 62.249992)
+scale = Vector2(1.296875, 0.3515625)
+texture = ExtResource("1_wtcfe")
+
+[node name="place7" type="Area2D" parent="place3" unique_id=1752451435]
+position = Vector2(711, -1)
+metadata/place = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="place3/place7" unique_id=126959939]
+position = Vector2(-5, 1)
+shape = SubResource("RectangleShape2D_rp3bj")
+
+[node name="Sprite2D" type="Sprite2D" parent="place3/place7/CollisionShape2D" unique_id=944139662]
+visible = false
+position = Vector2(0.9999999, 62.249992)
+scale = Vector2(1.296875, 0.3515625)
+texture = ExtResource("1_wtcfe")
+
+[node name="place3" type="Area2D" parent="place3" unique_id=1489780419]
+position = Vector2(101, 0)
+metadata/place = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="place3/place3" unique_id=1508594822]
+shape = SubResource("RectangleShape2D_rp3bj")
+
+[node name="Sprite2D" type="Sprite2D" parent="place3/place3/CollisionShape2D" unique_id=2009004568]
+visible = false
+position = Vector2(0.9999999, 62.249992)
+scale = Vector2(1.296875, 0.3515625)
+texture = ExtResource("1_wtcfe")
+
+[node name="place4" type="Area2D" parent="place3" unique_id=2025288189]
+position = Vector2(303, 0)
+metadata/place = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="place3/place4" unique_id=953590711]
+shape = SubResource("RectangleShape2D_rp3bj")
+
+[node name="Sprite2D" type="Sprite2D" parent="place3/place4/CollisionShape2D" unique_id=2001173715]
+visible = false
+position = Vector2(0.9999999, 62.249992)
+scale = Vector2(1.296875, 0.3515625)
+texture = ExtResource("1_wtcfe")
+
 [node name="place4" type="Area2D" parent="." unique_id=1293856585]
-position = Vector2(394, 616)
+position = Vector2(394, 766)
 metadata/place = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="place4" unique_id=1726465149]
@@ -151,20 +225,20 @@ texture = ExtResource("1_wtcfe")
 
 [node name="vodka" type="Area2D" parent="." unique_id=225396704]
 z_index = 1
-position = Vector2(131, 904)
+position = Vector2(131, 977.9999)
 script = ExtResource("3_epypp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="vodka" unique_id=152757670]
 z_index = 1
 shape = SubResource("CapsuleShape2D_ei405")
 
-[node name="Sprite2D" type="Sprite2D" parent="vodka/CollisionShape2D" unique_id=2124195975]
+[node name="Sprite2D" type="Sprite2D" parent="vodka" unique_id=2124195975]
 z_index = 1
-position = Vector2(3.8146973e-06, -0.999979)
+position = Vector2(0, -1)
 scale = Vector2(4.6875, 4.8437514)
 texture = ExtResource("4_ta5nu")
 
-[node name="Button" type="Button" parent="vodka/CollisionShape2D/Sprite2D" unique_id=12542085]
+[node name="Button" type="Button" parent="vodka/Sprite2D" unique_id=12542085]
 self_modulate = Color(1, 1, 1, 0)
 z_index = 5
 z_as_relative = false
@@ -179,6 +253,7 @@ offset_right = -3.6256294
 offset_bottom = -21.258823
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 script = ExtResource("5_hqns4")
 tooltip_alignment = 2
 origin = 3
@@ -186,9 +261,16 @@ offset = Vector2(25, 25)
 tooltip_strings = Array[String](["Vodka"])
 metadata/_edit_use_anchors_ = true
 
+[node name="outline" type="Sprite2D" parent="vodka/Sprite2D" unique_id=452849745]
+visible = false
+self_modulate = Color(18.892157, 18.892157, 18.892157, 1)
+z_index = -1
+scale = Vector2(1.2, 1.1)
+texture = ExtResource("4_ta5nu")
+
 [node name="stiring" type="Area2D" parent="." unique_id=2082373023]
 z_index = 1
-position = Vector2(1540, 899)
+position = Vector2(1508, 907)
 script = ExtResource("3_epypp")
 toAdd = "stirred"
 
@@ -197,25 +279,25 @@ z_index = 1
 position = Vector2(1, 35)
 shape = SubResource("CapsuleShape2D_gt76g")
 
-[node name="Sprite2D" type="Sprite2D" parent="stiring/CollisionShape2D" unique_id=1359540468]
+[node name="Sprite2D" type="Sprite2D" parent="stiring" unique_id=1359540468]
 z_index = 1
-position = Vector2(9.99995, 34.000015)
+position = Vector2(11, 69)
 scale = Vector2(2.4653323, 3.964356)
 texture = ExtResource("6_ei405")
 
-[node name="Button" type="Button" parent="stiring/CollisionShape2D/Sprite2D" unique_id=1244351630]
+[node name="Button" type="Button" parent="stiring/Sprite2D" unique_id=1244351630]
 self_modulate = Color(1, 1, 1, 0)
 z_index = 5
 z_as_relative = false
 anchors_preset = -1
-anchor_left = -0.20199998
-anchor_top = -0.155
+anchor_left = -0.18400002
+anchor_top = -0.056
 anchor_right = 1.0837902
-anchor_bottom = 0.6885259
-offset_left = -23.159615
-offset_top = -25.646944
+anchor_bottom = 0.78800005
+offset_left = -24.023613
+offset_top = -31.982944
 offset_right = -23.222572
-offset_bottom = -25.651585
+offset_bottom = -32.01793
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
@@ -226,9 +308,16 @@ offset = Vector2(25, 25)
 tooltip_strings = Array[String](["Stirring Spoon"])
 metadata/_edit_use_anchors_ = true
 
+[node name="outline" type="Sprite2D" parent="stiring/Sprite2D" unique_id=1631364034]
+visible = false
+self_modulate = Color(1.8247963, 1.8247963, 1.8247963, 1)
+z_index = -1
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("6_ei405")
+
 [node name="shaker" type="Area2D" parent="." unique_id=1410473764]
 z_index = 1
-position = Vector2(1420, 879)
+position = Vector2(1388, 887)
 script = ExtResource("3_epypp")
 toAdd = "shaken"
 
@@ -236,13 +325,13 @@ toAdd = "shaken"
 z_index = 1
 shape = SubResource("CapsuleShape2D_1fr6y")
 
-[node name="Sprite2D" type="Sprite2D" parent="shaker/CollisionShape2D" unique_id=308386175]
+[node name="Sprite2D" type="Sprite2D" parent="shaker" unique_id=308386175]
 z_index = 1
-position = Vector2(-2.0000038, -19.000008)
+position = Vector2(-2, -19)
 scale = Vector2(2.7779946, 3.1621091)
 texture = ExtResource("7_e8dv2")
 
-[node name="Button" type="Button" parent="shaker/CollisionShape2D/Sprite2D" unique_id=885512603]
+[node name="Button" type="Button" parent="shaker/Sprite2D" unique_id=885512603]
 self_modulate = Color(1, 1, 1, 0)
 z_index = 5
 z_as_relative = false
@@ -265,9 +354,16 @@ offset = Vector2(25, 25)
 tooltip_strings = Array[String](["Shaker"])
 metadata/_edit_use_anchors_ = true
 
+[node name="outline" type="Sprite2D" parent="shaker/Sprite2D" unique_id=1529344724]
+visible = false
+self_modulate = Color(1.8247963, 1.8247963, 1.8247963, 1)
+z_index = -1
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("7_e8dv2")
+
 [node name="blender" type="Area2D" parent="." unique_id=1952463535]
 z_index = 1
-position = Vector2(1666, 840)
+position = Vector2(1666, 856)
 script = ExtResource("4_d21ai")
 metadata/blender = true
 
@@ -276,25 +372,25 @@ z_index = 1
 position = Vector2(31, -4)
 shape = SubResource("CapsuleShape2D_2hxjc")
 
-[node name="Sprite2D" type="Sprite2D" parent="blender/CollisionShape2D" unique_id=358653862]
+[node name="Sprite2D" type="Sprite2D" parent="blender" unique_id=358653862]
 z_index = 1
-position = Vector2(5.8174133e-05, -23.999985)
-scale = Vector2(2.5416646, 2.5937505)
+position = Vector2(31, -4)
+scale = Vector2(4.5624967, 4.515625)
 texture = ExtResource("9_2nhjh")
 
-[node name="Button" type="Button" parent="blender/CollisionShape2D/Sprite2D" unique_id=600574507]
+[node name="Button" type="Button" parent="blender/Sprite2D" unique_id=600574507]
 self_modulate = Color(1, 1, 1, 0)
 z_index = 5
 z_as_relative = false
 anchors_preset = -1
-anchor_left = 0.013566613
+anchor_left = 0.06379473
 anchor_top = 0.008326729
-anchor_right = 1.1460263
-anchor_bottom = 1.0967282
-offset_left = -26.618444
-offset_top = -43.209003
-offset_right = -26.681404
-offset_bottom = -43.213646
+anchor_right = 0.94181985
+anchor_bottom = 0.8826542
+offset_left = -23.884094
+offset_top = -36.2319
+offset_right = -23.947054
+offset_bottom = -36.236534
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
@@ -305,9 +401,16 @@ offset = Vector2(25, 25)
 tooltip_strings = Array[String](["Blender (needs ice)"])
 metadata/_edit_use_anchors_ = true
 
+[node name="outline" type="Sprite2D" parent="blender/Sprite2D" unique_id=948532717]
+visible = false
+self_modulate = Color(18.892157, 18.892157, 18.892157, 1)
+z_index = -1
+scale = Vector2(1.118, 1.025)
+texture = ExtResource("9_2nhjh")
+
 [node name="water" type="Area2D" parent="." unique_id=524280698]
 z_index = 1
-position = Vector2(484, 922)
+position = Vector2(484, 995.9999)
 script = ExtResource("3_epypp")
 toAdd = "water"
 
@@ -315,13 +418,13 @@ toAdd = "water"
 z_index = 1
 shape = SubResource("CapsuleShape2D_e8dv2")
 
-[node name="Sprite2D" type="Sprite2D" parent="water/CollisionShape2D" unique_id=97250937]
+[node name="Sprite2D" type="Sprite2D" parent="water" unique_id=97250937]
 z_index = 1
-position = Vector2(1.0000153, -12.999989)
+position = Vector2(1, -13)
 scale = Vector2(2.781252, 2.7708333)
 texture = ExtResource("7_flf07")
 
-[node name="Button" type="Button" parent="water/CollisionShape2D/Sprite2D" unique_id=50988461]
+[node name="Button" type="Button" parent="water/Sprite2D" unique_id=50988461]
 self_modulate = Color(1, 1, 1, 0)
 z_index = 5
 z_as_relative = false
@@ -336,6 +439,7 @@ offset_right = -11.418694
 offset_bottom = -32.48324
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 script = ExtResource("5_hqns4")
 trigger_mode = 1
 tooltip_alignment = 2
@@ -344,9 +448,16 @@ offset = Vector2(25, 25)
 tooltip_strings = Array[String](["Water"])
 metadata/_edit_use_anchors_ = true
 
+[node name="outline" type="Sprite2D" parent="water/Sprite2D" unique_id=2018471638]
+visible = false
+self_modulate = Color(18.892157, 18.892157, 18.892157, 1)
+z_index = -1
+scale = Vector2(1.2, 1.1)
+texture = ExtResource("7_flf07")
+
 [node name="grenadine" type="Area2D" parent="." unique_id=1750166694]
 z_index = 1
-position = Vector2(570, 930)
+position = Vector2(570, 1003.9999)
 script = ExtResource("3_epypp")
 toAdd = "grenadine"
 
@@ -354,13 +465,13 @@ toAdd = "grenadine"
 z_index = 1
 shape = SubResource("CapsuleShape2D_3n2aa")
 
-[node name="Sprite2D" type="Sprite2D" parent="grenadine/CollisionShape2D" unique_id=1427432880]
+[node name="Sprite2D" type="Sprite2D" parent="grenadine" unique_id=1427432880]
 z_index = 1
-position = Vector2(4.2915344e-06, -6.999977)
+position = Vector2(0, -7)
 scale = Vector2(2.8593743, 2.4427085)
 texture = ExtResource("8_k73cj")
 
-[node name="Button" type="Button" parent="grenadine/CollisionShape2D/Sprite2D" unique_id=248023572]
+[node name="Button" type="Button" parent="grenadine/Sprite2D" unique_id=248023572]
 self_modulate = Color(0.97, 0.97, 0.97, 0)
 z_index = 5
 z_as_relative = false
@@ -374,6 +485,7 @@ offset_right = -15.994907
 offset_bottom = -48.020817
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 script = ExtResource("5_hqns4")
 tooltip_alignment = 2
 origin = 3
@@ -381,9 +493,16 @@ offset = Vector2(25, 25)
 tooltip_strings = Array[String](["Grenadine"])
 metadata/_edit_use_anchors_ = true
 
+[node name="outline" type="Sprite2D" parent="grenadine/Sprite2D" unique_id=404291942]
+visible = false
+self_modulate = Color(18.892157, 18.892157, 18.892157, 1)
+z_index = -1
+scale = Vector2(1.2, 1.1)
+texture = ExtResource("8_k73cj")
+
 [node name="citrus" type="Area2D" parent="." unique_id=1202219946]
 z_index = 1
-position = Vector2(645, 944)
+position = Vector2(645, 1017.9999)
 script = ExtResource("3_epypp")
 toAdd = "citrus"
 
@@ -391,13 +510,13 @@ toAdd = "citrus"
 z_index = 1
 shape = SubResource("CapsuleShape2D_2nhjh")
 
-[node name="Sprite2D" type="Sprite2D" parent="citrus/CollisionShape2D" unique_id=909317383]
+[node name="Sprite2D" type="Sprite2D" parent="citrus" unique_id=909317383]
 z_index = 1
-position = Vector2(1.0000095, 2.0000234)
+position = Vector2(1, 2)
 scale = Vector2(2.3750002, 3.0078125)
 texture = ExtResource("9_rjqkl")
 
-[node name="Button" type="Button" parent="citrus/CollisionShape2D/Sprite2D" unique_id=517112086]
+[node name="Button" type="Button" parent="citrus/Sprite2D" unique_id=517112086]
 self_modulate = Color(1, 1, 1, 0)
 z_index = 5
 z_as_relative = false
@@ -412,6 +531,7 @@ offset_right = -9.599049
 offset_bottom = -27.985916
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 script = ExtResource("5_hqns4")
 tooltip_alignment = 5
 origin = 3
@@ -419,24 +539,26 @@ offset = Vector2(25, 25)
 tooltip_strings = Array[String](["Citrus"])
 metadata/_edit_use_anchors_ = true
 
+[node name="outline" type="Sprite2D" parent="citrus/Sprite2D" unique_id=905668651]
+visible = false
+self_modulate = Color(18.892157, 18.892157, 18.892157, 1)
+z_index = -1
+scale = Vector2(1.2, 1.1)
+texture = ExtResource("9_rjqkl")
+
 [node name="tequilla" type="Area2D" parent="." unique_id=1622415]
 z_index = 1
-position = Vector2(850, 952)
+position = Vector2(863, 1026.9999)
 script = ExtResource("3_epypp")
 toAdd = "tequilla"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="tequilla" unique_id=1147642742]
+[node name="Sprite2D" type="Sprite2D" parent="tequilla" unique_id=1360196593]
 z_index = 1
-position = Vector2(5, 1)
-shape = SubResource("CapsuleShape2D_ebxd8")
-
-[node name="Sprite2D" type="Sprite2D" parent="tequilla/CollisionShape2D" unique_id=1360196593]
-z_index = 1
-position = Vector2(0.99999714, 2.336502e-05)
+position = Vector2(6, 1)
 scale = Vector2(2.9166663, 3.0078125)
 texture = ExtResource("12_2nhjh")
 
-[node name="Button" type="Button" parent="tequilla/CollisionShape2D/Sprite2D" unique_id=908979937]
+[node name="Button" type="Button" parent="tequilla/Sprite2D" unique_id=908979937]
 self_modulate = Color(1, 1, 1, 0)
 z_index = 5
 z_as_relative = false
@@ -451,6 +573,7 @@ offset_right = -24.015999
 offset_bottom = -23.996277
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 script = ExtResource("5_hqns4")
 trigger_mode = 1
 tooltip_alignment = 5
@@ -459,9 +582,21 @@ offset = Vector2(25, 25)
 tooltip_strings = Array[String](["Tequilla"])
 metadata/_edit_use_anchors_ = true
 
+[node name="outline" type="Sprite2D" parent="tequilla/Sprite2D" unique_id=1349475474]
+visible = false
+self_modulate = Color(18.892157, 18.892157, 18.892157, 1)
+z_index = -1
+scale = Vector2(1.2, 1.1)
+texture = ExtResource("12_2nhjh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tequilla" unique_id=1147642742]
+z_index = 1
+position = Vector2(5, 1)
+shape = SubResource("CapsuleShape2D_ebxd8")
+
 [node name="orange" type="Area2D" parent="." unique_id=245067281]
 z_index = 1
-position = Vector2(715, 952)
+position = Vector2(723, 1025.9999)
 script = ExtResource("3_epypp")
 toAdd = "orange"
 
@@ -470,15 +605,15 @@ z_index = 1
 position = Vector2(32, -9)
 shape = SubResource("CapsuleShape2D_2u7jv")
 
-[node name="Sprite2D" type="Sprite2D" parent="orange/CollisionShape2D" unique_id=786572682]
+[node name="Sprite2D" type="Sprite2D" parent="orange" unique_id=786572682]
 modulate = Color(0.9, 0.75975, 0.40499997, 1)
 self_modulate = Color(1, 0.8333334, 0, 1)
 z_index = 1
-position = Vector2(4.0000153, -11.0000305)
+position = Vector2(36, -20)
 scale = Vector2(2.645834, 3.441406)
 texture = ExtResource("13_bjha6")
 
-[node name="Button" type="Button" parent="orange/CollisionShape2D/Sprite2D" unique_id=36030712]
+[node name="Button" type="Button" parent="orange/Sprite2D" unique_id=36030712]
 self_modulate = Color(1, 1, 1, 0)
 z_index = 5
 z_as_relative = false
@@ -494,6 +629,7 @@ offset_right = -13.800003
 offset_bottom = -18.81009
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 script = ExtResource("5_hqns4")
 tooltip_alignment = 5
 origin = 3
@@ -501,9 +637,16 @@ offset = Vector2(25, 25)
 tooltip_strings = Array[String](["Orange"])
 metadata/_edit_use_anchors_ = true
 
+[node name="outline" type="Sprite2D" parent="orange/Sprite2D" unique_id=400443137]
+visible = false
+self_modulate = Color(18.892157, 18.892157, 18.892157, 1)
+z_index = -1
+scale = Vector2(1.145, 1.05)
+texture = ExtResource("13_bjha6")
+
 [node name="soda water" type="Area2D" parent="." unique_id=339397104]
 z_index = 1
-position = Vector2(225, 933)
+position = Vector2(225, 1006.9999)
 script = ExtResource("3_epypp")
 toAdd = "soda water"
 
@@ -511,13 +654,13 @@ toAdd = "soda water"
 z_index = 1
 shape = SubResource("CapsuleShape2D_3n2aa")
 
-[node name="Sprite2D" type="Sprite2D" parent="soda water/CollisionShape2D" unique_id=769726375]
+[node name="Sprite2D" type="Sprite2D" parent="soda water" unique_id=769726375]
 z_index = 1
-position = Vector2(-2.4999866, -3.5000076)
+position = Vector2(-2.4999847, -3.5)
 scale = Vector2(2.7187498, 2.6354165)
 texture = ExtResource("10_fs4d3")
 
-[node name="Button" type="Button" parent="soda water/CollisionShape2D/Sprite2D" unique_id=1213000788]
+[node name="Button" type="Button" parent="soda water/Sprite2D" unique_id=1213000788]
 self_modulate = Color(1, 1, 1, 0)
 z_index = 5
 z_as_relative = false
@@ -533,6 +676,7 @@ offset_right = -16.367817
 offset_bottom = -46.86165
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 script = ExtResource("5_hqns4")
 tooltip_alignment = 2
 origin = 3
@@ -540,44 +684,59 @@ offset = Vector2(25, 25)
 tooltip_strings = Array[String](["Soda Water"])
 metadata/_edit_use_anchors_ = true
 
+[node name="outline" type="Sprite2D" parent="soda water/Sprite2D" unique_id=1642618540]
+visible = false
+self_modulate = Color(18.892157, 18.892157, 18.892157, 1)
+z_index = -1
+scale = Vector2(1.2, 1.1)
+texture = ExtResource("10_fs4d3")
+
 [node name="whisky" type="Area2D" parent="." unique_id=2085533543]
 z_index = 1
-position = Vector2(365, 952)
+position = Vector2(365, 1025.9999)
 script = ExtResource("3_epypp")
 toAdd = "whisky"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="whisky" unique_id=645023874]
+[node name="Sprite2D" type="Sprite2D" parent="whisky" unique_id=2119178464]
 z_index = 1
-position = Vector2(-4, 0)
-shape = SubResource("CapsuleShape2D_bjha6")
-
-[node name="Sprite2D" type="Sprite2D" parent="whisky/CollisionShape2D" unique_id=2119178464]
-z_index = 1
-position = Vector2(-2.000002, -4.9999924)
+position = Vector2(-6, -5)
 scale = Vector2(2.9887695, 2.7475595)
 texture = ExtResource("11_7vxoj")
 
-[node name="Button" type="Button" parent="whisky/CollisionShape2D/Sprite2D" unique_id=387514104]
+[node name="Button" type="Button" parent="whisky/Sprite2D" unique_id=387514104]
 self_modulate = Color(1, 1, 1, 0)
 z_index = 5
 z_as_relative = false
 anchors_preset = -1
 anchor_left = -0.13926506
-anchor_top = -0.029888898
-anchor_right = 0.8588335
-anchor_bottom = 0.9824455
+anchor_top = -0.069000006
+anchor_right = 1.023
+anchor_bottom = 1.177
 offset_left = -16.067112
-offset_top = -26.111982
-offset_right = -16.13007
-offset_bottom = -26.116623
+offset_top = -23.608871
+offset_right = -24.010063
+offset_bottom = -38.568115
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 script = ExtResource("5_hqns4")
 tooltip_alignment = 2
 origin = 3
 offset = Vector2(25, 25)
 tooltip_strings = Array[String](["Whisky"])
 metadata/_edit_use_anchors_ = true
+
+[node name="outline" type="Sprite2D" parent="whisky/Sprite2D" unique_id=1445419696]
+visible = false
+self_modulate = Color(18.892157, 18.892157, 18.892157, 1)
+z_index = -1
+scale = Vector2(1.145, 1.05)
+texture = ExtResource("11_7vxoj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="whisky" unique_id=645023874]
+z_index = 1
+position = Vector2(-4, 0)
+shape = SubResource("CapsuleShape2D_bjha6")
 
 [node name="camera" type="Camera2D" parent="." unique_id=734319948]
 position = Vector2(1516, 541)
@@ -588,7 +747,7 @@ limit_right = 2000
 limit_bottom = 10000532
 
 [node name="drawer" type="Area2D" parent="." unique_id=1624584086]
-position = Vector2(1068, 808)
+position = Vector2(1068, 880)
 script = ExtResource("5_q6r6c")
 metadata/place = true
 
@@ -601,7 +760,7 @@ scale = Vector2(1, 0.2734375)
 texture = ExtResource("1_wtcfe")
 
 [node name="iceMachine" type="Area2D" parent="." unique_id=1024892369]
-position = Vector2(-76, 796)
+position = Vector2(-76, 868)
 script = ExtResource("5_d21ai")
 metadata/icePlace = true
 
@@ -632,6 +791,7 @@ offset_left = 20.0
 offset_top = 13.0
 offset_right = 216.0
 offset_bottom = 77.0
+mouse_filter = 1
 script = ExtResource("7_4d7sh")
 metadata/_edit_use_anchors_ = true
 
@@ -639,16 +799,16 @@ metadata/_edit_use_anchors_ = true
 
 [node name="book" type="Sprite2D" parent="Control/CanvasLayer" unique_id=1280228879]
 z_index = 10
-position = Vector2(1016, 1621.75)
+position = Vector2(1016, -562.25)
 scale = Vector2(40.328125, 24.484375)
 texture = ExtResource("8_rj586")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control/CanvasLayer" unique_id=1919671256]
 z_index = 11
 offset_left = 404.99994
-offset_top = 1197.0001
+offset_top = -986.9999
 offset_right = 1624.0
-offset_bottom = 1933.0
+offset_bottom = -251.0
 theme = SubResource("Theme_rp3bj")
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_constants/line_separation = 5
@@ -657,11 +817,11 @@ tab_size = 3
 
 [node name="openBook" type="Button" parent="Control/CanvasLayer" unique_id=454998662]
 offset_left = 792.0
-offset_top = 991.0
+offset_top = 23.0
 offset_right = 1173.0
-offset_bottom = 1049.0
+offset_bottom = 81.0
 theme = SubResource("Theme_rj586")
-text = "↑"
+text = "wololo"
 
 [node name="ui" type="Label" parent="Control/CanvasLayer" unique_id=1278619011]
 offset_left = 20.0
@@ -673,43 +833,43 @@ metadata/_edit_use_anchors_ = true
 [node name="left" type="Button" parent="Control/CanvasLayer" unique_id=1010949049]
 z_index = 4
 offset_left = 246.0
-offset_top = 1410.75
+offset_top = -773.25
 offset_right = 326.0
-offset_bottom = 1765.75
+offset_bottom = -418.25
 theme = SubResource("Theme_4d7sh")
 text = "<"
 
 [node name="right" type="Button" parent="Control/CanvasLayer" unique_id=432057960]
 z_index = 4
 offset_left = 1701.0
-offset_top = 1417.75
+offset_top = -766.25
 offset_right = 1781.0
-offset_bottom = 1772.75
+offset_bottom = -411.25
 theme = SubResource("Theme_ir8iy")
 text = ">"
 
 [node name="tazer" type="Area2D" parent="." unique_id=1300496687]
-position = Vector2(1248, 766)
+position = Vector2(1248, 838)
 script = ExtResource("5_kdubu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tazer" unique_id=1587944148]
 shape = SubResource("RectangleShape2D_d21ai")
 
-[node name="Sprite2D" type="Sprite2D" parent="tazer/CollisionShape2D" unique_id=1253082562]
-position = Vector2(-0.9999771, -2.000019)
+[node name="Sprite2D" type="Sprite2D" parent="tazer" unique_id=1253082562]
+position = Vector2(-1, -2)
 scale = Vector2(2.0625002, 2.3593752)
 texture = ExtResource("18_k73cj")
 
-[node name="Button" type="Button" parent="tazer/CollisionShape2D/Sprite2D" unique_id=1610742361]
+[node name="Button" type="Button" parent="tazer/Sprite2D" unique_id=1610742361]
 modulate = Color(1, 1, 1, 0)
 z_index = 5
 anchors_preset = -1
 anchor_right = 0.74849576
 anchor_bottom = 0.99243474
-offset_left = -20.363602
-offset_top = -32.211903
-offset_right = -13.624771
-offset_bottom = -30.032413
+offset_left = -20.363586
+offset_top = -31.364216
+offset_right = -13.624756
+offset_bottom = -29.184727
 mouse_filter = 1
 script = ExtResource("5_hqns4")
 tooltip_alignment = 2
@@ -717,6 +877,13 @@ origin = 3
 offset = Vector2(25, 25)
 tooltip_strings = Array[String](["Tazer"])
 metadata/_edit_use_anchors_ = true
+
+[node name="outline" type="Sprite2D" parent="tazer/Sprite2D" unique_id=1416739705]
+visible = false
+self_modulate = Color(18.892157, 18.892157, 18.892157, 1)
+z_index = -1
+scale = Vector2(1.2, 1.1)
+texture = ExtResource("18_k73cj")
 
 [node name="startDay" type="Button" parent="." unique_id=386922921]
 offset_left = 999.0
@@ -729,31 +896,31 @@ text = "Start Day"
 [node name="patrons" type="Area2D" parent="." unique_id=1670098809]
 z_as_relative = false
 
-[connection signal="button_down" from="vodka/CollisionShape2D/Sprite2D/Button" to="vodka" method="_on_button_button_down"]
-[connection signal="button_up" from="vodka/CollisionShape2D/Sprite2D/Button" to="vodka" method="_on_button_button_up"]
-[connection signal="button_down" from="stiring/CollisionShape2D/Sprite2D/Button" to="stiring" method="_on_button_button_down"]
-[connection signal="button_up" from="stiring/CollisionShape2D/Sprite2D/Button" to="stiring" method="_on_button_button_up"]
-[connection signal="button_down" from="shaker/CollisionShape2D/Sprite2D/Button" to="shaker" method="_on_button_button_down"]
-[connection signal="button_up" from="shaker/CollisionShape2D/Sprite2D/Button" to="shaker" method="_on_button_button_up"]
-[connection signal="button_down" from="blender/CollisionShape2D/Sprite2D/Button" to="blender" method="_on_button_button_down"]
-[connection signal="button_up" from="blender/CollisionShape2D/Sprite2D/Button" to="blender" method="_on_button_button_up"]
-[connection signal="button_down" from="water/CollisionShape2D/Sprite2D/Button" to="water" method="_on_button_button_down"]
-[connection signal="button_up" from="water/CollisionShape2D/Sprite2D/Button" to="water" method="_on_button_button_up"]
-[connection signal="button_down" from="grenadine/CollisionShape2D/Sprite2D/Button" to="grenadine" method="_on_button_button_down"]
-[connection signal="button_up" from="grenadine/CollisionShape2D/Sprite2D/Button" to="grenadine" method="_on_button_button_up"]
-[connection signal="button_down" from="citrus/CollisionShape2D/Sprite2D/Button" to="citrus" method="_on_button_button_down"]
-[connection signal="button_up" from="citrus/CollisionShape2D/Sprite2D/Button" to="citrus" method="_on_button_button_up"]
-[connection signal="button_down" from="tequilla/CollisionShape2D/Sprite2D/Button" to="tequilla" method="_on_button_button_down"]
-[connection signal="button_up" from="tequilla/CollisionShape2D/Sprite2D/Button" to="tequilla" method="_on_button_button_up"]
-[connection signal="button_down" from="orange/CollisionShape2D/Sprite2D/Button" to="orange" method="_on_button_button_down"]
-[connection signal="button_up" from="orange/CollisionShape2D/Sprite2D/Button" to="orange" method="_on_button_button_up"]
-[connection signal="button_down" from="soda water/CollisionShape2D/Sprite2D/Button" to="soda water" method="_on_button_button_down"]
-[connection signal="button_up" from="soda water/CollisionShape2D/Sprite2D/Button" to="soda water" method="_on_button_button_up"]
-[connection signal="button_down" from="whisky/CollisionShape2D/Sprite2D/Button" to="whisky" method="_on_button_button_down"]
-[connection signal="button_up" from="whisky/CollisionShape2D/Sprite2D/Button" to="whisky" method="_on_button_button_up"]
+[connection signal="button_down" from="vodka/Sprite2D/Button" to="vodka" method="_on_button_button_down"]
+[connection signal="button_up" from="vodka/Sprite2D/Button" to="vodka" method="_on_button_button_up"]
+[connection signal="button_down" from="stiring/Sprite2D/Button" to="stiring" method="_on_button_button_down"]
+[connection signal="button_up" from="stiring/Sprite2D/Button" to="stiring" method="_on_button_button_up"]
+[connection signal="button_down" from="shaker/Sprite2D/Button" to="shaker" method="_on_button_button_down"]
+[connection signal="button_up" from="shaker/Sprite2D/Button" to="shaker" method="_on_button_button_up"]
+[connection signal="button_down" from="blender/Sprite2D/Button" to="blender" method="_on_button_button_down"]
+[connection signal="button_up" from="blender/Sprite2D/Button" to="blender" method="_on_button_button_up"]
+[connection signal="button_down" from="water/Sprite2D/Button" to="water" method="_on_button_button_down"]
+[connection signal="button_up" from="water/Sprite2D/Button" to="water" method="_on_button_button_up"]
+[connection signal="button_down" from="grenadine/Sprite2D/Button" to="grenadine" method="_on_button_button_down"]
+[connection signal="button_up" from="grenadine/Sprite2D/Button" to="grenadine" method="_on_button_button_up"]
+[connection signal="button_down" from="citrus/Sprite2D/Button" to="citrus" method="_on_button_button_down"]
+[connection signal="button_up" from="citrus/Sprite2D/Button" to="citrus" method="_on_button_button_up"]
+[connection signal="button_down" from="tequilla/Sprite2D/Button" to="tequilla" method="_on_button_button_down"]
+[connection signal="button_up" from="tequilla/Sprite2D/Button" to="tequilla" method="_on_button_button_up"]
+[connection signal="button_down" from="orange/Sprite2D/Button" to="orange" method="_on_button_button_down"]
+[connection signal="button_up" from="orange/Sprite2D/Button" to="orange" method="_on_button_button_up"]
+[connection signal="button_down" from="soda water/Sprite2D/Button" to="soda water" method="_on_button_button_down"]
+[connection signal="button_up" from="soda water/Sprite2D/Button" to="soda water" method="_on_button_button_up"]
+[connection signal="button_down" from="whisky/Sprite2D/Button" to="whisky" method="_on_button_button_down"]
+[connection signal="button_up" from="whisky/Sprite2D/Button" to="whisky" method="_on_button_button_up"]
 [connection signal="button_down" from="Control/CanvasLayer/openBook" to="Control" method="_on_open_book_button_down"]
 [connection signal="button_down" from="Control/CanvasLayer/left" to="Control" method="_on_left_button_down"]
 [connection signal="button_down" from="Control/CanvasLayer/right" to="Control" method="_on_right_button_down"]
-[connection signal="button_down" from="tazer/CollisionShape2D/Sprite2D/Button" to="tazer" method="_on_button_button_down"]
-[connection signal="button_up" from="tazer/CollisionShape2D/Sprite2D/Button" to="tazer" method="_on_button_button_up"]
+[connection signal="button_down" from="tazer/Sprite2D/Button" to="tazer" method="_on_button_button_down"]
+[connection signal="button_up" from="tazer/Sprite2D/Button" to="tazer" method="_on_button_button_up"]
 [connection signal="button_down" from="startDay" to="." method="_on_button_button_down"]
