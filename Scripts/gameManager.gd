@@ -29,9 +29,6 @@ func _ready() -> void:
 		save_game = player_data.new()
 	day=save_game.days
 	info=infoToGet.dayVariables[str(day)]
-	
-	load_peeps()
-	
 	if not info["possible"].has("on the rocks"):
 		get_node("iceMachine").queue_free()
 	
@@ -41,21 +38,25 @@ func _ready() -> void:
 		get_node("blender").queue_free()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	
+	if lives <=0:
+		get_tree().change_scene_to_file("res://game_over.tscn")
+		return
+		
 	#camera movement
 	var mousePos=get_viewport().get_mouse_position().x
 	mousePos=clamp(mousePos,0,1920)
-	if mousePos<250:
+	var winSize = get_window().size.x
+	if mousePos<winSize*.15:
 		mov=251/mousePos
 		mov=clamp(mov,.1,25)
 		camera.position.x-=mov
-	if mousePos>1670:
+	elif mousePos>winSize-winSize*.15:
 		mov=250/(1921-mousePos)
 		mov=clamp(mov,.1,25)
 		camera.position.x+=mov
 	camera.position.x=clamp(camera.position.x,0,2000)
 	
-	#spawning patrons15
+	#spawning patrons
 	if timer>0 and dayStarted:
 		timer-=1*delta
 	elif dayStarted:
@@ -64,13 +65,17 @@ func _process(delta: float) -> void:
 			while didIt==false:
 				var ran=random.randi()%places.size()
 				if places[ran]==null:
+					if peeps.is_empty():
+						load_peeps()
 					newPerson=instance.instantiate()
 					get_node("patrons").add_child(newPerson)
 					didIt=true
 					newPerson.position.x=500*ran-700
 					newPerson.position.y=350
 					newPerson.z_index=0
-					newPerson.get_node("CollisionShape2D/Sprite2D").texture=peeps[random.randi()%peeps.size()]
+					var picked = random.randi()%peeps.size()
+					newPerson.get_node("CollisionShape2D/Sprite2D").texture=peeps[picked]
+					peeps.remove_at(picked)
 					places[ran]=newPerson
 		timer=15-random.randi()%7
 	
@@ -91,15 +96,22 @@ func _process(delta: float) -> void:
 	#end the day
 	if gameHT==3 and day<5:
 		save_game.days+=1
+		save_game.points+=points
 		save_game.write_savegame()
 		get_tree().change_scene_to_file("res://next_day.tscn")
 	elif day==5:
 		save_game.days=1
+		save_game.points+=points
 		save_game.write_savegame()
 		get_tree().change_scene_to_file("res://start_screen.tscn")
 		
+	var pointLabel: String = str(int(points/100))+"."
+	if points%100==0:
+		pointLabel+="00"
+	else:
+		pointLabel+=str(points%100)
 	#update UI
-	label.text="Points: "+str(points)+" Lives: "+str(lives)+" "+gameHL+":"+gameML
+	label.text="Tips: "+pointLabel+"       Citations Remaining: "+str(lives)+"       Time: "+gameHL+":"+gameML
 
 func _on_button_button_down() -> void:
 	dayStarted=true

@@ -71,5 +71,11 @@ class_name data
 	"Tequilla, No Sunrise":
 		["tequilla","grenadine","orange","shaken"],
 	"Strawberry Daiquiri":
-		["grenadine","vodka","blended"]
+		["grenadine","vodka","blended"],
+	"New Fashioned":
+		["whisky","orange","citrus","shaken"],
+	"MoreHito": 
+		["vodka","citrus","soda water","shaken"],
+	"Aperol Spritz but without the Aperol or the Spritz":
+		["citrus","blended"]
 }

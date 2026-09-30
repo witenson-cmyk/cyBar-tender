@@ -12,6 +12,8 @@ var words
 var camera
 var point
 var visChars = 0
+@onready var label=get_node("Camera2D/Label")
+var i = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -34,6 +36,7 @@ func _ready() -> void:
 			point.text+="\n"
 			dNum+=1
 			camera.position.y=cameraBMAX
+	
 	
 func _input(event):
 	if event.is_action_pressed("ui_accept") and visChars==point.get_total_character_count():
@@ -62,3 +65,10 @@ func _process(delta: float) -> void:
 	if visChars < point.get_total_character_count():
 		visChars+=75*delta
 	point.visible_characters=visChars
+	
+	i += 2.5*delta
+	if i >=360:
+		i = 0
+	var visibility = abs(sin(i))
+	visibility = clamp(visibility,.2,1)
+	label.modulate.a=sin(visibility)

@@ -42,3 +42,9 @@ func _on_button_button_up() -> void:
 					thing.timer=15
 				lastPlace.set_meta("icePlace",true)
 				queue_free()
+
+func _mouse_enter() -> void:
+	get_node("CollisionShape2D/Sprite2D/outline").visible=true
+
+func _mouse_exit() -> void:
+	get_node("CollisionShape2D/Sprite2D/outline").visible=false

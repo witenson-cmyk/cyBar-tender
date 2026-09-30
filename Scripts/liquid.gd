@@ -40,6 +40,7 @@ func _on_button_button_up() -> void:
 					if(all==toAdd):
 						return
 				thing.added.append(toAdd)
+				return
 
 func _mouse_enter() -> void:
 	get_node("Sprite2D/outline").visible=true

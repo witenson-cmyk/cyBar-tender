@@ -1,9 +1,35 @@
 [gd_scene format=3 uid="uid://c44nm3drf4ghu"]
 
 [ext_resource type="Script" uid="uid://2fdx5f8rqpn8" path="res://Scripts/game_over.gd" id="1_y26ei"]
+[ext_resource type="Shader" uid="uid://dg0hpem4jsije" path="res://Sprites/new_shader.gdshader" id="2_yxx3c"]
 
 [sub_resource type="Theme" id="Theme_rp3bj"]
 default_font_size = 80
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ccer4"]
+shader = ExtResource("2_yxx3c")
+shader_parameter/brightness = 1.0
+shader_parameter/contrast = 1.08
+shader_parameter/saturation = 1.1
+shader_parameter/gamma = 1.05
+shader_parameter/curvature = 0.1
+shader_parameter/corner_soften = 0.01
+shader_parameter/vignette = 0.28
+shader_parameter/scanline_strength = 0.3
+shader_parameter/scanline_density = 1.15
+shader_parameter/interlace_strength = 0.2
+shader_parameter/mask_strength = 0.22
+shader_parameter/mask_scale = 1.0
+shader_parameter/chroma_offset_px = 2.0
+shader_parameter/luma_smear_px = 1.2
+shader_parameter/jitter_px = 1.8
+shader_parameter/wobble_px = 1.0
+shader_parameter/tape_noise = 0.12
+shader_parameter/tape_lines = 0.1
+shader_parameter/roll_speed = 0.1
+shader_parameter/roll_strength = 0.05
+shader_parameter/glow_strength = 0.25
+shader_parameter/glow_threshold = 0.65
 
 [sub_resource type="Theme" id="Theme_3n2aa"]
 default_font_size = 100
@@ -18,6 +44,24 @@ offset_right = 1408.0
 offset_bottom = 859.0
 theme = SubResource("Theme_rp3bj")
 text = "Title Screen"
+
+[node name="ColorRect" type="ColorRect" parent="title" unique_id=759810048]
+z_index = 99
+material = SubResource("ShaderMaterial_ccer4")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1407.0
+offset_top = -958.5
+offset_right = 1321.0
+offset_bottom = 689.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 1, 0)
 
 [node name="retry" type="Button" parent="." unique_id=635790396]
 offset_left = 460.0

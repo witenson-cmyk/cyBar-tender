@@ -61,4 +61,12 @@ func _on_button_button_up() -> void:
 							return
 					thing.added.append(toAdd)
 					blended=false
+					return
+					
+func _mouse_enter() -> void:
+	if blended:
+		get_node("Sprite2D/outline").visible=true
+
+func _mouse_exit() -> void:
+	get_node("Sprite2D/outline").visible=false
 					
