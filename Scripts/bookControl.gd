@@ -66,10 +66,13 @@ func _process(delta: float) -> void:
 		left.visible=true
 
 func _on_open_book_button_down() -> void:
+	AudioManager.button_noise.play()
 	open = not open
 
 func _on_right_button_down() -> void:
+	AudioManager.button_noise.play()
 	page+=1
 
 func _on_left_button_down() -> void:
+	AudioManager.button_noise.play()
 	page-=1

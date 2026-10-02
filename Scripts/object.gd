@@ -49,6 +49,8 @@ func _process(delta: float) -> void:
 
 func _on_button_button_down() -> void:
 	dragging = true
+	AudioManager.clink.pitch_scale=.9
+	AudioManager.clink.play()
 	off = get_global_mouse_position() - global_position
 
 func _on_button_button_up() -> void:
@@ -57,6 +59,7 @@ func _on_button_button_up() -> void:
 	if(placed!=null):
 		for thing in placed:
 			if thing.get_meta("place")==true:
+				AudioManager.low_clink.play()
 				lastok=thing.global_position
 				thing.set_meta("place",false)
 				if(lastPlace!=null):
@@ -73,8 +76,10 @@ func _on_button_button_up() -> void:
 					if thing.wants.has("on the rocks"):
 						pointsToAdd+=150
 					get_tree().current_scene.points+=pointsToAdd
+					AudioManager.correct.play()
 				else:
 					get_tree().current_scene.lives=get_tree().current_scene.lives-1
+					AudioManager.wrong.play()
 				thing.queue_free()
 				lastPlace.set_meta("place",true)
 				queue_free()

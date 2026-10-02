@@ -9,7 +9,7 @@
 [ext_resource type="Script" uid="uid://dykgcvsu6yety" path="res://Scripts/tazer.gd" id="5_kdubu"]
 [ext_resource type="Script" uid="uid://byimbx3sgyx57" path="res://Scripts/drawer.gd" id="5_q6r6c"]
 [ext_resource type="Texture2D" uid="uid://drvo6ou65kvyb" path="res://Sprites/spooooon.png" id="6_ei405"]
-[ext_resource type="Script" uid="uid://xl1dyi3yxv47" path="res://bookControl.gd" id="7_4d7sh"]
+[ext_resource type="Script" uid="uid://xl1dyi3yxv47" path="res://Scripts/bookControl.gd" id="7_4d7sh"]
 [ext_resource type="Texture2D" uid="uid://ev3k0ydm5px3" path="res://Sprites/shakin.png" id="7_e8dv2"]
 [ext_resource type="Texture2D" uid="uid://c0mpip2lv2cl6" path="res://Sprites/bowawa.png" id="7_flf07"]
 [ext_resource type="Texture2D" uid="uid://ckcbpf5kg781v" path="res://Sprites/grenadineine.png" id="8_k73cj"]

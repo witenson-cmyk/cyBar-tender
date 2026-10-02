@@ -20,12 +20,13 @@ config/icon="res://Sprites/icon.svg"
 TooltipManager="*uid://brqdjqtp7oci6"
 TooltipPlaceholderVariables="*uid://nel5st3wktcw"
 TooltipLinkData="*uid://bjkjmtptqed1y"
+AudioManager="*uid://c0445a3fx07i"
 
 [display]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-window/size/mode=2
+window/size/mode=3
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 

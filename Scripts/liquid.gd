@@ -4,6 +4,7 @@ var dragging=false
 @export var toAdd="vodka"
 var off=Vector2(0,0)
 var previousPosition = startingPos
+var random=RandomNumberGenerator.new()
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -40,6 +41,8 @@ func _on_button_button_up() -> void:
 					if(all==toAdd):
 						return
 				thing.added.append(toAdd)
+				AudioManager.sploosh.pitch_scale=.4+float(random.randi()%50)/100
+				AudioManager.sploosh.play()
 				return
 
 func _mouse_enter() -> void:

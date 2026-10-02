@@ -69,10 +69,10 @@ theme_override_font_sizes/font_size = 40
 text = "Click to Progress"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1568137564]
-offset_left = -970.0
-offset_top = -522.0
-offset_right = 988.0
-offset_bottom = 527.0
+offset_left = -910.0
+offset_top = -486.0
+offset_right = 902.0
+offset_bottom = 496.0
 theme = SubResource("Theme_3n2aa")
 theme_override_colors/default_color = Color(6.738305e-07, 0.74408203, 0.064985365, 1)
 theme_override_constants/line_separation = 8

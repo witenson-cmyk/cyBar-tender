@@ -70,6 +70,7 @@ func _process(delta: float) -> void:
 						load_peeps()
 					newPerson=instance.instantiate()
 					get_node("patrons").add_child(newPerson)
+					AudioManager.ding.play()
 					didIt=true
 					newPerson.position.x=500*ran-800
 					newPerson.position.y=350
@@ -101,11 +102,13 @@ func _process(delta: float) -> void:
 	
 	#end the day
 	if gameHT==2 and day<5:
+		AudioManager.actual_end.play()
 		save_game.days+=1
 		save_game.points+=points
 		save_game.write_savegame()
 		get_tree().change_scene_to_file("res://next_day.tscn")
 	elif day==5:
+		AudioManager.actual_end.play()
 		save_game.points+=points-9000
 		save_game.write_savegame()
 		if save_game.points>=0:
@@ -125,6 +128,7 @@ func _process(delta: float) -> void:
 	label.text="Tips: "+pointLabel+"       Citations Remaining: "+str(lives)+"       Time: "+gameHL+":"+gameML
 
 func _on_button_button_down() -> void:
+	AudioManager.button_noise.play()
 	dayStarted=true
 	get_node("startDay").queue_free()
 	

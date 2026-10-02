@@ -67,8 +67,12 @@ func _process(delta: float) -> void:
 		cameraBMAX=0
 	camera.position.y=clamp(camera.position.y,0,cameraBMAX)
 	if visChars < point.get_total_character_count():
-		visChars+=75*delta
+		visChars+=45*delta
+		visChars=clamp(visChars,0,point.get_total_character_count())
+	var prevCharacters = point.visible_characters
 	point.visible_characters=visChars
+	if int(prevCharacters)!=int(point.visible_characters):
+		AudioManager.ping.play()
 	
 	i += 2.5*delta
 	if i >=360:

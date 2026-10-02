@@ -20,4 +20,5 @@ func _on_exit_button_down() -> void:
 
 
 func _on_start_game_button_down() -> void:
+	AudioManager.button_noise.play()
 	get_tree().change_scene_to_file("res://next_day.tscn")
