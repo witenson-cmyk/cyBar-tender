@@ -13,9 +13,9 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if dragging:
 		position = get_global_mouse_position()-off
-		z_index=3
+		z_index=10
 	else:
-		position=lerp(position,startingPos,.2)
+		position=lerp(position,startingPos,.15)
 		z_index = 1
 	var shmoovX = (global_position.x - previousPosition.x)/100
 	var shmoovY = (global_position.y - previousPosition.y)/100*sign(shmoovX)

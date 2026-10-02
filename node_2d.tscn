@@ -228,8 +228,8 @@ texture = ExtResource("25_gt76g")
 
 [node name="Cubby" type="Sprite2D" parent="CanvasLayer2/Backbackground" unique_id=1850065758]
 self_modulate = Color(0.60960835, 0.60960835, 0.60960835, 1)
-position = Vector2(-114.65001, 93.14998)
-scale = Vector2(1.4632812, 1.0354165)
+position = Vector2(-95.74166, 68.5)
+scale = Vector2(1.3058593, 1.0354165)
 texture = ExtResource("22_gt76g")
 
 [node name="place7" type="Area2D" parent="." unique_id=331055570]
@@ -355,107 +355,6 @@ position = Vector2(-5, 1)
 shape = SubResource("RectangleShape2D_rp3bj")
 
 [node name="Sprite2D" type="Sprite2D" parent="place3/place9/CollisionShape2D" unique_id=1760575830]
-position = Vector2(0.9999999, 62.249992)
-scale = Vector2(1.296875, 0.3515625)
-texture = ExtResource("24_2hxjc")
-
-[node name="place5" type="Area2D" parent="place3" unique_id=1241484972]
-position = Vector2(-1049, -1)
-metadata/place = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="place3/place5" unique_id=1339910572]
-shape = SubResource("RectangleShape2D_rp3bj")
-
-[node name="Sprite2D" type="Sprite2D" parent="place3/place5/CollisionShape2D" unique_id=1149139436]
-position = Vector2(0.9999999, 62.249992)
-scale = Vector2(1.296875, 0.3515625)
-texture = ExtResource("24_2hxjc")
-
-[node name="place8" type="Area2D" parent="place3/place5" unique_id=395015549]
-position = Vector2(589, -1)
-metadata/place = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="place3/place5/place8" unique_id=1266693400]
-position = Vector2(-5, 1)
-shape = SubResource("RectangleShape2D_rp3bj")
-
-[node name="Sprite2D" type="Sprite2D" parent="place3/place5/place8/CollisionShape2D" unique_id=691854242]
-position = Vector2(0.9999999, 62.249992)
-scale = Vector2(1.296875, 0.3515625)
-texture = ExtResource("24_2hxjc")
-
-[node name="place8" type="Area2D" parent="place3/place5/place8" unique_id=1182022006]
-position = Vector2(-235, -1)
-metadata/place = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="place3/place5/place8/place8" unique_id=961984620]
-position = Vector2(-5, 1)
-shape = SubResource("RectangleShape2D_rp3bj")
-
-[node name="Sprite2D" type="Sprite2D" parent="place3/place5/place8/place8/CollisionShape2D" unique_id=561143800]
-position = Vector2(0.9999999, 62.249992)
-scale = Vector2(1.296875, 0.3515625)
-texture = ExtResource("24_2hxjc")
-
-[node name="place3" type="Area2D" parent="place3/place5" unique_id=1441152146]
-position = Vector2(116, 0)
-metadata/place = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="place3/place5/place3" unique_id=1466623538]
-shape = SubResource("RectangleShape2D_rp3bj")
-
-[node name="Sprite2D" type="Sprite2D" parent="place3/place5/place3/CollisionShape2D" unique_id=588741783]
-position = Vector2(0.9999999, 62.249992)
-scale = Vector2(1.296875, 0.3515625)
-texture = ExtResource("24_2hxjc")
-
-[node name="place4" type="Area2D" parent="place3/place5" unique_id=942146311]
-position = Vector2(231, 0)
-metadata/place = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="place3/place5/place4" unique_id=708071375]
-shape = SubResource("RectangleShape2D_rp3bj")
-
-[node name="Sprite2D" type="Sprite2D" parent="place3/place5/place4/CollisionShape2D" unique_id=1278318365]
-position = Vector2(0.9999999, 62.249992)
-scale = Vector2(1.296875, 0.3515625)
-texture = ExtResource("24_2hxjc")
-
-[node name="place9" type="Area2D" parent="place3/place5" unique_id=520311219]
-position = Vector2(-228, -1)
-metadata/place = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="place3/place5/place9" unique_id=1142691119]
-position = Vector2(-5, 1)
-shape = SubResource("RectangleShape2D_rp3bj")
-
-[node name="Sprite2D" type="Sprite2D" parent="place3/place5/place9/CollisionShape2D" unique_id=304300397]
-position = Vector2(0.9999999, 62.249992)
-scale = Vector2(1.296875, 0.3515625)
-texture = ExtResource("24_2hxjc")
-
-[node name="place10" type="Area2D" parent="place3" unique_id=936521547]
-position = Vector2(-575, -2)
-metadata/place = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="place3/place10" unique_id=1474424364]
-position = Vector2(-5, 1)
-shape = SubResource("RectangleShape2D_rp3bj")
-
-[node name="Sprite2D" type="Sprite2D" parent="place3/place10/CollisionShape2D" unique_id=1184823851]
-position = Vector2(0.9999999, 62.249992)
-scale = Vector2(1.296875, 0.3515625)
-texture = ExtResource("24_2hxjc")
-
-[node name="place11" type="Area2D" parent="place3" unique_id=776774556]
-position = Vector2(-1161, -2)
-metadata/place = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="place3/place11" unique_id=1544711894]
-position = Vector2(-5, 1)
-shape = SubResource("RectangleShape2D_rp3bj")
-
-[node name="Sprite2D" type="Sprite2D" parent="place3/place11/CollisionShape2D" unique_id=1903949883]
 position = Vector2(0.9999999, 62.249992)
 scale = Vector2(1.296875, 0.3515625)
 texture = ExtResource("24_2hxjc")

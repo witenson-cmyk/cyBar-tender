@@ -6,22 +6,24 @@ var words = {
 "admin NEW SYSTEM MESSAGE:
 admin GOOD MORNING LOCA 3, THE DATE IS 10/27/2096
 admin NO NEWS UPDATE
+admin REMINDER: CITIZENSHIP RENEWAL IS DUE BY END OF MONTH, AMOUNT DUE: 90.00 UNITS
+admin YOUR CURRENT BALANCE DOES NOT COVER AMOUNT DUE
 admin YOU HAVE BEEN ASSIGNED A NEW TEMPORARY POSITION
 admin - POSITION: Remote Bartender
 admin - LOCATION: 2704 Silkwood Street
 admin - BUILDING NAME: cyBar 3
-admin - SHIFT DATES AND TIME: W Th F Sa Su, 9PM - 1AM
-admin - MESSAGE FROM EMPLOYER: Hi! Welcome to the team! You'll be taking over the night shift from here on, it's a short shift but probably the busiest, so GL. There's a handbook waiting for you when you get there, don't take it though, we're a family here so sharing is caring.
-admin - I won't be there to train you, so make sure you read it throughly. I'll update it each day if anything changes, so make sure to check it each day, gotcha?
+admin - SHIFT DATES AND TIME: W Th F Sa Su, 9PM - 2AM
+admin - MESSAGE FROM EMPLOYER: Hi! Welcome to the team! You'll be taking over the night shift from here on, it's a short shift but probably the busiest, so GL. 
+admin - Make sure you read whatever notes you get from my assistant manager, they know a lot more about how this whole thing works than I do. I won't be there to train you, so make sure you read it throughly.
 admin END MESSAGE",
 	"2": 
 "admin NEW SYSTEM MESSAGE:
 admin GOOD MORNING LOCA 3, THE DATE IS 10/28/2096
 admin NEWS UPDATE: DUE TO THE GENEROUS WORK DONE BY OUR NATIONS GREATEST SCIENTISTS, NEW AIR FILTERS RATED WITH 4% GREATER AIR FILTRATION CAPABILITIES HAVE BEEN RELEASED TO THE PUBLIC.
 admin CITIZENS LEVEL C3 OR HIGHER MAY PURCHASE FILTERS THROUGH REGULAR CHANNELS WITH ECHO-3 AND ECHO-3.5 FILTERS BEING SUPPORTED
-admin NOTE: C5 AND C6 CITIZENS NO LONGER GET COMPLEMENTARY FILTERS PLEASE AQUAINT YOURSELF WITH THE CHANNELS REQUIRED TO PURCHASE NEW PROVISIONS OR PURCHASE HIGHER CITIZENSHIP LEVEL. 
+admin NOTE: C5 AND C6 CITIZENS NO LONGER GET COMPLEMENTARY FILTERS AND MUSH AQUAINT THEMSELVES WITH THE CHANNELS REQUIRED TO PURCHASE NEW PROVISIONS OR PURCHASE A HIGHER CITIZENSHIP LEVEL. 
 admin C7 AND ABOVE ARE NOW REQUIRED TO MANUALLY REQUEST PROVISIONS AND ARE NO LONGER BEING AUTOMATICALLY REQUESTED ON THEIR BEHALF.
-ADMIN END NEWS
+admin END NEWS
 other hi! :3
 other can you hear Me?
 player Yes, I can. Are you supposed to be reaching out to someone like this?
@@ -131,12 +133,36 @@ admin INSUFFICIENT DATA
 ",
 	"5":
 		"admin NEW SYSTEM MESSAGE:
-GOOD MORNING LOCA 3, THE DATE IS 10/31/2096, DATA HAS BEEN RESET
-NO NEWS UPDATE
+admin GOOD MORNING LOCA 3, THE DATE IS 10/31/2096, DATA LIMITS HAVE BEEN RESET
+admin NO NEWS UPDATE
+admin REMINDER: CITIZENSHIP RENEWAL IS DUE TOMORROW
 player you there
 player anything
 player a name at least?
-player ..."
+player ...",
+	"6":
+		"admin NEW SYSTEM MESSAGE:
+admin GOOD MORNING LOCA 3, THE DATE IS 11/01/2096
+admin NO NEWS UPDATE
+admin NOTICE: YOUR BALANCE WAS INSUFFICIENT TO PAY OFF YOUR CITIZENSHIP DUES, YOUR ACCOUNT HAS BEEN CHARGED BY THE AMOUNT AND IS NOW IN THE NEGATIVES
+admin .
+admin the end, thanks for playing",	
+	"7":
+		"admin NEW SYSTEM MESSAGE:
+admin GOOD MORNING LOCA 3, THE DATE IS 11/01/2096
+admin NO NEWS UPDATE
+admin NOTICE: YOUR CITIZENSHIP HAS BEEN SUCCESSFULLY PAID OFF
+admin .
+admin the end, thanks for playing"
+
+}
+var headers = {
+	"other":
+		"UNKOWN SENDER: ",
+	"player":
+		"USER: ",
+	"admin":
+		""
 }
 
 var bookPages = {

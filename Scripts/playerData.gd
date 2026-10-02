@@ -5,7 +5,6 @@ const SAVE_PATH := "res://Resources/savegame.tres"
 
 @export var days: int = 1
 @export var points: int = 0
-@export var fired: int = 0
 
 func write_savegame() -> void:
 	var error_code := ResourceSaver.save(self, SAVE_PATH)

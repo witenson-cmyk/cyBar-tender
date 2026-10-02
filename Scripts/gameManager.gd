@@ -3,7 +3,7 @@ var camera
 var mov
 var lives = 3
 var points = 0
-var places=[null,null,null,null,null,null]
+var places=[null,null,null,null,null,null,null,null]
 var timer=3
 var instance
 var newPerson
@@ -27,6 +27,7 @@ func _ready() -> void:
 		save_game = ResourceLoader.load(SAVE_PATH, "", ResourceLoader.CACHE_MODE_IGNORE)
 	else:
 		save_game = player_data.new()
+		save_game.write_savegame()
 	day=save_game.days
 	info=infoToGet.dayVariables[str(day)]
 	if not info["possible"].has("on the rocks"):
@@ -70,14 +71,14 @@ func _process(delta: float) -> void:
 					newPerson=instance.instantiate()
 					get_node("patrons").add_child(newPerson)
 					didIt=true
-					newPerson.position.x=500*ran-700
+					newPerson.position.x=500*ran-800
 					newPerson.position.y=350
 					newPerson.z_index=0
 					var picked = random.randi()%peeps.size()
 					newPerson.get_node("CollisionShape2D/Sprite2D").texture=peeps[picked]
 					peeps.remove_at(picked)
 					places[ran]=newPerson
-		timer=15-random.randi()%7
+		timer=15-random.randi()%10
 	
 	#game timer
 	if dayStarted:
@@ -93,16 +94,26 @@ func _process(delta: float) -> void:
 	else:
 		gameML=str(gameMT)
 	
+	if gameHT>=12:
+		gameML+= " AM"
+	else:
+		gameML+= " PM"
+	
 	#end the day
-	if gameHT==3 and day<5:
+	if gameHT==2 and day<5:
 		save_game.days+=1
 		save_game.points+=points
 		save_game.write_savegame()
 		get_tree().change_scene_to_file("res://next_day.tscn")
 	elif day==5:
-		save_game.days=1
-		save_game.points+=points
+		save_game.points+=points-9000
 		save_game.write_savegame()
+		if save_game.points>=0:
+			save_game.days+=2
+			save_game.write_savegame()
+		else:
+			save_game.days+=1
+			save_game.write_savegame()
 		get_tree().change_scene_to_file("res://start_screen.tscn")
 		
 	var pointLabel: String = str(int(points/100))+"."
@@ -121,4 +132,5 @@ func load_peeps():
 	for file_name in DirAccess.get_files_at("res://Sprites/patrons/"):
 		if(file_name.get_extension()=="import"):
 			file_name = file_name.replace(".import","")
-		peeps.append(load("res://Sprites/patrons/"+file_name))
+			peeps.append(load("res://Sprites/patrons/"+file_name))
+			

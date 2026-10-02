@@ -5,7 +5,7 @@ class_name data
 	"1":
 	{
 		"timerMax":
-			100,
+			80,
 		"possible":
 			["vodka","water","grenadine","citrus","soda water","whisky","orange","tequilla"],
 		"Special":
@@ -16,7 +16,7 @@ class_name data
 	"2":
 	{
 		"timerMax":
-			85,
+			70,
 		"possible":
 			["vodka","water","grenadine","citrus","soda water","whisky","on the rocks","orange","tequilla"],
 		"Special":
@@ -27,7 +27,7 @@ class_name data
 	"3":
 	{
 		"timerMax":
-			65,
+			60,
 		"possible":
 			["vodka","water","grenadine","citrus","soda water","whisky","on the rocks","orange","tequilla"],
 		"Special":
@@ -38,7 +38,7 @@ class_name data
 	"4":
 	{
 		"timerMax":
-			55,
+			50,
 		"possible":
 			["vodka","water","grenadine","citrus","soda water","whisky","on the rocks","orange","tequilla"],
 		"Special":
@@ -49,7 +49,7 @@ class_name data
 	"5":
 	{
 		"timerMax":
-			45,
+			40,
 		"possible":
 			["vodka","water","grenadine","citrus","soda water","whisky","on the rocks","orange","tequilla"],
 		"Special":

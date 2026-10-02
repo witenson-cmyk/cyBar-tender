@@ -17,7 +17,11 @@ var i = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	save_game = ResourceLoader.load(SAVE_PATH, "", ResourceLoader.CACHE_MODE_IGNORE)
+	if ResourceLoader.exists(SAVE_PATH):
+		save_game = ResourceLoader.load(SAVE_PATH, "", ResourceLoader.CACHE_MODE_IGNORE)
+	else:
+		save_game = player_data.new()
+		save_game.write_savegame()
 	speak=text.words.get(str(save_game.days))
 	speaks=speak.split("\n")
 	for other in speaks:
@@ -31,22 +35,22 @@ func _ready() -> void:
 		whos.append(who)
 	camera = get_node("Camera2D")
 	point = get_node("RichTextLabel")
-	if dNum<lines.size():
-			point.text+=lines[dNum]
-			point.text+="\n"
-			dNum+=1
-			camera.position.y=cameraBMAX
+	point.text+="Current Account Balance: %.2f" %(save_game.points/100)+"\n"
 	
 	
 func _input(event):
 	if event.is_action_pressed("ui_accept") and visChars==point.get_total_character_count():
 		if dNum<lines.size():
+			point.text+=text.headers[(whos[dNum]).to_lower()]
 			point.text+=lines[dNum]
 			point.text+="\n"
 			dNum+=1
 			camera.position.y=cameraBMAX
-		else:
+		elif save_game.days<6:
 			get_tree().change_scene_to_file("res://node_2d.tscn")
+		else:
+			DirAccess.remove_absolute("res://Resources/savegame.tres")
+			get_tree().change_scene_to_file("res://start_screen.tscn")
 	elif event.is_action_pressed("ui_accept"):
 		visChars = point.get_total_character_count()
 		

@@ -1,10 +1,8 @@
 [gd_scene format=3 uid="uid://jkv67xmb0qb5"]
 
 [ext_resource type="Script" uid="uid://dcp7y32n6cs4r" path="res://Scripts/start_screen.gd" id="1_ncxyx"]
+[ext_resource type="Texture2D" uid="uid://djpvj8rugifkk" path="res://Sprites/titleScreen.png" id="2_afy8x"]
 [ext_resource type="Shader" uid="uid://dg0hpem4jsije" path="res://Sprites/new_shader.gdshader" id="2_pevhg"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_rp3bj"]
-font_size = 120
 
 [sub_resource type="Theme" id="Theme_3n2aa"]
 default_font_size = 75
@@ -46,16 +44,10 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ncxyx")
 
-[node name="Label" type="Label" parent="." unique_id=1641191304]
-layout_mode = 0
-offset_left = 3.0
-offset_top = 26.0
-offset_right = 1925.0
-offset_bottom = 594.0
-text = "cyBar:tender"
-label_settings = SubResource("LabelSettings_rp3bj")
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="TitleScreen" type="Sprite2D" parent="." unique_id=1735288302]
+position = Vector2(960, 540)
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("2_afy8x")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2080385994]
 position = Vector2(960, 540)

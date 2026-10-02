@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bn4xkp8srbk4o" path="res://Scripts/next_day.gd" id="1_r4e5j"]
 [ext_resource type="Shader" uid="uid://dg0hpem4jsije" path="res://Sprites/new_shader.gdshader" id="2_3ytln"]
+[ext_resource type="Texture2D" uid="uid://7mjhxepnh6ma" path="res://Sprites/screen.png" id="3_qhir5"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qhir5"]
 shader = ExtResource("2_3ytln")
@@ -34,6 +35,11 @@ default_font_size = 32
 [node name="nextDay" type="Node2D" unique_id=1892391482]
 script = ExtResource("1_r4e5j")
 
+[node name="Screen" type="Sprite2D" parent="." unique_id=1149531743]
+position = Vector2(3.0000038, -2.000001)
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("3_qhir5")
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1521904049]
 
 [node name="ColorRect" type="ColorRect" parent="Camera2D" unique_id=1230066004]
@@ -58,6 +64,7 @@ offset_left = 462.0
 offset_top = 407.0
 offset_right = 870.0
 offset_bottom = 460.0
+theme_override_colors/font_color = Color(0, 0.74509805, 0.06666667, 1)
 theme_override_font_sizes/font_size = 40
 text = "Click to Progress"
 
@@ -67,6 +74,7 @@ offset_top = -522.0
 offset_right = 988.0
 offset_bottom = 527.0
 theme = SubResource("Theme_3n2aa")
+theme_override_colors/default_color = Color(6.738305e-07, 0.74408203, 0.064985365, 1)
 theme_override_constants/line_separation = 8
 fit_content = true
 scroll_active = false

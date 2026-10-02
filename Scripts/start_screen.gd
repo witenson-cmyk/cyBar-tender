@@ -7,7 +7,6 @@ func _ready() -> void:
 		save_game = ResourceLoader.load(SAVE_PATH, "", ResourceLoader.CACHE_MODE_IGNORE)
 	else:
 		save_game = player_data.new()
-		save_game.days=1
 		save_game.write_savegame()
 
 
