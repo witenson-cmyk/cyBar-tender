@@ -14,7 +14,7 @@ var point
 var visChars = 0
 @onready var label=get_node("Camera2D/Label")
 var i = 0
-
+var bMaxTemp=0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	if ResourceLoader.exists(SAVE_PATH):
@@ -43,7 +43,7 @@ func _input(event):
 		if dNum<lines.size():
 			point.text+=text.headers[(whos[dNum]).to_lower()]
 			point.text+=lines[dNum]
-			point.text+="\n"
+			point.text+="[/color]\n"
 			dNum+=1
 			camera.position.y=cameraBMAX
 		elif save_game.days<6:
@@ -74,6 +74,9 @@ func _process(delta: float) -> void:
 	if int(prevCharacters)!=int(point.visible_characters):
 		AudioManager.ping.play()
 	
+	if bMaxTemp!=cameraBMAX:
+		camera.position.y=cameraBMAX
+	bMaxTemp=cameraBMAX
 	i += 2.5*delta
 	if i >=360:
 		i = 0

@@ -1,6 +1,8 @@
 class_name TooltipTrigger
 extends Node
 
+@onready var toolStringTemp = tooltip_strings[0]
+
 ## The TooltipTrigger is used to set the positioning and content of tooltips.
 ##
 ## [TooltipTrigger]s work with the [TooltipManager] to instantiate a new

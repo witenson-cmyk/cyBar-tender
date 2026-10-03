@@ -3,7 +3,7 @@ var camera
 var mov
 var lives = 3
 var points = 0
-var places=[null,null,null,null,null,null,null,null]
+var places=[null,null,null,null,null,null,null]
 var timer=3
 var instance
 var newPerson
@@ -17,6 +17,9 @@ var dayStarted = false
 var infoToGet: data = data.new()
 var info
 var peeps = []
+@export var timerMax=30
+var dayOver=false
+var dayActuallyOver = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -58,9 +61,9 @@ func _process(delta: float) -> void:
 	camera.position.x=clamp(camera.position.x,0,2000)
 	
 	#spawning patrons
-	if timer>0 and dayStarted:
+	if timer>0 and dayStarted and not dayOver:
 		timer-=1*delta
-	elif dayStarted:
+	elif dayStarted and not dayOver:
 		var didIt=false
 		if places.has(null):
 			while didIt==false:
@@ -79,7 +82,7 @@ func _process(delta: float) -> void:
 					newPerson.get_node("CollisionShape2D/Sprite2D").texture=peeps[picked]
 					peeps.remove_at(picked)
 					places[ran]=newPerson
-		timer=15-random.randi()%10
+		timer=timerMax-day*2-random.randi()%(9+day)
 	
 	#game timer
 	if dayStarted:
@@ -101,23 +104,26 @@ func _process(delta: float) -> void:
 		gameML+= " PM"
 	
 	#end the day
-	if gameHT==2 and day<5:
+	if gameHT>3 and gameHT<8 and not dayOver:
+		dayOver=true
 		AudioManager.actual_end.play()
-		save_game.days+=1
-		save_game.points+=points
-		save_game.write_savegame()
-		get_tree().change_scene_to_file("res://next_day.tscn")
-	elif day==5:
-		AudioManager.actual_end.play()
-		save_game.points+=points-9000
-		save_game.write_savegame()
-		if save_game.points>=0:
-			save_game.days+=2
-			save_game.write_savegame()
-		else:
+	
+	if places.is_empty() and dayOver:
+		if day<5:
 			save_game.days+=1
+			save_game.points+=points
 			save_game.write_savegame()
-		get_tree().change_scene_to_file("res://start_screen.tscn")
+			get_tree().change_scene_to_file("res://next_day.tscn")
+		elif day==5:
+			save_game.points+=points-9000
+			save_game.write_savegame()
+			if save_game.points>=0:
+				save_game.days+=2
+				save_game.write_savegame()
+			else:
+				save_game.days+=1
+				save_game.write_savegame()
+			get_tree().change_scene_to_file("res://start_screen.tscn")
 		
 	var pointLabel: String = str(int(points/100))+"."
 	if points%100==0:

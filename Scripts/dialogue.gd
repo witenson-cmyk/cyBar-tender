@@ -47,9 +47,9 @@ player No you won't I'm resetting my IP
 other ;(
 admin YOU HAVE DISCONNECTED",
 	"3":
-"NEW SYSTEM MESSAGE:
+"admin NEW SYSTEM MESSAGE:
 admin GOOD MORNING LOCA 3, THE DATE IS 10/29/2096
-admin NEWS UPDATE: DUE TO AN INCREASE IN ILOGICAL DATA TRANSFER, DATA ALLOWENCES WILL BE DECREASED ACCROSS ALL CITIZENSHIP LEVELS BY 10%, PLEASE MAKE SURE TO REPORT ANY CASES OF ILLOGICAL DATA TRANSFERING TO YOUR LOCAL AUTHORITY.
+admin NEWS UPDATE: DUE TO AN INCREASE IN ILOGICAL DATA TRANSFER, DATA ALLOWANCES WILL BE DECREASED ACCROSS ALL CITIZENSHIP LEVELS BY 10%, PLEASE MAKE SURE TO REPORT ANY CASES OF ILLOGICAL DATA TRANSFERING TO YOUR LOCAL AUTHORITY.
 admin REMINDER, ILLOGICAL DATA TRANSFERS REFER TO ANY DATA BEING TRANSFERED FOR ANY NON STATE REQUIRED PURPOSE, SUCH AS ENTERTAINMENT, EDUCATION, AND ART CREATED BY THE PUBLIC. LET THE STATE HANDLE THESE, THEY KNOW WHAT THEY ARE DOING.
 admin END NEWS
 other checking this ip again because i know you're a pussy
@@ -64,7 +64,7 @@ other awwwww
 player On what earth do you think I would tell you that over a fucking UCC
 other actually wait i can just look that up gimme a sec
 player huh?
-other damn, loca 3, you must be psomeoneretty good off, marginally breathable air has to be expensive
+other damn, loca 3, you must be pretty good off, marginally breathable air has to be expensive
 player I'm not rich, I was just born here
 other damn you're like young young then
 player I'm like 25 stfu
@@ -73,7 +73,7 @@ player ...
 player ok, if you're so jelous, then just move over here
 other you say it like it's that easy
 player Didn't you hear about the whole public movement initiative they were doing, supposedly if you were from a \"deteriorating\" loca they would let you apply for transfer
-other if you were human
+other only if you're human
 player ?
 player oh
 other yeaaaahhh
@@ -158,11 +158,11 @@ admin the end, thanks for playing"
 }
 var headers = {
 	"other":
-		"UNKOWN SENDER: ",
+		"[color=lime]UNKOWN SENDER: ",
 	"player":
-		"USER: ",
+		"[color=light green]USER: ",
 	"admin":
-		""
+		"[color=default]"
 }
 
 var bookPages = {
