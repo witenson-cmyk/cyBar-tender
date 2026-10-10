@@ -17,7 +17,7 @@ var dayStarted = false
 var infoToGet: data = data.new()
 var info
 var peeps = []
-@export var timerMax=30
+@export var timerMax=25
 var dayOver=false
 var dayActuallyOver = false
 
@@ -85,10 +85,12 @@ func _process(delta: float) -> void:
 		timer=timerMax-day*2-random.randi()%(9+day)
 	
 	#game timer
-	if dayStarted:
+	if dayStarted and not dayOver:
 		gameTimer+=3*delta
 	gameTime=int(gameTimer/30)*30
 	var gameHT: int = int((gameTime/60)+9)%13
+	if gameHT<9:
+		gameHT+=1
 	var gameMT: int = int(gameTime)%60
 	var label = get_node("Control/CanvasLayer/ui")
 	var gameHL=str(gameHT)
@@ -98,17 +100,25 @@ func _process(delta: float) -> void:
 	else:
 		gameML=str(gameMT)
 	
-	if gameHT>=12:
+	if gameHT<9:
 		gameML+= " AM"
 	else:
 		gameML+= " PM"
 	
 	#end the day
-	if gameHT>3 and gameHT<8 and not dayOver:
+	if gameHT>=2 and gameHT<8 and not dayOver:
 		dayOver=true
 		AudioManager.actual_end.play()
 	
-	if places.is_empty() and dayOver:
+	if dayOver:
+		var isGood=true
+		for thing in places:
+			if thing != null:
+				isGood=false
+		if isGood:
+			dayActuallyOver=true
+	
+	if dayActuallyOver:
 		if day<5:
 			save_game.days+=1
 			save_game.points+=points

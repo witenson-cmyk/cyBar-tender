@@ -43,6 +43,9 @@ func _on_button_button_up() -> void:
 				thing.added.append(toAdd)
 				AudioManager.sploosh.pitch_scale=.4+float(random.randi()%50)/100
 				AudioManager.sploosh.play()
+				thing.get_node("CollisionShape2D/Sprite2D/Button")._on_mouse_exited()
+				await get_tree().create_timer(0.00005)
+				thing.get_node("CollisionShape2D/Sprite2D/Button")._on_mouse_entered()
 				return
 
 func _mouse_enter() -> void:

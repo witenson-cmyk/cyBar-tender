@@ -141,15 +141,15 @@ metadata/_edit_use_anchors_ = true
 [node name="book" type="Sprite2D" parent="Control/CanvasLayer" unique_id=1280228879]
 self_modulate = Color(0.22785605, 0.22785605, 0.22785605, 1)
 z_index = 10
-position = Vector2(1016, -562.25)
+position = Vector2(960, -562.25)
 scale = Vector2(40.328125, 24.484375)
 texture = ExtResource("8_rj586")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control/CanvasLayer" unique_id=1919671256]
 z_index = 11
-offset_left = 404.99994
+offset_left = 348.99994
 offset_top = -986.9999
-offset_right = 1624.0
+offset_right = 1568.0
 offset_bottom = -238.0
 theme = SubResource("Theme_rp3bj")
 theme_override_colors/default_color = Color(1, 1, 1, 1)
@@ -161,40 +161,46 @@ text = "YOU SHOULDN'T BE SEEING THIS"
 tab_size = 3
 
 [node name="openBook" type="Button" parent="Control/CanvasLayer" unique_id=454998662]
-offset_left = 835.0
+offset_left = 739.0
 offset_top = 23.0
-offset_right = 1216.0
+offset_right = 1120.0
 offset_bottom = 81.0
 theme = SubResource("Theme_rj586")
+theme_override_colors/font_color = Color(0.92156863, 0.24705882, 0.7647059, 1)
 text = "wololo"
 
 [node name="ui" type="Label" parent="Control/CanvasLayer" unique_id=1278619011]
 anchors_preset = -1
-anchor_right = 0.45260417
-anchor_bottom = 0.02037037
-offset_left = 548.0
+anchor_left = -0.27864584
+anchor_right = 0.346875
+anchor_bottom = 0.027777778
+offset_left = 804.0
 offset_top = 101.0
-offset_right = 588.0
+offset_right = 844.0
 offset_bottom = 124.0
+theme_override_colors/font_color = Color(0.9227603, 0.2455535, 0.7642122, 1)
+theme_override_font_sizes/font_size = 40
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="left" type="Button" parent="Control/CanvasLayer" unique_id=1010949049]
 z_index = 4
-offset_left = 246.0
+offset_left = 190.0
 offset_top = -773.25
-offset_right = 326.0
+offset_right = 270.0
 offset_bottom = -418.25
 theme = SubResource("Theme_4d7sh")
+theme_override_colors/font_color = Color(0.92156863, 0.24705882, 0.7647059, 1)
 text = "<"
 
 [node name="right" type="Button" parent="Control/CanvasLayer" unique_id=432057960]
 z_index = 4
-offset_left = 1709.0
+offset_left = 1653.0
 offset_top = -766.25
-offset_right = 1789.0
+offset_right = 1733.0
 offset_bottom = -411.25
 theme = SubResource("Theme_ir8iy")
+theme_override_colors/font_color = Color(0.92156863, 0.24705882, 0.7647059, 1)
 text = ">"
 
 [node name="ColorRect" type="ColorRect" parent="Control/CanvasLayer" unique_id=1329425042]
@@ -232,141 +238,78 @@ position = Vector2(-95.74166, 68.5)
 scale = Vector2(1.3058593, 1.0354165)
 texture = ExtResource("22_gt76g")
 
-[node name="place7" type="Area2D" parent="." unique_id=331055570]
-position = Vector2(796, 822)
+[node name="place11" type="Area2D" parent="." unique_id=827462353]
+position = Vector2(127, 822)
 metadata/place = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="place7" unique_id=1769195859]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="place11" unique_id=1944105670]
 position = Vector2(-5, 1)
 shape = SubResource("RectangleShape2D_rp3bj")
 
-[node name="Sprite2D" type="Sprite2D" parent="place7/CollisionShape2D" unique_id=761702368]
+[node name="Sprite2D" type="Sprite2D" parent="place11/CollisionShape2D" unique_id=1228890413]
 position = Vector2(0.9999999, 62.249992)
 scale = Vector2(1.296875, 0.3515625)
 texture = ExtResource("24_2hxjc")
 
-[node name="place8" type="Area2D" parent="." unique_id=211766824]
-position = Vector2(560, 822)
+[node name="place10" type="Area2D" parent="." unique_id=1752451435]
+position = Vector2(865, 822)
 metadata/place = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="place8" unique_id=1145606762]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="place10" unique_id=126959939]
+shape = SubResource("RectangleShape2D_rp3bj")
+
+[node name="Sprite2D" type="Sprite2D" parent="place10/CollisionShape2D" unique_id=944139662]
+position = Vector2(0.9999999, 62.249992)
+scale = Vector2(1.296875, 0.3515625)
+texture = ExtResource("24_2hxjc")
+
+[node name="place6" type="Area2D" parent="." unique_id=1489780419]
+position = Vector2(299, 823)
+metadata/place = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="place6" unique_id=1508594822]
+shape = SubResource("RectangleShape2D_rp3bj")
+
+[node name="Sprite2D" type="Sprite2D" parent="place6/CollisionShape2D" unique_id=2009004568]
+position = Vector2(0.9999999, 62.249992)
+scale = Vector2(1.296875, 0.3515625)
+texture = ExtResource("24_2hxjc")
+
+[node name="place5" type="Area2D" parent="." unique_id=2025288189]
+position = Vector2(488, 823)
+metadata/place = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="place5" unique_id=953590711]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_rp3bj")
+
+[node name="Sprite2D" type="Sprite2D" parent="place5/CollisionShape2D" unique_id=2001173715]
+position = Vector2(0.9999999, 62.249992)
+scale = Vector2(1.296875, 0.3515625)
+texture = ExtResource("24_2hxjc")
+
+[node name="place9" type="Area2D" parent="." unique_id=677816167]
+position = Vector2(676, 822)
+metadata/place = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="place9" unique_id=795601394]
 position = Vector2(-5, 1)
 shape = SubResource("RectangleShape2D_rp3bj")
 
-[node name="Sprite2D" type="Sprite2D" parent="place8/CollisionShape2D" unique_id=1859957767]
+[node name="Sprite2D" type="Sprite2D" parent="place9/CollisionShape2D" unique_id=191320739]
 position = Vector2(0.9999999, 62.249992)
 scale = Vector2(1.296875, 0.3515625)
 texture = ExtResource("24_2hxjc")
 
-[node name="place3" type="Area2D" parent="." unique_id=784477678]
-position = Vector2(87, 823)
+[node name="place8" type="Area2D" parent="place9" unique_id=941691317]
+position = Vector2(-723, -1)
 metadata/place = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="place3" unique_id=340371987]
-shape = SubResource("RectangleShape2D_rp3bj")
-
-[node name="Sprite2D" type="Sprite2D" parent="place3/CollisionShape2D" unique_id=1734400848]
-position = Vector2(0.9999999, 62.249992)
-scale = Vector2(1.296875, 0.3515625)
-texture = ExtResource("24_2hxjc")
-
-[node name="place8" type="Area2D" parent="place3" unique_id=677816167]
-position = Vector2(589, -1)
-metadata/place = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="place3/place8" unique_id=795601394]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="place9/place8" unique_id=153670729]
 position = Vector2(-5, 1)
 shape = SubResource("RectangleShape2D_rp3bj")
 
-[node name="Sprite2D" type="Sprite2D" parent="place3/place8/CollisionShape2D" unique_id=191320739]
-position = Vector2(0.9999999, 62.249992)
-scale = Vector2(1.296875, 0.3515625)
-texture = ExtResource("24_2hxjc")
-
-[node name="place8" type="Area2D" parent="place3/place8" unique_id=941691317]
-position = Vector2(-931, -1)
-metadata/place = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="place3/place8/place8" unique_id=153670729]
-position = Vector2(-5, 1)
-shape = SubResource("RectangleShape2D_rp3bj")
-
-[node name="Sprite2D" type="Sprite2D" parent="place3/place8/place8/CollisionShape2D" unique_id=639139041]
-position = Vector2(0.9999999, 62.249992)
-scale = Vector2(1.296875, 0.3515625)
-texture = ExtResource("24_2hxjc")
-
-[node name="place7" type="Area2D" parent="place3" unique_id=1752451435]
-position = Vector2(826, -1)
-metadata/place = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="place3/place7" unique_id=126959939]
-position = Vector2(-5, 1)
-shape = SubResource("RectangleShape2D_rp3bj")
-
-[node name="Sprite2D" type="Sprite2D" parent="place3/place7/CollisionShape2D" unique_id=944139662]
-position = Vector2(0.9999999, 62.249992)
-scale = Vector2(1.296875, 0.3515625)
-texture = ExtResource("24_2hxjc")
-
-[node name="place7" type="Area2D" parent="place3/place7" unique_id=827462353]
-position = Vector2(-938, 0)
-metadata/place = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="place3/place7/place7" unique_id=1944105670]
-position = Vector2(-5, 1)
-shape = SubResource("RectangleShape2D_rp3bj")
-
-[node name="Sprite2D" type="Sprite2D" parent="place3/place7/place7/CollisionShape2D" unique_id=1228890413]
-position = Vector2(0.9999999, 62.249992)
-scale = Vector2(1.296875, 0.3515625)
-texture = ExtResource("24_2hxjc")
-
-[node name="place3" type="Area2D" parent="place3" unique_id=1489780419]
-position = Vector2(116, 0)
-metadata/place = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="place3/place3" unique_id=1508594822]
-shape = SubResource("RectangleShape2D_rp3bj")
-
-[node name="Sprite2D" type="Sprite2D" parent="place3/place3/CollisionShape2D" unique_id=2009004568]
-position = Vector2(0.9999999, 62.249992)
-scale = Vector2(1.296875, 0.3515625)
-texture = ExtResource("24_2hxjc")
-
-[node name="place4" type="Area2D" parent="place3" unique_id=2025288189]
-position = Vector2(351, 0)
-metadata/place = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="place3/place4" unique_id=953590711]
-shape = SubResource("RectangleShape2D_rp3bj")
-
-[node name="Sprite2D" type="Sprite2D" parent="place3/place4/CollisionShape2D" unique_id=2001173715]
-position = Vector2(0.9999999, 62.249992)
-scale = Vector2(1.296875, 0.3515625)
-texture = ExtResource("24_2hxjc")
-
-[node name="place9" type="Area2D" parent="place3" unique_id=154630712]
-position = Vector2(-228, -1)
-metadata/place = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="place3/place9" unique_id=779375496]
-position = Vector2(-5, 1)
-shape = SubResource("RectangleShape2D_rp3bj")
-
-[node name="Sprite2D" type="Sprite2D" parent="place3/place9/CollisionShape2D" unique_id=1760575830]
-position = Vector2(0.9999999, 62.249992)
-scale = Vector2(1.296875, 0.3515625)
-texture = ExtResource("24_2hxjc")
-
-[node name="place4" type="Area2D" parent="." unique_id=1293856585]
-position = Vector2(322, 823)
-metadata/place = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="place4" unique_id=1726465149]
-shape = SubResource("RectangleShape2D_rp3bj")
-
-[node name="Sprite2D" type="Sprite2D" parent="place4/CollisionShape2D" unique_id=1865423651]
+[node name="Sprite2D" type="Sprite2D" parent="place9/place8/CollisionShape2D" unique_id=639139041]
 position = Vector2(0.9999999, 62.249992)
 scale = Vector2(1.296875, 0.3515625)
 texture = ExtResource("24_2hxjc")
@@ -976,6 +919,7 @@ offset_top = 302.0
 offset_right = 1309.0
 offset_bottom = 400.0
 theme = SubResource("Theme_3n2aa")
+theme_override_colors/font_color = Color(0.92156863, 0.24705882, 0.7647059, 1)
 text = "Start Day"
 
 [node name="patrons" type="Area2D" parent="." unique_id=1670098809]
