@@ -1,7 +1,7 @@
 extends Resource
 class_name player_data
 
-const SAVE_PATH := "res://Resources/savegame.tres"
+const SAVE_PATH := "user://savegame.tres"
 
 @export var days: int = 1
 @export var points: int = 0

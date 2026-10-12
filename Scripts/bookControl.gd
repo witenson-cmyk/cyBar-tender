@@ -10,7 +10,7 @@ var info: dialogue = dialogue.new()
 @onready var day = get_parent().day
 var save_game: player_data = null
 var Dinfo: data = data.new()
-const SAVE_PATH:="res://Resources/savegame.tres"
+const SAVE_PATH:="user://savegame.tres"
 var page = 0
 var totalPages = 0
 

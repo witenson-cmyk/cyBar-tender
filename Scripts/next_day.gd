@@ -1,5 +1,5 @@
 extends Node2D
-const SAVE_PATH:="res://Resources/savegame.tres"
+const SAVE_PATH:="user://savegame.tres"
 var save_game: player_data = null
 var text: dialogue = dialogue.new()
 var speak: String

@@ -8,7 +8,7 @@ var timer=3
 var instance
 var newPerson
 var random=RandomNumberGenerator.new()
-const SAVE_PATH:="res://Resources/savegame.tres"
+const SAVE_PATH:="user://savegame.tres"
 var save_game: player_data = null
 var day
 var gameTime = 0
@@ -48,14 +48,14 @@ func _process(delta: float) -> void:
 		
 	#camera movement
 	var mousePos=get_viewport().get_mouse_position().x
-	mousePos=clamp(mousePos,0,1920)
-	var winSize = get_window().size.x
+	var winSize = get_viewport_rect().size.x
+	mousePos=clamp(mousePos,0,winSize)
 	if mousePos<winSize*.15:
 		mov=251/mousePos
 		mov=clamp(mov,.1,25)
 		camera.position.x-=mov
 	elif mousePos>winSize-winSize*.15:
-		mov=250/(1921-mousePos)
+		mov=250/(winSize-mousePos)
 		mov=clamp(mov,.1,25)
 		camera.position.x+=mov
 	camera.position.x=clamp(camera.position.x,0,2000)
